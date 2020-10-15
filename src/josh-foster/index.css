@@ -37,8 +37,7 @@ section header button a{
 
 section header button a:hover{
     color: red;
-    font-size: 1.5rem;
-    
+    font-size: 1.5rem;  
 }
 
 
