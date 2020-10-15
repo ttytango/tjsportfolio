@@ -1,7 +1,12 @@
-let button = document.querySelector('button')
-let aboutCard = document.querySelector('.aboutCard')
-let aboutCardExtended = document.querySelector('.aboutCardExtended')
-let goBack = document.querySelector('#goBack')
+const button = document.querySelector('button')
+const aboutCard = document.querySelector('.aboutCard')
+const aboutCardExtended = document.querySelector('.aboutCardExtended')
+const goBack = document.querySelector('#goBack')
+const projectIMG = document.querySelector('#projectIMG')
+const project1 = document.querySelector('#project1')
+const project1Button = document.querySelector('#project1b')
+const project2 = document.querySelector('#project2')
+
 
 button.onclick = () => {
     aboutCard.style.display='none'
@@ -9,7 +14,7 @@ button.onclick = () => {
     animation()
 }
 
-let animation = () => {
+const animation = () => {
     myVar = setTimeout(animation1, 0020);
 }
 
@@ -23,11 +28,16 @@ goBack.onclick = () => {
     animation2()
 }
 
-let animation2 = () => {
+const animation2 = () => {
     myVar = setTimeout(animation3, 1500);
 }
 
-animation3 = () => {
+const animation3 = () => {
     aboutCard.style.display='inline-block'
     aboutCardExtended.style.display='none'
+}
+
+project1Button.onclick = () => {
+    project1.style.display = 'none'
+    project2.style.display = 'block'
 }
