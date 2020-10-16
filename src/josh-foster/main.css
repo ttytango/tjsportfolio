@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    background-image: url(/src/josh-foster/my\ website\ bgcrop.jpg);
+    background-image: url(/src/josh-foster/wholebg01\ \(00298\).jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,7 +10,7 @@ body{
 
 header nav{
 width: 90%;
-margin: 1% auto 0 auto;
+margin: 3% auto 0 auto;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
@@ -27,17 +27,25 @@ header nav a{
 
 .about{
     width: 90%;
-    margin: 10% auto 0 4%;
+    margin: 10% auto 0 3.5%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 .about img{
     clip-path: circle(50% at 50% 50%);
-    width: 30%;
+    width: 25%;
+    filter: grayscale(100%);
+    transition: 0.5s ease;
 }
+
+.about img:hover{
+    width: 26%;
+    filter: grayscale(0%);
+}
+
+
 
 .about article{
     height: 220px;
@@ -51,22 +59,32 @@ header nav a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+
+.about article:hover h1{
+    font-size:1.5rem ;
 }
 
 .about article p{
     margin: auto;
     text-align: center;
     padding: 0;
-    margin: 0;
+    margin: 0; 
+    font-size: 1vw;  
 }
+
+
 
 .about article h1{
     font-family: 'Bebas Neue';
-    font-size: 3rem;
+    font-size: 3vw;
     padding: 0;
     margin: 7.5%;
+    transition: 1s ease
 }
 
 header nav a i{
-font-size: 2rem;
+font-size: 1.5rem;
 }
+
