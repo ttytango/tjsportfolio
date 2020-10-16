@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Noto Sans JP;
 }
 
 body {
@@ -45,10 +46,6 @@ body {
     color: black;
     background-color: #F7F7F9;
     transition: width 2s;
-}
-
-.aboutCard:hover {
-    width: 350px;
 }
 
 
@@ -98,7 +95,7 @@ body {
     color: #00173D;
     background-color: #85B4FF;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 16px;
     transition: width 2s;
 }
 
@@ -129,12 +126,20 @@ body {
 
 }
 
+.skillsCard h2{
+    width: 100%;
+    text-align: center;
+    color: #33a1fd;
+    font-size: 28px;
+}
+
 .skillContainer {
     width: 200px;
     background-color: #ddd;
     border-radius: 20px;
     display: inline-block;
     margin-left: 5px;
+    border: black 2px solid;
 }
 
 .skillsCard article{
@@ -143,15 +148,30 @@ body {
     margin: 10px 0;
 }
 
-.skillsCard svg {
+[title~="HTML5"] {
     font-size: 52px;
-    color: #33A1FD;
-    
+    color: #E54C21;   
 }
+
+[title~="css3"] {
+    font-size: 52px;
+    color: #264DE4;   
+}
+
+[title~="Git"] {
+    font-size: 52px;
+    color: #F05033;   
+}
+
+[title~="JS"] {
+    font-size: 52px;
+    color: #F7E018;   
+}
+
 
 .skills {
     text-align: right;
-    padding: 3px;
+    padding: 1px;
     color: white;
 }
 
@@ -172,10 +192,21 @@ body {
     border-radius: 20px;
 }
 
+#JS {
+    width: 30%;
+    background-color: #33a1fd;
+    border-radius: 20px;
+}
+
 .projects {
     width: 100%;
+    height: 600px;
     margin: 200px 0;
     text-align: center;
+    background-color: #5D7C98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projectsBox {
@@ -208,6 +239,7 @@ body {
 
 .projectsBox p {
     padding: 20px;
+    
 }
 
 .projectsBox img {
@@ -225,13 +257,13 @@ body {
 
 .bottomSection{
     width: 100%;
-    height: 50px;
+    height: 47px;
     background-color: #33A1FD;
     text-align: left;
 }
 
 .bottomSection button {
-    height: 50px;
+    height: 47px;
     width: 150px;
 }
 
