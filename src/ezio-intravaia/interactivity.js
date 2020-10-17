@@ -4,8 +4,11 @@ const aboutCardExtended = document.querySelector('.aboutCardExtended')
 const goBack = document.querySelector('#goBack')
 const projectIMG = document.querySelector('#projectIMG')
 const project1 = document.querySelector('#project1')
-const project1Button = document.querySelector('#project1b')
+const project1Button = document.querySelector('#project1Button')
+const project2Button = document.querySelector('#project2Button')
 const project2 = document.querySelector('#project2')
+const navbarButton = document.querySelector('#navBar')
+const navBar = document.querySelector('nav')
 
 
 button.onclick = () => {
@@ -38,6 +41,22 @@ const animation3 = () => {
 }
 
 project1Button.onclick = () => {
+    project1.style.display = 'block'
+    project2.style.display = 'none'
+}
+
+project2Button.onclick = () => {
     project1.style.display = 'none'
     project2.style.display = 'block'
+}
+
+navbarButton.onclick = () => {
+    if (navBar.style.display == 'none') {
+        navBar.style.display = 'block'
+        navbarButton.style.right= '350px'
+    } else {
+        navBar.style.display= 'none'
+        navbarButton.style.right= '20px'
+    }
+
 }
