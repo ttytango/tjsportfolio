@@ -140,7 +140,6 @@ project3Button.onclick = () => {
     project1.style.display = 'none'
     project2.style.display = 'none'
     project3.style.display = 'block'
-    slideOn = 3
     clearTimeout(myVar);
     timer()
 
