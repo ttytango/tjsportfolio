@@ -1,9 +1,9 @@
 /* Reset */
-*{
+* {
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 p {
@@ -20,32 +20,32 @@ img {
 
 /* Variables */
 :root {
-  --primary-color: #ffbc00 ; 
+  --primary-color: #ffbc00;
   --secondary-color: ;
   --light-color: #ddd;
   --dark-color: #333;
 }
-
 
 /* Main style */
 header {
   height: 100vh;
   position: relative;
   background: rgba(0, 0, 0, 0.4);
-  color:var(--light-color);
+  color: var(--light-color);
 }
 
 header::before {
   content: "";
-  background:  url("img/pexels-photo.jpg") no-repeat center center/cover;
+  background: url("img/pexels-photo.jpg") no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; }
+  z-index: -1;
+}
 
- #navigation {
+#navigation {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -80,8 +80,8 @@ header::before {
   margin: 10px 0;
 }
 
-#navigation nav ul a, 
-#navigation-about nav ul a { 
+#navigation nav ul a,
+#navigation-about nav ul a {
   list-style-type: none;
   padding: 1.5rem 2.5rem;
   text-decoration: none;
@@ -95,7 +95,7 @@ header::before {
 #navigation nav ul a:hover,
 #navigation-about nav ul a:hover {
   border-color: var(--light-color);
-  background:var(--dark-color);
+  background: var(--dark-color);
   color: var(--primary-color);
   cursor: pointer;
 }
@@ -107,19 +107,20 @@ header::before {
   position: fixed;
   top: 0;
   z-index: 1;
-  background: url('img/pexels-photo.jpg') no-repeat 20% 40%/cover;
+  background: url("img/pexels-photo.jpg") no-repeat 20% 40% / cover;
   height: 6rem;
+  transition: 0.5s;
 }
 
 #navigation-about nav ul {
-  margin: 35px 100px 0 0;
+  margin: 35px 0;
 }
 
 header {
   position: relative;
 }
 
-header .header-content{
+header .header-content {
   position: absolute;
   left: 50px;
   bottom: 150px;
@@ -139,14 +140,15 @@ header .header-content article {
   font-size: 1.5rem;
 }
 
-
 .about-content .about-photo {
-  width: 400px;
+  width: 200px;
+  height: 300px;
+  background: url("./img/stefan1.jpg") no-repeat center 7% / cover;
 }
 
 .about-content .about-text {
   width: 780px;
-  height: 265px;
+  height: 300px;
   margin-left: 30px;
   background-color: #eee;
   border-left: 2px solid var(--primary-color);
@@ -160,11 +162,11 @@ header .header-content article {
 }
 
 .about-content .about-text h4 {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .about-content .about-text p {
-  margin: 0 15px 15px 15px;
+  margin: 20px;
   font-size: 1.1rem;
 }
 
@@ -186,9 +188,7 @@ header .header-content article {
   grid-gap: 2rem;
 }
 
-.tools span {
-  transform: skew(10deg);
-}
+/* Footer */
 
 .footer-content {
   display: flex;
@@ -204,33 +204,33 @@ header .header-content article {
 }
 
 .footer-social a span {
-  color: #f4f4f4;
+  color: var(--light-color);
   margin-right: 1rem;
-  border: 2px #f4f4f4 solid;
+  border: 2px var(--light-color) solid;
   border-radius: 50%;
   height: 20px;
   width: 20px;
   line-height: 20px;
   padding: 0.5rem;
   text-align: center;
-  transition: 0.5s ease; 
+  transition: 0.5s ease;
 }
 
 .footer-social a span:hover {
   background-color: var(--primary-color);
-  color: var(--dark-color);  
+  color: var(--dark-color);
 }
 
 /* Utilities */
 .courgette {
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
 }
 
 .lead {
   font-size: 3rem;
 }
 
-.underline  {
+.underline {
   height: 2px;
   width: 8rem;
   background-color: var(--primary-color);
