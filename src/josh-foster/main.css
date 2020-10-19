@@ -1,90 +1,112 @@
-body{
-    background-color: black;
-    background-image: url(/src/josh-foster/wholebg01\ \(00298\).jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
+body {
+  background-color: black;
+  background-image: url("./background-image-main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
-header nav{
-width: 90%;
-margin: 3% auto 0 auto;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-background-color:rgb(230, 230, 230);
-padding: 15px;
-border-radius: 40px;
+header nav {
+  width: 90%;
+  margin: 3% auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e6e6e6;
+  padding: 15px;
+  border-radius: 40px;
 }
 
-header nav a{
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-    color:rgb(14, 14, 14);
+header nav a {
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  color: #0e0e0e;
 }
 
-.about{
-    width: 90%;
-    margin: 10% auto 0 3.5%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;  
+header nav a i {
+  font-size: 1.5rem;
+  padding-top: 1px;
 }
 
-.about img{
-    clip-path: circle(50% at 50% 50%);
-    width: 25%;
-    filter: grayscale(100%);
-    transition: 0.5s ease;
+.about {
+  width: 90%;
+  margin: 10% auto 0 3.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about img:hover{
-    width: 26%;
-    filter: grayscale(0%);
+.about img {
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  width: 25%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-
-
-.about article{
-    height: 220px;
-    color: whitesmoke;
-    padding: 5%;
-    border-radius: 2000px;
-    width: 40%;
-    background-color: whitesmoke;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;   
+.about img:hover {
+  width: 26%;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
-.about article:hover h1{
-    font-size:1.5rem ;
+.about article {
+  height: 220px;
+  color: whitesmoke;
+  padding: 5%;
+  border-radius: 2000px;
+  width: 40%;
+  background-color: whitesmoke;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about article p{
-    margin: auto;
-    text-align: center;
-    padding: 0;
-    margin: 0; 
-    font-size: 1vw;  
+.about article h1 {
+  font-family: 'Bebas Neue';
+  font-size: 3vw;
+  padding: 0;
+  margin: 7.5%;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
-
-
-.about article h1{
-    font-family: 'Bebas Neue';
-    font-size: 3vw;
-    padding: 0;
-    margin: 7.5%;
-    transition: 1s ease
+.about article:hover h1 {
+  font-size: 1.5rem;
 }
 
-header nav a i{
-font-size: 1.5rem;
+.about article p {
+  margin: auto;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 1vw;
 }
-
+/*# sourceMappingURL=main.css.map */

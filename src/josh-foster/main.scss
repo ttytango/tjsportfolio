@@ -1,0 +1,99 @@
+body{
+    background-color: black;
+    background-image: url("./background-image-main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    nav{
+        width: 90%;
+        margin: 3% auto 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color:rgb(230, 230, 230);
+        padding: 15px;
+        border-radius: 40px;
+        a{
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            color:rgb(14, 14, 14); 
+            i{
+                font-size: 1.5rem; 
+                padding-top: 1px;
+            }
+        }
+    }
+}
+
+
+
+
+.about{
+    width: 90%;
+    margin: 10% auto 0 3.5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    img{
+        clip-path: circle(50% at 50% 50%);
+        width: 25%;
+        filter: grayscale(100%);
+        transition: 0.5s ease;
+        &:hover{
+            width: 26%;
+            filter: grayscale(0%);
+        }
+    }
+    article{
+        height: 220px;
+        color: whitesmoke;
+        padding: 5%;
+        border-radius: 2000px;
+        width: 40%;
+        background-color: whitesmoke;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        h1{
+            font-family: 'Bebas Neue';
+            font-size: 3vw;
+            padding: 0;
+            margin: 7.5%;
+            transition: 1s ease 
+        }
+        &:hover{
+            h1{
+                font-size:1.5rem ; 
+            }
+        }
+        p{
+            margin: auto;
+            text-align: center;
+            padding: 0;
+            margin: 0; 
+            font-size: 1vw;  
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
