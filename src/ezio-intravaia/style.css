@@ -2,11 +2,56 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Noto Sans JP;
+    font-family: 'Indie Flower';
+    font-weight: bold;
 }
 
 body {
     background-color: #151C22;
+    background-image: url(./img/pattern1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navBar {
+    position: fixed;
+    right: 0;
+    z-index: 1;
+}
+
+header span {
+    font-size: 60px;
+    cursor: pointer;
+    right: 20px;
+    top: 5px;
+    padding: 7px 5px 0 5px;
+    text-decoration: none;
+    position: fixed;
+    color: #33A1FD;
+}
+
+nav{
+    display: none;
+    border: 2px solid #151C22;
+    padding: 20px;
+    background-color: #85B4FF;
+    height: 100vh;
+}
+
+nav img {
+    width: 300px;
+    height: 300px;
+}
+
+ul li{
+    padding: 20px;
+    list-style-type: none;
+    text-align: center;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 24px;
 }
 
 .hero-image {
@@ -24,12 +69,14 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: whitesmoke;
-    font-size: 38px;
+    font-size: 42px;
+    text-align: center;
 }
+
 
 .about {
     width: 100%;
-    margin: 50px 0;
+    margin: 100px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly; 
@@ -81,6 +128,14 @@ body {
     border-radius: 25px;
     font-weight: bold;
     font-size: 16px;
+    cursor: pointer;
+    transition: 0.6s ease-out;
+}
+
+.aboutCard button:hover {
+    color: whitesmoke;
+    background-color: #55728b;
+    border: 3px double whitesmoke;
 }
 
 .aboutCardExtended {
@@ -94,7 +149,7 @@ body {
     text-align: center;
     color: #00173D;
     background-color: #85B4FF;
-    overflow: hidden;
+    overflow: auto;
     font-size: 16px;
     transition: width 2s;
 }
@@ -112,29 +167,40 @@ body {
 
 
 .skillsCard {
-    margin-top: 10px;
+    margin-top: 20px;
     border: 3px solid #364959;
     box-shadow: 0 14px 60px 0 #33A1FD;
     background-color: #55728b;
     width: 600px;
-    height: 500px;
+    height: 550px;
     padding: 20px;
+    position: relative;
+}
+
+.page1 {
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
     flex-wrap: wrap;
+}
 
+.page2 {
+    display: none;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .skillsCard h2{
     width: 100%;
     text-align: center;
     color: #33a1fd;
-    font-size: 28px;
+    font-size: 38px;
 }
 
 .skillContainer {
     width: 200px;
+    height: 20px;
     background-color: #ddd;
     border-radius: 20px;
     display: inline-block;
@@ -143,9 +209,21 @@ body {
 }
 
 .skillsCard article{
+    width: 50%;
     display: flex;
     align-items: center;
-    margin: 10px 0;
+}
+
+.skillsCard h3 {
+    width: 30%;
+    margin-top: 10px;
+    font-size: 24px;
+    color: #33A1FD;
+    text-align: center;
+}
+
+.skillsCard p {
+    padding-left: 50px;
 }
 
 [title~="HTML5"] {
@@ -171,53 +249,101 @@ body {
 
 .skills {
     text-align: right;
-    padding: 1px;
     color: white;
 }
 
 #html {
     width: 90%;
+    height: 100%;
     background-color: #33a1fd;
     border-radius: 20px;
 }
 
 #css {
     width: 50%;
+    height: 100%;
     background-color: #33a1fd;
     border-radius: 20px;
 }
 #git {
     width: 60%;
+    height: 100%;
     background-color: #33a1fd;
     border-radius: 20px;
 }
 
 #JS {
     width: 30%;
+    height: 100%;
     background-color: #33a1fd;
     border-radius: 20px;
 }
 
+.dots {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: grey;
+    transition: 1s;
+}
+
+#dot1 {
+    position: absolute;
+    bottom: 10px;
+    left: 250px;
+    background-color: darkslategrey;
+}
+
+#dot2 {
+    position: absolute;
+    bottom: 10px;
+    left: 280px;
+}
+
+
 .projects {
     width: 100%;
-    height: 600px;
     margin: 200px 0;
     text-align: center;
-    background-color: #5D7C98;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .projectsBox {
     width: 800px;
-    height: 400px;
+    height: 500px;
     border: #00173D solid 2px;
-    display: inline-block;
-
+    box-shadow: 0 14px 60px 0 #33A1FD;
+    margin: 0 auto;
 }
 
-.projectsBox svg {
+.projectTitle {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #33A1FD;
+    font-size: 24px;
+}
+
+.projectTitle svg {
+    background-color: #33a1fd;
+    font-size: 44px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    cursor: pointer;
+}
+
+.pause {
+    color: red;
+    display: none;
+}
+
+.play {
+    color: #16f028;
+}
+
+
+.projectsBox .middleSection svg {
     font-size: 48px;
     margin: 20px;
     color: #33A1FD;
@@ -226,16 +352,9 @@ body {
 .middleSection{
     width: 100%;
     height: 300px;
+    background-color: #55728b;
 }
 
-.projectsBox h2{
-    text-align: center;
-    width: 100%;
-    height: 50px;
-    padding: 5px;
-    background-color: #33A1FD;
-    font-size: 28px;
-}
 
 .projectsBox p {
     padding: 20px;
@@ -257,17 +376,44 @@ body {
 
 .bottomSection{
     width: 100%;
-    height: 47px;
+    height: 147px;
     background-color: #33A1FD;
-    text-align: left;
 }
 
-.bottomSection button {
+.bottomButton {
     height: 47px;
     width: 150px;
+    margin: 10px;
+    font-size: 16px;
+    cursor:pointer;
+    border: 3px double whitesmoke;
+    background-color: #85B4FF;
+    transition: 0.6s ease-out;
 }
 
+
+.bottomSection button:hover{
+    background-color: #264DE4;
+    color: whitesmoke;
+}
+
+.bottomButtonOn {
+    height: 47px;
+    width: 150px;
+    margin: 10px;
+    font-size: 16px;
+    cursor:pointer;
+    border: 3px double whitesmoke;
+    background-color: #264DE4;
+    color: whitesmoke;
+}
+
+
 #project2{
+    display: none;
+}
+
+#project3{
     display: none;
 }
 
@@ -286,4 +432,65 @@ body {
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
+}
+
+.contact {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 0 14px 160px 0 #33A1FD;
+    background-color: #55728b;
+    text-align: center;    
+    background-image: url(./img/christian-wiediger-WkfDrhxDMC8-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contactMe {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: 60px;
+    padding: 10px 0 20px;
+    width: 100%;
+    color: whitesmoke;
+}
+
+.contact p {
+    font-size: 26px;
+    color: whitesmoke;
+}
+
+.contact svg {
+    color: #33A1FD;
+    border: 2px solid #33A1FD;
+    padding: 10px;
+    font-size: 60px;
+    border-radius: 100%;
+}
+
+
+@media only screen and (max-width: 820px) {
+    .projectsBox {
+        width: 400px;
+        height: 700px;
+    }
+
+    .projectsBox img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .middleSection {
+        height: 500px;
+    }
+
+    .bottomSection {
+        height: 145px;
+    }
 }
