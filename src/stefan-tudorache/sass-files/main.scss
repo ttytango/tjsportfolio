@@ -1,13 +1,16 @@
 @import "utilities";
 @import "variables";
 @import "mixin";
+@import "projects_grid";
 
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  // box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
+
+// Main Header
 
 header {
   height: 100vh;
@@ -43,22 +46,19 @@ header {
       & ul {
         margin: 26px 0;
 
-        & li {
-          list-style-type: none;
-          padding: 1.5rem 2rem;
-          text-decoration: none;
-          font-size: 20px;
-          border: 1px solid transparent;
-          border-radius: 10px;
-          margin: 10px 10px;
-          transition: 0.3s ease-in;
+        & a {
+          @include nav-links;
 
           &:hover {
-            border-color: $light-color;
-            background: $dark-color;
-            color: $primary-color;
-            cursor: pointer;
+            @include nav-links-hover;
           }
+        }
+
+        &:first-child {
+          margin-right: 50px;
+        }
+        &:nth-child(2) {
+          margin-right: -70px;
         }
       }
     }
@@ -70,8 +70,163 @@ header {
     margin-left: 80px;
     padding-top: 20px;
   }
+
+  & .header-content {
+    position: absolute;
+    left: 50px;
+    bottom: 150px;
+
+    & article {
+      width: 400px;
+      margin-left: 100px;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+  }
 }
 
-a {
-  color: $light-color;
+// Inner Header and About Page
+
+#navigation-about {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: url("../img/pexels-photo.jpg") no-repeat 20% 40% / cover;
+  height: 6rem;
+  transition: 0.5s;
+
+  & nav ul {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+
+    & a {
+      @include nav-links;
+
+      &:hover {
+        @include nav-links-hover;
+      }
+    }
+  }
+
+  & .logo-about {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+  }
+}
+
+.about {
+  margin-top: 120px;
+  font-size: 1.5rem;
+
+  &-page {
+    background: url("../img/pexels-pixabay-268533.jpg") no-repeat center 0% /
+      cover;
+  }
+
+  &-content {
+    & .flex-box {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+
+  &-photo {
+    width: 300px;
+    height: 300px;
+    background: url("../img/stefan1.jpg") no-repeat center 7% / cover;
+  }
+
+  &-text {
+    width: 800px;
+    height: 300px;
+    margin-left: 30px;
+    background-color: #eee;
+    border-left: 2px solid $primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    & p {
+      font-size: 1.1rem;
+      margin: 0 15px;
+    }
+
+    & a {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+      border: 2px solid $dark-color;
+      border-radius: 20px;
+      background-color: $primary-color;
+      color: $dark-color;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease-in;
+
+      &:hover {
+        color: $primary-color;
+        background-color: $dark-color;
+        border: 2px solid $primary-color;
+      }
+    }
+  }
+}
+
+.tools {
+  width: 90%;
+  margin: 115px 150px 60px 150px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 2rem;
+}
+
+// Projects Page
+
+.title {
+  margin-top: 110px;
+  font-size: 1.5rem;
+}
+
+// Footer
+
+.footer {
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+  }
+
+  &-social {
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+
+    & a span {
+      color: $light-color;
+      margin-right: 1rem;
+      border: 2px $light-color solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      padding: 0.5rem;
+      text-align: center;
+      transition: 0.5s ease;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $dark-color;
+      }
+    }
+  }
 }
