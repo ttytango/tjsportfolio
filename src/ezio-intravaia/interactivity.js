@@ -27,7 +27,7 @@ let i;
 navbarButton.onclick = () => {
     if (navBar.style.display == 'none') {
         navBar.style.display = 'block'
-        navbarButton.style.right= '350px'
+        navbarButton.style.right= '320px'
     } else {
         navBar.style.display= 'none'
         navbarButton.style.right= '20px'
@@ -87,7 +87,7 @@ for (i = 0; i < playClass.length; i++) {
         playClass[i].style.display= 'none'
         }
         for (i = 0; i < pauseClass.length; i++) {   
-        pauseClass[i].style.display= 'block'    
+        pauseClass[i].style.display= 'inline-block'    
         }}}
     }
     
@@ -96,7 +96,7 @@ for (i = 0; i < playClass.length; i++) {
         if (play == false) {
         play = true
         for (i = 0; i < playClass.length; i++) {   
-        playClass[i].style.display= 'block'
+        playClass[i].style.display= 'inline-block'
         }
         for (i = 0; i < pauseClass.length; i++) {   
         pauseClass[i].style.display= 'none'    
