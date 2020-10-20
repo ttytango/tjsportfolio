@@ -1,3 +1,4 @@
+const navLinks = document.querySelectorAll('nav a')
 const button = document.querySelector('button')
 const aboutCard = document.querySelector('.aboutCard')
 const aboutCardExtended = document.querySelector('.aboutCardExtended')
@@ -17,10 +18,33 @@ const dot1 = document.querySelector('#dot1')
 const dot2 = document.querySelector('#dot2')
 const page1 = document.querySelector('.page1')
 const page2 = document.querySelector('.page2')
+// const skillsParagraph = document.querySelectorAll('.skillsCard p')
+const heroImageH1 = document.querySelector('.hero-image h1')
+const secondHalf = document.querySelector('.secondHalf')
+const firstHalf = document.querySelector('.firstHalf')
+const fullImage = document.querySelector('.fullImage')
+
+
+
 
 
 let play = true
 let i;
+
+
+const openingSite = () => {
+    myVar = setTimeout(openingSite1, 3000);
+}
+
+const openingSite1 = () => {
+    heroImageH1.style.visibility ='visible'
+    firstHalf.style.display = 'none'
+    secondHalf.style.display = 'none'
+    fullImage.style.display = 'block'
+}
+
+
+openingSite()
 
 
 
@@ -33,6 +57,15 @@ navbarButton.onclick = () => {
         navbarButton.style.right= '20px'
     }
 }
+
+for (i = 0; i < navLinks.length; i++) {   
+    navLinks[i].onclick = () => {
+        navBar.style.display= 'none'
+        navbarButton.style.right= '20px'
+    }
+
+}
+
 
 button.onclick = () => {
     aboutCard.style.display='none'
@@ -69,6 +102,7 @@ dot1.onclick = () => {
     dot1.style.backgroundColor = 'darkslategrey';
     dot2.style.backgroundColor = 'grey';
 }
+
 
 dot2.onclick = () => {
     page1.style.display = 'none'
@@ -197,5 +231,42 @@ const project2Slide = () => {
 }
 
 
+var scroll = window.requestAnimationFrame ||
+function(callback){ window.setTimeout(callback, 1000/60)};
+var elementsToShow = document.querySelectorAll('.showOn'); 
+
+function loop() {
+
+Array.prototype.forEach.call(elementsToShow, function(element){
+if (isElementInViewport(element)) {
+element.classList.add('is-visible');
+} else {
+element.classList.remove('is-visible');
+}
+});
+
+scroll(loop);
+}
+
+loop();
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+// special bonus for those using jQuery
+if (typeof jQuery === "function" && el instanceof jQuery) {
+el = el[0];
+}
+var rect = el.getBoundingClientRect();
+return (
+(rect.top <= 0
+&& rect.bottom >= 0)
+||
+(rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+||
+(rect.top >= 0 &&
+rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+);
+}
 
 timer()
