@@ -1,0 +1,17 @@
+@mixin nav-links {
+  list-style-type: none;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin: 10px 10px;
+  transition: 0.3s ease-in;
+}
+
+@mixin nav-links-hover {
+  border-color: $light-color;
+  background: $dark-color;
+  color: $primary-color;
+  cursor: pointer;
+}
