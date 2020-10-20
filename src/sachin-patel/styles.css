@@ -7,48 +7,102 @@
 }
 
 html {
+  width: 100%;
   font-size: 62.5%;
 }
 
 body {
+  width: 100%;
   background-image: url(images/BG57.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-header {
-  margin: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-header .navbar {
-  width: 30%;
-  height: 40px;
+h1 {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  font-size: 3.5rem;
+  color: whitesmoke;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+h1:hover {
+  color: #38b6ff;
+  text-shadow: 1px 1px 2px #38b6ff;
+  cursor: pointer;
+}
+
+header {
+  width: 50%;
+  height: 100%;
+  margin: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .logo {
+  width: 275px;
+  height: 275px;
+  margin: 35px;
+  -webkit-box-shadow: 0 20px 60px rgba(56, 182, 255, 0.3);
+          box-shadow: 0 20px 60px rgba(56, 182, 255, 0.3);
+  border-radius: 16%;
+  border-bottom: 2px solid #38b6ff;
+  border-top: 4px solid whitesmoke;
+  border-left: 2px solid #38b6ff;
+  border-right: 4px solid whitesmoke;
+}
+
+header .navbar {
+  width: 18%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .navbar a {
   text-decoration: none;
-  font-family: "Bubblegum Sans", cursive;
-  font-size: 3rem;
+  padding: 50px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 3.1rem;
   color: whitesmoke;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+header .navbar a:hover {
+  color: #38b6ff;
+  text-shadow: 1px 1px 2px #38b6ff;
 }
 /*# sourceMappingURL=styles.css.map */
