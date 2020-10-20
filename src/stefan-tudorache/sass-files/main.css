@@ -74,11 +74,6 @@ a {
   color: #333;
 }
 
-.project-page {
-  background: url("../img/pexels-vlad-bagacian-3987066.jpg") no-repeat center 10%/cover;
-  height: 100vh;
-}
-
 .items {
   display: -ms-grid;
   display: grid;
@@ -94,8 +89,8 @@ a {
   position: relative;
   background: #ffbc00;
   overflow: hidden;
-  height: 99%;
-  width: 99%;
+  height: 100%;
+  width: 100%;
 }
 
 .item::after {
@@ -177,8 +172,8 @@ a {
   transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), -webkit-transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
   transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
   transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 500ms cubic-bezier(0.2, 1, 0.3, 1), -webkit-transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms;
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
 }
 
 .item-text-wrap {
@@ -195,8 +190,10 @@ a {
   margin: 4px;
 }
 
-.item-text-category {
+.item-link {
   text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
   font-size: 1.2rem;
   opacity: 0.7;
   margin: 0;
@@ -442,6 +439,11 @@ header .header-content article {
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
   grid-gap: 2rem;
+}
+
+.project-page {
+  background: url("../img/pexels-vlad-bagacian-3987066.jpg") no-repeat center 10%/cover;
+  height: 100vh;
 }
 
 .title {

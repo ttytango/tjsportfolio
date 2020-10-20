@@ -1,8 +1,4 @@
-.project-page {
-  background: url("../img/pexels-vlad-bagacian-3987066.jpg") no-repeat center
-    10% / cover;
-  height: 100vh;
-}
+@import "variables";
 
 .items {
   display: grid;
@@ -16,8 +12,8 @@
   position: relative;
   background: $primary-color;
   overflow: hidden;
-  height: 99%;
-  width: 99%;
+  height: 100%;
+  width: 100%;
 
   &::after {
     content: "";
@@ -86,7 +82,7 @@
     transform: translateY(-20%);
     transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1),
       transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
-    transition-delay: 500ms;
+    transition-delay: 400ms;
   }
 
   &-text-wrap {
@@ -102,8 +98,10 @@
     margin: 4px;
   }
 
-  &-text-category {
+  &-link {
     text-transform: uppercase;
+    text-decoration: none;
+    color: $dark-color;
     font-size: 1.2rem;
     opacity: 0.7;
     margin: 0;
