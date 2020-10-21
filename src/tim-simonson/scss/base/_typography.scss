@@ -1,0 +1,78 @@
+html {
+    font-family: $font-family;
+}
+
+header {
+    nav {
+        font-size: 1rem;
+        letter-spacing: 0rem;
+        a {
+            // @include respond(large) {
+            //     font-size: 2.4rem; //1 rem = 9px, 9/16 = 50%
+            //     letter-spacing: 1.6rem;
+            // }
+            // @include respond(medium) {
+            //     font-size: 1.6rem; //1 rem = 9px, 9/16 = 50%
+            //     // letter-spacing: 0.6rem;
+            // }
+            // @include respond(small) {
+            //     font-size: 1.2rem; //1 rem = 8px, 8/16 = 50%
+            //     letter-spacing: 0.2rem;
+            // }
+        }
+    }
+    @include respond(large) {
+        font-size: 2rem; //1 rem = 9px, 9/16 = 50%
+        letter-spacing: 1.4rem;
+    }
+    @include respond(medium) {
+        font-size: 1.6rem; //1 rem = 9px, 9/16 = 50%
+        // letter-spacing: 0.6rem;
+    }
+    @include respond(small) {
+        font-size: 1.2rem; //1 rem = 8px, 8/16 = 50%
+        letter-spacing: 0.2rem;
+    }
+}
+
+.subheading {
+    h3 {
+        font-size: 0.8rem;
+        letter-spacing: 0.4rem;
+        margin: 0 auto;
+    }
+    // @include respond(large) {
+    //     font-size: 100%; //1 rem = 9px, 9/16 = 50%
+    //     letter-spacing: 3rem;
+    // }
+    // @include respond(medium) {
+    //     font-size: 62.5%; //1 rem = 9px, 9/16 = 50%
+    //     letter-spacing: 1.6rem;
+    // }
+    // @include respond(small) {
+    //     font-size: 40%; //1 rem = 8px, 8/16 = 50%
+    //     letter-spacing: 0.4rem;
+    // }
+}
+
+.content {
+    font-size: 2rem;
+    color: $black;
+    h2 {
+        font-size: 3rem;
+        color: $black;
+    }
+    p {
+        font-size: 1.6rem;
+        color: $black;
+    }
+    ul {
+        list-style-position: inside;
+        padding: 2px 40px;
+        font-size: 1.6rem;
+        color: $black;
+        li {
+            line-height: 1.6rem;
+        }
+    }
+}
