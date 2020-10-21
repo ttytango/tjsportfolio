@@ -1,6 +1,5 @@
 @import "utilities";
-@import "variables";
-@import "mixin";
+@import "mixin_variables";
 @import "projects_grid";
 
 * {
@@ -14,6 +13,7 @@
 
 header {
   height: 100vh;
+  width: 100%;
   position: relative;
   background: rgba(0, 0, 0, 0.2);
   color: $light-color;
@@ -63,12 +63,11 @@ header {
 
   & .header-content {
     position: absolute;
-    left: 50px;
+    left: 150px;
     bottom: 150px;
 
     & article {
-      width: 400px;
-      margin-left: 100px;
+      width: 40%;
       text-align: center;
       font-size: 1.5rem;
       line-height: 3rem;
@@ -116,11 +115,7 @@ header {
 .about {
   margin-top: 25px;
   font-size: 1.5rem;
-
-  &-page {
-    // background: url("../img/pexels-pixabay-268533.jpg") no-repeat center 0% /
-    //   cover;
-  }
+  text-align: center;
 
   &-content {
     & .flex-box {
@@ -378,3 +373,5 @@ header {
     }
   }
 }
+
+@import "media_queries";
