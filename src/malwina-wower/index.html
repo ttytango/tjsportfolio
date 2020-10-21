@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="src/styles.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,28 +15,37 @@
     <header>
       <h1>Malwina Wower</h1>  
         <nav class="main-nav">
-          <ul>
+          <button class="hamburger" id="hamburger">
+            <span class="fas fa-bars"></span> 
+          </button>
+          <ul class="myLinks" id ="myLinks">
             <li><a href="#myportfolio">Portfolio</a></li>
             <li><a href="#myskills">Skills</a></li>
             <li><a href="#myrecentwork">Recent Work</a></li>
             <li><a href="#contact-section">Contact</a></li>
           </ul>
         </nav>
+
     </header>
 
     <section class="about">
       <section class="aboutme">
-      <div>
-        <h3>Hi</h3>
-        <p>I'm <span>Malwina</span>. I love programming, travelling and learning new things.</p>
-        <p>I started _nology course so I could learn how to create beautiful websites. </p>
-        <p>I'm super pumped about it! </p>
-      </div>
-      <div>
-        <img src="src/img/picture-of-malwina.jpg" class="profile-pic" alt="avatar">
-      </div>
+        <div class="column">
+          <div class="left-column">
+            <h2>Hi</h2>
+            <p>I'm <span>Malwina</span>. I love programming, travelling and learning new things.</p>
+            <p>I started _nology course so I could learn how to create beautiful websites. </p>
+            <p><a href="#contact-section">Lets chat!</a></p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="right-column">
+            <img src="src/img/picture-of-malwina.jpg" class="profile-pic" alt="avatar">
+          </div>
+        </div>
+      </section>
     </section>
-  </section>
 
 <main>
   <section>
@@ -46,76 +56,76 @@
       eveniet! Atque, suscipit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium labore
       perferendis minus incidunt doloribus, eligendi repudiandae earum dignissimos est neque deserunt consequatur.
       Repudiandae autem maxime magnam eveniet! Atque, suscipit amet.</p>
-      <p>
     </div>
 
-    <div class="container">
-      <div class="skills">
-        <div class="row">
-          <div class="col-2"><i class="fab fa-html5"></i></div>
-          <div class="col-2"><i class="fab fa-css3-alt"></i></div>
-          <div class="col-2"><i class="fab fa-js-square"></i></div>
-          <div class="col-2"><i class="fab fa-react"></i></div>
-          <div class="col-2"><i class="fab fa-bootstrap"></i></div>
-          <div class="col-2"><i class="fab fa-github-square"></i></div>
+    <div class="icons-wrapper">
+        <div class="wrapper">
+          <div class="skills skill1"><i class="fab fa-html5"></i><span>HTML 5</span></div>
+          <div class="skills skill2"><i class="fab fa-css3-alt"></i>
+          <span>CSS</span></div>
+          <div class="skills skill3"><i class="fab fa-js-square"></i>
+          <span>JS</span></div>
+          <div class="skills skill4"><i class="fab fa-react"></i>
+          <span>REACT</span>
+          </div>
+          <div class="skills skill5"><i class="fab fa-bootstrap"></i>
+          <span>BOOTSRTAP</span></div>
+          <div class="skills skill6"><i class="fab fa-github-square"></i>
+          <span>GITHUB</span></div>
         </div>
-      </div>
-      <aside>
-        <div class="row">
-          <div class="col-2">HTML 5</div>
-          <div class="col-2">CSS</div>
-          <div class="col-2">JS</div>
-          <div class="col-2">REACT</div>
-          <div class="col-2">BOOTSRTAP</div>
-          <div class="col-2">GITHUB</div>
-        </div>
-      </aside>
-    </div>
+
+
   </section>
 
 
-  <article id="myrecentwork">
+  <section id="myrecentwork">
     <h3>My recent work</h3>
     <p> Nothing here yet but I hope soon I will be able to share my projects. :) Can't wait to create things!</p>
+    
+        <section class="projects">
+          <section class="my-recent-work">
 
-    <section class="projects">
-      <section class="my-recent-work">
-        <div class="recent-work">
-          <span class=""></span>
-          <h4>project #1</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quo ipsa officiis</p>
-          <span class="fas fa-code"></span>
-        </div>
-        <div class="recent-work">
-          <span class=""></span>
-          <h4>project #2</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quo ipsa officiis</p>
-          <span class="fas fa-code"></span>
-        </div>
-        <div class="recent-work">
-          <span class=""></span>
-          <h4>project #3</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quo ipsa officiis</p>
-          <span class="fas fa-code"></span>
-        </div>
-      </section>
-    </section>
-  </article>
+            <div class="recent-work" data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-easing="ease-in-out">
+              <span class=""></span>
+              <h4>project #1</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quo ipsa officiis</p>
+              <span class="fas fa-code"></span>
+            </div>
+
+            <div class="recent-work" data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-easing="ease-in-out">
+              <span class=""></span>
+              <h4>project #2</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quo ipsa officiis</p>
+              <span class="fas fa-code"></span>
+            </div>
+
+            <div class="recent-work" data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-easing="ease-in-out">
+              <span class=""></span>
+              <h4>project #3</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quo ipsa officiis</p>
+              <span class="fas fa-code"></span>
+            </div>
+
+          </section>
+        </section>
+  <section id="myportfolio">
+    <div class="portfolio">
+      <h3>Portfolio</h3>
+      <p> 
+        doloribus, eligendi repudiandae earum dignissimos est neque deserunt consequatur. Repudiandae autem maxime magnam
+        eveniet! Atque, suscipit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium labore
+        perferendis minus incidunt doloribus, eligendi repudiandae earum dignissimos est neque deserunt consequatur.
+        Repudiandae autem maxime magnam eveniet! Atque, suscipit amet.</p>
+      <p>
+    </div>
+  </section>
 </main>
-
-<section id="myportfolio">
-  <div class="portfolio">
-    <h3>Portfolio</h3>
-  <p> 
-    doloribus, eligendi repudiandae earum dignissimos est neque deserunt consequatur. Repudiandae autem maxime magnam
-    eveniet! Atque, suscipit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium labore
-    perferendis minus incidunt doloribus, eligendi repudiandae earum dignissimos est neque deserunt consequatur.
-    Repudiandae autem maxime magnam eveniet! Atque, suscipit amet.</p>
-  <p>
-</div>
-</section>
-
-
 
 
 <section id="contact-section">
@@ -123,37 +133,33 @@
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dignissimos minus voluptatem.</p>
   <ul>
     <a href="#" alt="github">
-      <li class="contact-github"><i class="fab fa-github-square"></i></li>
+      <li class="contact-github"><span class="fab fa-github-square"></span></li>
     </a>
     <a href="#" alt="linkedin">
-      <li class="contact-linkedIn"><i class="fab fa-linkedin"></i></li>
+      <li class="contact-linkedIn"><span class="fab fa-linkedin"></span></li>
     </a>
     <a href="#" alt="email">
-      <li class="contact-email"><i class="fas fa-envelope-square"></i></li>
+      <li class="contact-email"><span class="fas fa-envelope-square"></span></li>
     </a>
 
   </ul>
 
-  <ul class="images">
-    <li><img src="src/img/working_late.svg" alt="some image"></li>
-  </ul>
+  <span class="girl-with-a-laptop">
+    <img src="src/img/working_late.svg" alt="some image">
+  </span>
 </section>
 
 
 <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-11">
-        © Copyrights Malwina Wower. All Rights Reserved
-      </div>
-      <div class="col-1">
-        <div id="time"></div>
-      </div>
-    </div>
-  </div>
-</footer>
+  <p>© Copyrights Malwina Wower. All Rights Reserved</p>
+  </footer>
 
-  </body>
+  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="https://kit.fontawesome.com/cd8bdb49fe.js" crossorigin="anonymous"></script>
   <script src="src/script.js"></script>
+  </body>
 </html>
