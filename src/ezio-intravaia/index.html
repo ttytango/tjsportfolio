@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/208e14b18c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>My portfolio</title>
   </head>
@@ -33,14 +34,13 @@
         <h1>Hello! I'm Ezio <br>
         The developer who built this webpage
         </h1>
-
       </section>
     </header>
     <main>
       <section id="about" class="about">
         <section class="aboutCard">
           <div class="backgroundColorCard">
-            <img src="./img/0.jpg" alt="photo of myself">
+            <img data-aos="flip-up" src="./img/0.jpg" alt="photo of myself">
           </div>
           <h2>Ezio Intravaia</h2>
             <p>Trainee Junior Software Developer <br>
@@ -72,15 +72,15 @@
         <section class="skillsCard showOn ">
           <h2>What I can do</h2>
 
-          <section class="page1 fade moveRight rotate">
+          <section class="page1 rotate fade">
             <article>
               <i title="HTML5" class="fab fa-html5"></i>
               <div class="skillContainer">
                 <div id="html" class="skills">90%</div>
               </div>
             </article>
-            <h3>HTML</h3>
-            <p>Able to write clean and samantic code and create well structured and easily accesable website</p>
+            <h3 data-aos="flip-up" >HTML</h3>
+            <p data-aos="fade-right">Able to write clean and samantic code and create well structured and easily accesable website</p>
         
 
             <article>
@@ -90,7 +90,7 @@
               </div>
             </article>
             <h3>CSS & SCSS</h3>
-            <p>Able to make awesome and responsive website for any type of device</p>
+            <p data-aos="fade-right">Able to make awesome and responsive website for any type of device</p>
 
             <article>
               <i title="Git" class="fab fa-git-alt"></i>
@@ -99,7 +99,7 @@
               </div>
             </article>
             <h3>Git & Github</h3>
-            <p>Able to use git in order to track changes in source code during software development </p>
+            <p data-aos="fade-right">Able to use git in order to track changes in source code during software development </p>
 
             <article>
               <i title="JS" class="fab fa-js-square"></i>
@@ -108,7 +108,7 @@
             </div>
             </article>
             <h3>JavaScript</h3>
-            <p>Able to do basic DOM interaction in order to make interactive website and browser games.</p>
+            <p data-aos="fade-right">Able to do basic DOM interaction in order to make interactive website and browser games.</p>
           </section>
           <section class="page2">
             <h3>Learning in progress..</h3>
@@ -193,5 +193,9 @@
     </footer>
 
     <script src="interactivity.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({duration: 2000});
+    </script>
   </body>
 </html>

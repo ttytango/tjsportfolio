@@ -121,7 +121,7 @@ for (i = 0; i < playClass.length; i++) {
         playClass[i].style.display= 'none'
         }
         for (i = 0; i < pauseClass.length; i++) {   
-        pauseClass[i].style.display= 'inline-block'    
+        pauseClass[i].style.display= 'contents'    
         }}}
     }
     
@@ -130,7 +130,7 @@ for (i = 0; i < playClass.length; i++) {
         if (play == false) {
         play = true
         for (i = 0; i < playClass.length; i++) {   
-        playClass[i].style.display= 'inline-block'
+        playClass[i].style.display= 'contents'
         }
         for (i = 0; i < pauseClass.length; i++) {   
         pauseClass[i].style.display= 'none'    
@@ -230,43 +230,5 @@ const project2Slide = () => {
     }
 }
 
-
-var scroll = window.requestAnimationFrame ||
-function(callback){ window.setTimeout(callback, 1000/60)};
-var elementsToShow = document.querySelectorAll('.showOn'); 
-
-function loop() {
-
-Array.prototype.forEach.call(elementsToShow, function(element){
-if (isElementInViewport(element)) {
-element.classList.add('is-visible');
-} else {
-element.classList.remove('is-visible');
-}
-});
-
-scroll(loop);
-}
-
-loop();
-
-// Helper function from: http://stackoverflow.com/a/7557433/274826
-function isElementInViewport(el) {
-// special bonus for those using jQuery
-if (typeof jQuery === "function" && el instanceof jQuery) {
-el = el[0];
-}
-var rect = el.getBoundingClientRect();
-return (
-(rect.top <= 0
-&& rect.bottom >= 0)
-||
-(rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-||
-(rect.top >= 0 &&
-rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-);
-}
 
 timer()
