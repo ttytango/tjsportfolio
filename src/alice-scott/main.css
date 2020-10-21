@@ -1,0 +1,294 @@
+@-webkit-keyframes growanimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes growanimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-image: url(img/christin-hume-mfB1B1s4sMc-unsplash.jpg);
+  background-color: #eeeeee;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 96% 96%, 91% 100%, 85% 96%, 79% 100%, 72% 92%, 67% 97%, 62% 95%, 60% 100%, 53% 93%, 47% 98%, 42% 98%, 36% 100%, 31% 96%, 26% 100%, 19% 96%, 16% 100%, 11% 96%, 6% 99%, 3% 98%, 0% 100%);
+          clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 96% 96%, 91% 100%, 85% 96%, 79% 100%, 72% 92%, 67% 97%, 62% 95%, 60% 100%, 53% 93%, 47% 98%, 42% 98%, 36% 100%, 31% 96%, 26% 100%, 19% 96%, 16% 100%, 11% 96%, 6% 99%, 3% 98%, 0% 100%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[20];
+      grid-template-columns: repeat(20, 1fr);
+  margin-bottom: 50px;
+}
+
+header .banner {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 18;
+  grid-column: 2 / 20;
+  background-color: rgba(20, 20, 20, 0.7);
+  border-radius: 30px;
+  height: 80vh;
+  width: 90vw;
+  border: 1px solid rgba(248, 248, 246, 0.863);
+  margin: 20px auto;
+  max-width: 580px;
+  -webkit-box-shadow: 2px 2px 10px whitesmoke;
+          box-shadow: 2px 2px 10px whitesmoke;
+}
+
+header .banner h1 {
+  color: rgba(248, 248, 246, 0.863);
+  font-size: 4rem;
+  text-align: center;
+  position: relative;
+  top: 10%;
+  margin: auto;
+  text-shadow: 2px 2px 5px black;
+  /* Top and bottom borders over name */
+}
+
+header .banner p {
+  color: rgba(248, 248, 246, 0.863);
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  top: 10%;
+}
+
+header .banner div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 40vw;
+  margin: auto;
+  color: rgba(248, 248, 246, 0.863);
+  position: relative;
+  font-size: 1.5rem;
+  top: 30%;
+}
+
+header .banner .arrow {
+  color: rgba(248, 248, 246, 0.863);
+  position: absolute;
+  font-size: 50px;
+  bottom: 18%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#about {
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: min-content (1fr)[5];
+      grid-template-rows: -webkit-min-content repeat(5, 1fr);
+      grid-template-rows: min-content repeat(5, 1fr);
+}
+
+#about .my-experience {
+  background-color: bisque;
+  width: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1 / 7;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#about .future-goals {
+  background-color: yellowgreen;
+  width: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1 / 7;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+}
+
+#projects {
+  margin: 50px 0;
+  background-color: #eeeeee;
+  padding: 40px 0;
+}
+
+#projects .project-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr (4fr)[6] 1fr;
+      grid-template-columns: 1fr repeat(6, 4fr) 1fr;
+  -ms-grid-rows: min-content (2fr)[6];
+      grid-template-rows: -webkit-min-content repeat(6, 2fr);
+      grid-template-rows: min-content repeat(6, 2fr);
+  gap: 10px;
+}
+
+#projects .project-grid h2 {
+  grid-column: 2 / -1;
+}
+
+#projects .project-grid article {
+  opacity: 0.85;
+  cursor: pointer;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+#projects .project-grid article:hover {
+  opacity: 100%;
+}
+
+#projects .project-grid .project-1 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
+}
+
+#projects .project-grid .project-2 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
+}
+
+#projects .project-grid .project-3 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
+}
+
+#projects .project-grid .project-4 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
+}
+
+#projects .project-grid .project-5 {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6 / 7;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
+}
+
+#projects .project-grid .project-6 {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  grid-row: 7 / 8;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
+}
+
+#projects .project-grid img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 10px #141414;
+          box-shadow: 3px 3px 10px #141414;
+}
+
+#contact {
+  height: 100vh;
+}
+
+#contact .contact-info {
+  height: 90vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+#contact .contact-info .left-contact {
+  width: 90%;
+  height: 30%;
+  padding: 20px;
+}
+
+#contact .contact-info .left-contact div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 40vw;
+  margin: auto;
+  color: rgba(248, 248, 246, 0.863);
+  position: relative;
+  font-size: 1.5rem;
+  top: 30%;
+}
+
+#contact .contact-info form {
+  background-color: #eeeeee;
+  width: 90%;
+  height: 70%;
+  color: #141414;
+}
+/*# sourceMappingURL=main.css.map */
