@@ -1,4 +1,4 @@
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 500px) {
   @import "mixin_variables";
 
   header {
@@ -124,6 +124,27 @@
       display: flex;
       justify-content: space-evenly;
     }
+  }
+
+  // Project Page
+  .project-page {
+    background: $light-color;
+
+    & .items {
+      display: block;
+      background-color: $dark-color;
+      padding: 10px 0;
+
+      & .item {
+        width: 90%;
+        margin: 10px auto;
+      }
+    }
+  }
+
+  // Contact Page
+
+  .contact-page {
   }
 
   .footer {
