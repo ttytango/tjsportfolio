@@ -152,7 +152,7 @@ article .section-1 {
       grid-template-rows: 1fr 2fr;
   gap: 0 70px;
   margin: 30px 70px 30px 70px;
-      grid-template-areas: "title-box title-box title-box" "box-1 box-2 box-3";
+      grid-template-areas: "title-box title-box title-box" "box-1 box-2 box-3";
 }
 
 article div > h3 {
@@ -218,7 +218,7 @@ article .sect-box-3 {
   /*margin-top: 150px;*/
   /*justify-items: end;*/
   /*justify-items: start;*/
-      grid-template-areas: "box-1 box-2 box-3" "box-4 box-5 box-6";
+      grid-template-areas: "box-1 box-2 box-3" "box-4 box-5 box-6";
 }
 
 .section-2 div {
