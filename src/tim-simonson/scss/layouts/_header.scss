@@ -1,0 +1,80 @@
+header {
+    @include clearfix;
+    background-color: $color-lime;
+    background-image: linear-gradient(to top right, rgba(12, 12, 12, 0.57) 75%, rgba(12, 12, 112, 0.3) 80%, rgba(131, 143, 134, 0.5) 90%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.6' stroke-opacity='0.36' %3E%3Ccircle fill='%23c8ff52' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23bcf152' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23b0e352' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23a5d551' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%2399c751' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%238db951' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2381ab51' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23769d51' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%236a8f51' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%235e8050' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23527250' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23476450' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%233b5650' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%232f4850' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23233a50' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23182c4f' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%230c1e4f' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%2300104f' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 200px;
+    color: $font-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        // line-height: 100px;
+        width: 36%;
+        margin: 0;
+        padding: 40px;
+        font-size: 1.6rem;
+        letter-spacing: 0.4rem;
+        @include respond(large) {
+            width: 100%;
+            font-size: 3rem;
+        }
+        @include respond(medium) {
+            width: 40%;
+        }
+        @include respond(small) {
+            width: 20%;
+        }
+    }
+    nav {
+        height: 100px;
+        width: 80%;
+        @include respond(large) {
+            height: 100px;
+            font-size: 2.4rem; //1 rem = 9px, 9/16 = 50%
+            letter-spacing: 0.6rem;
+        }
+        @include respond(medium) {
+            font-size: 1.2rem; //1 rem = 9px, 9/16 = 50%
+            // letter-spacing: 0.6rem;
+            // width: 10%;
+        }
+        @include respond(small) {
+            font-size: 1.2rem; //1 rem = 8px, 8/16 = 50%
+            letter-spacing: 0rem;
+            width: 40%;
+            margin: 0 -40px;
+        }
+        a {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            padding-right: 20px;
+            color: $font-color;
+            @include respond(small) {
+                display: flex;
+                flex-direction: row;
+                align-items: space-between;
+                justify-content: center;
+                letter-spacing: 0;
+            }
+        }
+        @include respond(small) {
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+            justify-content: center;
+        }
+        @include respond(medium) {
+            width: 70%;
+            // padding: 10px 60px;
+        }
+        @include respond(large) {
+            width: 70%;
+            padding: 10px 60px;
+        }
+    }
+}

@@ -3,7 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Alice's portfolio</title>
+    <script src="https://kit.fontawesome.com/f25651ee7a.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="main.css">
   </head>
-  <body></body>
+  <body>
+  <header>
+
+    <!-- Landing Page -->
+    <span class="navbar fas fa-bars"></span>
+    <div class="banner">
+      <h1>ALICE SCOTT</h1>
+      <p>WEB DEVELOPER</p>
+      <div>
+        <span class="fab fa-github"></span>
+        <span class="fab fa-linkedin-in"></span>
+        <span class="fab fa-instagram"></span>
+      </div>
+      <span class="arrow fas fa-arrow-down"></span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- About Me -->
+      <section id="about" class="about-me">
+        <div class="headings">
+            <h2 class="past-heading">My Experience</h2>
+            <h2 class="future-heading">Why Tech?</h2> 
+       </div> 
+       <p class="past">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+      Eveniet corrupti illo iusto sunt! Odit harum libero fugit expedita tenetur 
+       <br><br>
+      beatae dolores doloremque earum, sapiente at ipsum unde amet praesentium sed. 
+      <br><br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum unde, pariatur, libero, dolorem molestiae 
+      <br><br>
+      labore totam quo doloribus amet aut fugit id quidem omnis nam suscipit. 
+      <br><br>
+      Dolore exercitationem dolorem quasi.</p>
+    </section>
+        <!-- <p class="future">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corrupti illo iusto sunt! Odit harum libero fugit expedita tenetur beatae dolores doloremque earum, sapiente at ipsum unde amet praesentium sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eveniet vel nihil tenetur neque doloremque nemo quia fuga magni placeat esse odit nobis magnam libero eos, odio facere quae deleniti.</p> -->
+
+
+    <!-- Projects -->
+    <section id="projects">
+      <section class="project-grid">
+        <h2>PROJECTS</h2>
+        <article class="project-1"><img src="./img/log-pile.jpg" alt="placeholder"></article>
+        <article class="project-2"><img src="./img/log-pile.jpg" alt="placeholder"></article>
+        <article class="project-3"><img src="./img/log-pile.jpg" alt="placeholder"></article>
+        <article class="project-4"><img src="./img/log-pile.jpg" alt="placeholder"></article>
+        <article class="project-5"><img src="./img/log-pile.jpg" alt="placeholder"></article>
+        <article class="project-6"><img src="./img/log-pile.jpg" alt="placeholder"></article>
+      </section>
+    </section>  
+    
+    <!-- Contact -->
+    <section id="contact">
+        <section class="left-contact">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repudiandae voluptatem autem nesciunt quidem?</p>
+          <div>
+            <span class="fab fa-github"></span>
+            <span class="fab fa-linkedin-in"></span>
+            <span class="fab fa-instagram"></span>
+          </div>
+        </section>
+        <form action="https://formspree.io/f/xvovarvj" method="POST">
+          <input type="text" name="name" aria-label="name" placeholder="Name..." required>
+          <input type="email" name="email" aria-label="email" placeholder="Email..." required>
+          <textarea name="message" aria-label="message" placeholder="Message..." required></textarea>
+          <input type="submit" value="SUBMIT" class="button">
+        </form>
+    </section>
+  </main>
+
+  <footer>
+    <span class="fas fa-angle-double-up"></span>
+  </footer>
+
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+  <!-- <script>
+    AOS.init({
+      duration: 2000
+    });
+  </script> -->
+</body>
 </html>
