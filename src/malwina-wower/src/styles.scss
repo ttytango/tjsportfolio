@@ -123,7 +123,7 @@ div a {
     color: $tertiary-color;
     font-family: $secondary-font;
     font-size: 2.2rem;
-    line-height: 0.8;
+    line-height: 0.6rem;
     text-align: center;
     letter-spacing: 2px;
   }
@@ -148,31 +148,6 @@ div a {
     }
   }
 
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-
-    .left-column {
-      background-color: $secondary-color;
-      color: $tertiary-color;
-      display: inline-block;
-      box-sizing: border-box;
-      line-height: 2em;
-      height: 35vh;
-    }
-
-    .right-column {
-      background-color: $secondary-color;
-      height: 35vh;
-      text-align: left;
-      box-sizing: border-box;
-    }
-  }
-}
-
-.about {
   span {
     font-family: $secondary-font;
     font-size: 1.4em;
@@ -185,6 +160,30 @@ div a {
     border-radius: 50%;
     filter: grayscale(90%);
     margin: 40px 40px;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+    .left-column {
+      background-color: $secondary-color;
+      color: $tertiary-color;
+      display: inline-block;
+      box-sizing: border-box;
+      align-items: center;
+      line-height: 2em;
+      height: 35vh;
+    }
+
+    .right-column {
+      background-color: $secondary-color;
+      height: 35vh;
+      text-align: left;
+      box-sizing: border-box;
+    }
   }
 }
 
@@ -223,7 +222,7 @@ main {
     font-size: 1.6em;
   }
 
-  span {
+  span.icons-text {
     color: $dark-color;
     font-size: 0.3em;
     font-weight: lighter;
@@ -407,6 +406,14 @@ footer {
   color: $primary-color;
   padding: 10px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 ///*MEDIA*///
@@ -437,7 +444,7 @@ footer {
   }
   .aboutme {
     h2 {
-      padding: 5%;
+      padding: 4%;
     }
 
     img {
@@ -453,10 +460,9 @@ footer {
     .wrapper {
       grid-template-columns: repeat(3, 1fr);
 
-      span {
+      span.icons-text {
         transform: rotate(0deg);
         vertical-align: top;
-        display: inline-block;
         text-align: center;
         display: block;
       }
@@ -491,18 +497,21 @@ footer {
   .myLinks.show {
     background-color: $tertiary-color;
     opacity: 0.8;
-    position: relative;
-    display: inline-flex;
+    position: absolute;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    line-height: 10px;
+    line-height: 5px;
+    top: 45px;
+    left: 0;
   }
 
   #hamburger {
     opacity: 1;
     display: flex;
+    justify-content: flex-start;
     align-content: flex-end;
     margin-left: 60%;
   }
@@ -517,12 +526,11 @@ footer {
       font-size: 0.8rem;
       margin: 1.5%;
     }
-  }
-
-  .about img {
-    width: 250px;
-    border: 2px solid $primary-color;
-    padding: 0;
+    img {
+      width: 250px;
+      border: 2px solid $primary-color;
+      padding: 0;
+    }
   }
 
   .icons-wrapper {
@@ -533,7 +541,7 @@ footer {
     .wrapper {
       grid-template-columns: repeat(3, 1fr);
 
-      span {
+      span.icons-text {
         font-size: 9px;
       }
     }
