@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    
+
 }
 
 html {
@@ -21,37 +21,23 @@ body {
     background-repeat: no-repeat;
     display: flex;
 
-}
-
-h1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-size: 3.5rem;
-    color: whitesmoke;
-    transition: 0.6s ease;
-
-    &:hover {
-        color: #38b6ff;
-        text-shadow: 1px 1px 2px #38b6ff;
-        cursor: pointer;
-    }
-}
-
 header {
-    width: 50%;
-    height: 100%;
+    width: 20%;
+    height: 90vh;
     margin: 35px;
+    position: fixed;
     display: flex; 
     flex-direction: column;
     justify-content: space-around;
-    
+    align-items: center;
+    border-right: 2px solid #38b6ff;
+    border-image-slice: 40%;
     
     
 .logo {
-    width: 275px;
-    height: 275px;
+    max-width: 275px;
+    max-height: 275px;
+    width: 100%;
     margin: 35px;
     box-shadow: 0 20px 60px rgba(56,182,255,0.3);
     border-radius: 16%;
@@ -59,13 +45,15 @@ header {
     border-top: 4px solid whitesmoke;
     border-left: 2px solid $base-color;
     border-right: 4px solid whitesmoke;
+
+    
 }
     .navbar {
-        width: 18%;
-        height: 100%;
+        width: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
 
         a {
@@ -82,16 +70,44 @@ header {
             }
         }
     }
-    
+    .socials {
+        color: white;
+        font-size: 5rem;
+
+        .span {
+            border-radius: 16%;
+            border-bottom: 2px solid $base-color;
+            border-top: 4px solid whitesmoke;
+            border-left: 2px solid $base-color;
+            border-right: 4px solid whitesmoke;
+        }
+
+    }
 }
+main {
+    width: 80%;
+    margin-left: 20%;
 
 
+    div {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        h1 {
+        text-align: center;
+        font-size: 3.5rem;
+        color: whitesmoke;
+        transition: 0.6s ease;
 
-
-
-
-
-
-
-
+            &:hover {
+                color: #38b6ff;
+                text-shadow: 1px 1px 2px #38b6ff;
+                cursor: pointer;
+                }
+            }
+        }
+    }
+}
