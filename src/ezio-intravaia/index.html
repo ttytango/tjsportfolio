@@ -13,10 +13,9 @@
     <header>
 
       <section class="navBar">
-        <span id="navBar"><i class="fas fa-bars"></i></span>
+        <span class="roll-in-right" id="navBar"><i class="fas fa-bars"></i></span>
         <nav>
-          <img src="./img/logo.png" alt="">
-          <ul>
+          <ul class="roll-in-right">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -31,9 +30,10 @@
           <img class="secondHalf" src="./img/secondHalf.jpg" alt="">
           <img class='fullImage' src="./img/blake-connally-IKUYGCFmfw4-unsplash.jpg" alt="">
         </div>
-        <h1>Hello! I'm Ezio <br>
+        <h1 class="focus-in-expand">Hello! I'm Ezio <br>
         The developer who built this webpage
         </h1>
+        <h2 class="typewriter"><i class="fas fa-terminal"></i> Lets work together! </h2>
       </section>
     </header>
     <main>
@@ -79,7 +79,7 @@
                 <div id="html" class="skills">90%</div>
               </div>
             </article>
-            <h3 data-aos="flip-up" >HTML</h3>
+            <h3>HTML</h3>
             <p data-aos="fade-right">Able to write clean and samantic code and create well structured and easily accesable website</p>
         
 
@@ -184,11 +184,39 @@
             <p>ezio.intravaia@hotmail.com</p> 
             <a href="mailto: ezio.intravaia@hotmail.com"><i class="fas fa-envelope-square"></i></a>
           </div>
+          <div class="form">
+            <p>Here to contact me directily</p> 
+            <a><i class="fab fa-wpforms"></i></a>
+          </div>
           <div class="call">
             <p>07399873143</p>
             <a href="callto: 07399873143"><i class="fas fa-phone-square"></i></a>
           </div>
         </div>
+        <section class="contactMeForm">
+          <button><i class="fas fa-times-circle"></i></button>
+          <form action="">
+            <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+        
+            <label for="email">eMail</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Optional">
+
+          </div>
+          <div>
+                
+            <label for="content">Content</label>
+            <textarea id="content" name="content" placeholder="Write something.." required></textarea>
+          </div>
+        
+            <input type="submit" value="Submit">
+        
+          </form>
+      </section>
       </section>
     </footer>
 

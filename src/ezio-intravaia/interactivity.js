@@ -18,43 +18,59 @@ const dot1 = document.querySelector('#dot1')
 const dot2 = document.querySelector('#dot2')
 const page1 = document.querySelector('.page1')
 const page2 = document.querySelector('.page2')
-// const skillsParagraph = document.querySelectorAll('.skillsCard p')
 const heroImageH1 = document.querySelector('.hero-image h1')
+const heroImageH2 = document.querySelector('.hero-image h2')
 const secondHalf = document.querySelector('.secondHalf')
 const firstHalf = document.querySelector('.firstHalf')
 const fullImage = document.querySelector('.fullImage')
-
-
-
+const contactMe = document.querySelector('.contactMe')
+const contactMeForm = document.querySelector('.contactMeForm')
+const formButton = document.querySelector('.form a')
+const closeForm = document.querySelector('.contactMeForm button')
+const body = document.querySelector('body')
 
 
 let play = true
 let i;
-
 
 const openingSite = () => {
     myVar = setTimeout(openingSite1, 3000);
 }
 
 const openingSite1 = () => {
-    heroImageH1.style.visibility ='visible'
     firstHalf.style.display = 'none'
     secondHalf.style.display = 'none'
     fullImage.style.display = 'block'
+    body.style.overflow = 'initial'
+
+    openingSite2()
+}
+
+const openingSite2 = () => {
+    myVar = setTimeout(openingSite3, 0500);
+}
+
+const openingSite3 = () => {
+    heroImageH1.style.visibility ='visible'
+    navbarButton.style.display = 'block'
+
+    if (window.innerWidth > 600) {
+        heroImageH2.style.display = 'block'
+    }
 }
 
 
-openingSite()
-
-
-
 navbarButton.onclick = () => {
-    if (navBar.style.display == 'none') {
+    if (window.innerWidth < 420 && navBar.style.display == 'none'){
         navBar.style.display = 'block'
-        navbarButton.style.right= '320px'
-    } else {
+        navbarButton.style.top= '90px'
+    } else if (navBar.style.display == 'none') {
+        navBar.style.display = 'block'
+        navbarButton.style.right= '360px'
+    }  else {
         navBar.style.display= 'none'
         navbarButton.style.right= '20px'
+        navbarButton.style.top= '5px'
     }
 }
 
@@ -83,8 +99,14 @@ animation1 = () => {
 
 
 goBack.onclick = () => {
+    if (window.innerWidth < 450) {
+        aboutCardExtended.style.width='350px'
+        aboutCard.style.display='inline-block'
+        aboutCardExtended.style.display='none'    
+    } else {
     aboutCardExtended.style.width='350px'
     animation2()
+    }
 }
 
 const animation2 = () => {
@@ -230,5 +252,15 @@ const project2Slide = () => {
     }
 }
 
+formButton.onclick = () => {
+    contactMe.style.display = 'none'
+    contactMeForm.style.display = 'block'
+}
 
+closeForm.onclick = () => {
+    contactMe.style.display = 'flex'
+    contactMeForm.style.display = 'none'
+}
+
+openingSite()
 timer()
