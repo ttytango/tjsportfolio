@@ -53,10 +53,7 @@ const openingSite2 = () => {
 const openingSite3 = () => {
     heroImageH1.style.visibility ='visible'
     navbarButton.style.display = 'block'
-
-    if (window.innerWidth > 600) {
-        heroImageH2.style.display = 'block'
-    }
+    heroImageH2.style.display = 'block'
 }
 
 
