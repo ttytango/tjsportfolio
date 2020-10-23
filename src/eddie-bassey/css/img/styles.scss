@@ -22,11 +22,9 @@ body {
     background-color: white;
     font-family: 'Chilanka', cursive;
     color: $dark;
-    /* background-color: yellow; */
 
     h1 {
         font-size: 60px;
-        padding-left: 70px;
     }
     
     h2 {
@@ -36,6 +34,20 @@ body {
     h3 {
         font-size: 25px;
         font-weight: 100;
+    }
+}
+@media only screen and (max-width: 600px) {
+    body { h1 {
+        font-size: 45px;
+        }
+    
+    h2 {
+        font-size: 30px;
+        }
+        
+    h3 {
+        font-size: 25px;
+        }
     }
 }
 
