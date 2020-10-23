@@ -233,9 +233,12 @@ header {
 .form-section {
     width: 100%;
     height: 76.5vh;
+    background-image: url('../images/quill-writing.jpg');
     
     h1 {
+        padding-top: 10px;
         text-align: center;
+        color: $color-text;
     }
 }
 footer {
@@ -244,7 +247,7 @@ footer {
     background-image: url('../images/footer.png');
     background-color: rgba(170, 205, 221, 0.9); // Tint color
     background-blend-mode: soft-light;
-    object-fit: fill;
+    object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: $opacity-pic;
