@@ -13,8 +13,9 @@
         <nav>
             <a href="../html/index.html">Home</a>
             <a href="#">About</a>
-            <a href="#">Development</a>
-            <a href="#">Design</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
             <a href="https://www.linkedin.com/in/josh-foster-a66094142/"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/josh-foster" target="_blank"><i class="fab fa-github"></i></a>
         </nav>
@@ -28,16 +29,45 @@
         <img src="../img/nology-josh-foster-photo .jpg" alt="">
     </section>
 
+
+    <section data-aos-duration="2000" data-aos="fade-up" class="development-projects">
+        <div class="project1"><h2></h2></div>
+        <div class="project2"></div>
+        <div class="project3"></div>
+        <div class="project4"></div>
+        <div class="project5"></div>
+        <div class="project6"></div>
+        <div class="project7"></div>
+    </section>
+
+    <section  data-aos-duration="2000" data-aos="fade-up" class="contact">
+        <div>
+            <h2>Contact me</h2>
+            <form action="">
+                <fieldset>
+                    <input type="text" name=" name" aria-label="name" placeholder="Name" required>
+                    <input type="email" name=" email" aria-label="email" placeholder="Email address" required>
+                   <textarea name="message" id="message" cols="30" rows="10">Message</textarea>
+                </fieldset>
+                <input class="submit" type="button" value="Submit">
+            </form>
+        </div>
+    </section>
+
     
 
+
    
-    <footer>
+    <footer  >
        <div class="links">
         <a href="https://www.linkedin.com/in/josh-foster-a66094142/"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/josh-foster" target="_blank"><i class="fab fa-github"></i></a>
        </div> 
        <a href="">back to top</a>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
