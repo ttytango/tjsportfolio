@@ -1,4 +1,4 @@
-@import "variables";
+@import "mixin_variables";
 
 .items {
   display: grid;
@@ -107,3 +107,5 @@
     margin: 0;
   }
 }
+
+@import 'media_queries';
