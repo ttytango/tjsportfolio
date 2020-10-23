@@ -17,7 +17,7 @@ header {
 }
 
 .home {
-  background-image: url("/images/Coding.jpg");
+  background-image: url("../images/Coding.jpg");
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
@@ -45,7 +45,7 @@ header {
 .nav-section {
   width: 100%;
   height: 15%;
-  background-image: url("/images/nav.png");
+  background-image: url("../images/nav.png");
   -o-object-fit: fill;
      object-fit: fill;
   background-repeat: no-repeat;
@@ -154,7 +154,7 @@ header {
 .about {
   width: 100%;
   height: 72.5vh;
-  background-image: url("/images/16347.png");
+  background-image: url("./images/16347.png");
 }
 
 .about h2 {
@@ -181,17 +181,17 @@ header {
 
 .about .hobbies {
   display: none;
-  background-image: url("/images/hobbies.jpeg");
+  background-image: url("../images/hobbies.jpeg");
 }
 
 .about .journey {
-  background-image: url("/images/path1.png");
+  background-image: url("../images/path1.png");
 }
 
 .projects {
   width: 100%;
   height: 76.5vh;
-  background-image: url("/images/Coding.jpg");
+  background-image: url("../images/Coding.jpg");
   background-color: rgba(29, 27, 32, 0.7);
   background-blend-mode: darken;
   -o-object-fit: fill;
@@ -257,39 +257,6 @@ header {
   padding: 10px;
 }
 
-.skill-div .html {
-  color: #ff6600;
-}
-
-.skill-div .css {
-  color: blue;
-}
-
-.skill-div .sass {
-  color: purple;
-}
-
-.skill-div .js {
-  color: yellow;
-  background-color: black;
-}
-
-.skill-div .bootstrap {
-  color: purple;
-}
-
-.skill-div .npm {
-  color: firebrick;
-}
-
-.skill-div .node {
-  color: green;
-}
-
-.skill-div .react {
-  color: dodgerblue;
-}
-
 .form-section {
   width: 100%;
   height: 76.5vh;
@@ -302,7 +269,7 @@ header {
 footer {
   background-color: gray;
   height: 70px;
-  background-image: url("/images/footer.png");
+  background-image: url("../images/footer.png");
   background-color: rgba(170, 205, 221, 0.9);
   background-blend-mode: soft-light;
   -o-object-fit: fill;
