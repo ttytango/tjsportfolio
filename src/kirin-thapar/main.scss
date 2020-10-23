@@ -47,6 +47,8 @@ $black-color: #0000;
 
   .welcome {
   margin: 10px 20px 100px;
+  height: 85vh;
+  background-color: grey;
 background-size: cover;
 background-repeat: no-repeat;
 padding: 0px;
@@ -69,23 +71,27 @@ h2 {
   padding-left: 0;
 }
 .button  {
-border-radius: 5px;
- border: 2px solid $black-color;
- max-width: max-content; 
- text-decoration: none;
- padding: 10px;
-  margin: 20px;    
- text-decoration: none;
-  font-size: 18px;
-  max-width: max-content;
-  color: $black-color;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 2px;
   
-      
+  flex: right;
+  text-decoration: none;
+  width: 20%;
+  font-size: 18px;
+  color: #000000;
+  cursor: pointer;
+  
     &:hover {
         background-color: $color;
         color: $color;
   }
+
+
 }
+
+
 
 .about-me {
   padding-bottom: 20%;

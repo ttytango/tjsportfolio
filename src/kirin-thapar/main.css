@@ -50,6 +50,8 @@ nav a {
 
 .welcome {
   margin: 10px 20px 100px;
+  height: 85vh;
+  background-color: grey;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0px;
@@ -74,17 +76,17 @@ h2 {
 
 .button {
   border-radius: 5px;
-  border: 2px solid #0000;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 2px;
+  -webkit-box-flex: right;
+      -ms-flex: right;
+          flex: right;
   text-decoration: none;
-  padding: 10px;
-  margin: 20px;
-  text-decoration: none;
+  width: 20%;
   font-size: 18px;
-  max-width: max-content;
-  color: #0000;
+  color: #000000;
+  cursor: pointer;
 }
 
 .button:hover {
