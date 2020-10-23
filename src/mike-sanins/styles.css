@@ -1,14 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+  line-height: 3rem;
+}
+
+body {
+  background: #fff;
+}
+
+.onepage__container {
+  margin: 40px;
+}
+
+.onepage__container .onepage__header__container {
+  height: calc(100vh - 150px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.onepage__container .onepage__header__container div .side-1__name {
+  font-size: 40px;
+}
+
+.onepage__container .onepage__header__container div .side-1__programs {
+  font-size: 32px;
+  padding-top: 40px;
+}
+
+.onepage__container .onepage__header__container div .side-1__quote {
+  font-size: 24px;
+  padding-top: 40px;
+  color: #188C39;
+}
+
+.onepage__container .onepage__header__container .header__side-2 {
+  background-color: #ff4848;
+  width: 200px;
+}
+
+.onepage__container .onepage__header__container .header__side-2 span {
+  display: none;
+}
+
+.onepage__container .onepage__about-me__container {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.onepage__container .onepage__about-me__container p {
+  font-size: 1rem;
+  color: brown;
+  line-height: 2rem;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.onepage__container .onepage__projects_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.onepage__container .onepage__projects_container .projects_box {
+  margin-top: 100px;
+  width: 80%;
+  height: 400px;
+  background: #fadfbb;
+  border: 5px solid #ff4848;
+}
+
+.onepage__container .onepage__projects_container h2 {
+  font-size: 2rem;
+  color: #ff4848;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.onepage__container .onepage__projects_container p {
+  text-align: center;
+  color: brown;
+}
+
 @media only screen and (min-width: 1281px) {
-  * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-family: 'Inconsolata', monospace;
-    line-height: 3rem;
+  body {
+    background-color: blue;
   }
   .onepage__container {
     background: #fff;
+    margin: 0;
   }
   .onepage__container .onepage__header__container {
     height: 100vh;
@@ -55,6 +158,7 @@
     color: #188C39;
   }
   .onepage__container .onepage__header__container .header__side-2 {
+    width: unset;
     grid-column: 7/-1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 6;
@@ -77,188 +181,29 @@
     line-height: 100vh;
   }
   .onepage__container .onepage__about-me__container {
-    grid-column: 1/-1;
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 6;
-    grid-row: 7/13;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
-    -ms-grid-rows: (1fr)[6];
-        grid-template-rows: repeat(6, 1fr);
-  }
-  .onepage__container .onepage__about-me__container p {
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 4;
-    grid-column: 5/9;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 2;
-    grid-row: 3/5;
-    font-size: 2rem;
-    color: brown;
-    text-align: justify;
-  }
-  .onepage__container .onepage__about-me__container span {
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 1;
-    grid-column: 7/8;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
-    font-size: 120px;
-    opacity: 0.1;
-    color: brown;
-    -webkit-transform: translateX(-60px);
-            transform: translateX(-60px);
-    padding-bottom: 60px;
-  }
-  .onepage__container .onepage__projects_container {
+    margin-top: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .onepage__container .onepage__about-me__container p {
+    font-size: 2rem;
+    text-align: justify;
+    width: 600px;
+    line-height: 40px;
   }
   .onepage__container .onepage__projects_container .projects_box {
     margin-top: 300px;
     width: 20%;
     height: 600px;
-    background: #fadfbb;
-    border: 5px solid #188C39;
-  }
-  .onepage__container .onepage__projects_container .project-1 {
-    margin: 0;
   }
   .onepage__container .onepage__projects_container p {
     font-size: 2rem;
-    color: #188C39;
-    text-decoration: underline;
     margin-top: 10px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-family: 'Inconsolata', monospace;
-    line-height: 3rem;
-  }
-  .onepage__container {
-    background: #fff;
-    margin: 40px;
-  }
-  .onepage__container .onepage__header__container {
-    height: calc(100vh - 150px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .onepage__container .onepage__header__container div .side-1__name {
-    font-size: 40px;
-  }
-  .onepage__container .onepage__header__container div .side-1__programs {
-    font-size: 32px;
-    padding-top: 40px;
-  }
-  .onepage__container .onepage__header__container div .side-1__quote {
-    font-size: 24px;
-    padding-top: 40px;
-    color: #188C39;
-  }
-  .onepage__container .onepage__header__container .header__side-2 {
-    grid-column: 7/-1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 6;
-    grid-row: 1/7;
-    background-color: #ff4848;
-    width: 200px;
-  }
-  .onepage__container .onepage__header__container .header__side-2 span {
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 5;
-    grid-column: 4/9;
-    grid-row: 5/-1;
-    color: #kkk;
-    font-size: 50px;
-    display: none;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-transform: translateX(-30px);
-            transform: translateX(-30px);
-    line-height: 100vh;
-  }
-  .onepage__container .onepage__about-me__container {
-    margin-top: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .onepage__container .onepage__about-me__container p {
-    font-size: 1rem;
-    color: brown;
-    line-height: 2rem;
-    width: 200px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .onepage__container .onepage__about-me__container span {
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 1;
-    grid-column: 7/8;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
-    font-size: 120px;
-    opacity: 0.1;
-    color: brown;
-    -webkit-transform: translateX(-60px);
-            transform: translateX(-60px);
-    padding-bottom: 60px;
-  }
-  .onepage__container .onepage__projects_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .onepage__container .onepage__projects_container .projects_box {
-    margin-top: 100px;
-    width: 80%;
-    height: 400px;
-    background: #fadfbb;
-    border: 5px solid #188C39;
-  }
-  .onepage__container .onepage__projects_container p {
-    font-size: 2rem;
-    color: #188C39;
-    text-decoration: underline;
-    margin-top: 10px;
+    width: 50%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
