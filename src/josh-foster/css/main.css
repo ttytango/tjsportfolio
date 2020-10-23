@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  background-image: url("/src/josh-foster/img/background-image-main.jpg");
+  background-image: url("../img/background-image-main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -147,6 +147,13 @@ header nav a i:hover {
           align-items: center;
   background-color: whitesmoke;
   border-radius: 50px;
+  opacity: 0.75;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+}
+
+.development-projects div:hover {
+  opacity: 1;
 }
 
 .development-projects .project1 {
@@ -233,6 +240,100 @@ header nav a i:hover {
   grid-row: 4/5;
 }
 
+.contact div {
+  width: 60vw;
+  height: 40vw;
+  background-color: whitesmoke;
+  margin: 10% auto;
+  padding: 2vw;
+  border-radius: 50px;
+  opacity: 0.75;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact div:hover {
+  opacity: 1;
+}
+
+.contact div h2 {
+  font-family: "Bebas Neue";
+  font-size: 3vw;
+}
+
+.contact div:hover {
+  opacity: 1;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact form fieldset {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 20vw;
+  width: 50vw;
+}
+
+.contact form fieldset input {
+  border: none;
+  border-radius: 20px;
+  height: 10vw;
+  padding-left: 2vw;
+  margin: 2vh 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contact form fieldset textarea {
+  border: none;
+  border-radius: 20px;
+  padding: 5%;
+}
+
+.contact form .submit {
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 5vw;
+  width: 10vw;
+  margin: 5vh auto 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1vw;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.contact form .submit:hover {
+  background-color: black;
+  color: white;
+}
+
 footer {
   height: 7.5vw;
   width: 90%;
@@ -268,14 +369,14 @@ footer .links {
 footer .links a {
   margin-right: 5%;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2vw;
   color: #0e0e0e;
 }
 
 footer a {
   margin-right: 5%;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 3vw;
   font-family: 'Bebas Neue';
   color: #0e0e0e;
   -webkit-transition: 0.25s ease;

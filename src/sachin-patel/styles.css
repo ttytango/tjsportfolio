@@ -108,6 +108,7 @@ body main p {
   font-size: 3.5rem;
   margin: 10%;
   padding: 5%;
+  font-style: "PT Sans", sans-serif;
 }
 
 body main div {
@@ -207,5 +208,37 @@ body main .container .box:hover {
   border-left: 2px solid #38b6ff;
   border-right: 4px solid whitesmoke;
   cursor: pointer;
+}
+
+body main .icons-wrapper {
+  width: 50%;
+  height: 100vh;
+  margin-left: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .icons-wrapper .skills {
+  width: 50%;
+  margin-left: 50px;
+  color: white;
+  font-size: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 10px;
 }
 /*# sourceMappingURL=styles.css.map */

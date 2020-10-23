@@ -199,7 +199,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: whitesmoke;
-  font-size: 42px;
+  font-size: 46px;
   text-align: center;
   z-index: 2;
 }
@@ -691,6 +691,7 @@ body {
   border: #364959 solid 3px;
   -webkit-box-shadow: 0 14px 60px 0 #33A1FD;
           box-shadow: 0 14px 60px 0 #33A1FD;
+  border-radius: 50px;
   margin: 0 auto;
 }
 
@@ -700,13 +701,15 @@ body {
   height: 50px;
   background-color: #33A1FD;
   font-size: 24px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 .projects .projectsBox .projectTitle svg {
   background-color: #33a1fd;
   font-size: 44px;
   position: absolute;
-  right: 2px;
+  right: 40px;
   top: 2px;
   cursor: pointer;
 }
@@ -752,7 +755,7 @@ body {
 
 .projects .projectsBox .bottomSection {
   width: 100%;
-  height: 100px;
+  height: 120px;
   background-color: #33A1FD;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -763,6 +766,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .projects .projectsBox .bottomSection .bottomButton {
@@ -772,6 +777,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: 3px double whitesmoke;
+  border-radius: 50px;
   background-color: #85B4FF;
   -webkit-transition: 0.6s ease-out;
   transition: 0.6s ease-out;
@@ -789,6 +795,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: 3px double whitesmoke;
+  border-radius: 50px;
   background-color: #264DE4;
   color: whitesmoke;
 }
@@ -948,12 +955,39 @@ body {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 500px) {
   .hero-image h1 {
-    top: 40%;
+    top: 30%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+  }
+  .hero-image h2 {
+    top: 80%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .hero-image .typewriter {
+    white-space: normal;
+    -webkit-animation: typing 3.5s steps(30, end), blink-caret 1.5s step-end infinite;
+            animation: typing 3.5s steps(30, end), blink-caret 1.5s step-end infinite;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
   }
   .skillsCard {
     height: 700px;
