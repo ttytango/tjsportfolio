@@ -26,7 +26,6 @@ header{
         background-color:$main-color;
         padding: 15px;
         border-radius: 40px;
-
         a{
             text-decoration: none;
             font-family: 'Courier New', Courier, monospace;
@@ -116,6 +115,7 @@ header{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(4,1fr);
     gap: 1vw;
+    
 
     div{
         display: flex;
@@ -123,6 +123,13 @@ header{
         align-items: center;
         background-color: whitesmoke;
         border-radius: 50px;
+        opacity: 0.75;
+        transition: .6s ease;
+
+        &:hover{
+            opacity: 1;
+        }
+
     }
 
     .project1{
@@ -178,6 +185,94 @@ header{
 
 }
 
+.contact{
+
+  
+    div{
+        
+        width: 60vw;
+        height: 40vw;
+        background-color:whitesmoke;
+        margin: 10% auto;
+        padding: 2vw;
+        border-radius: 50px;
+        opacity: 0.75;
+        transition: .6s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            opacity: 1;
+        }
+
+        h2{
+            font-family: $font-one ;
+            font-size: 3vw;
+            
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+    
+    }
+
+    form{
+        
+        display: flex;
+        flex-direction: column;
+
+        fieldset{
+
+            border: none;
+            display: flex;
+            flex-direction: column;
+            height: 20vw;
+            width: 50vw;
+            
+
+            input{
+                border: none;
+                border-radius: 20px;
+                height: 10vw;
+                padding-left: 2vw;
+                margin: 2vh 0;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            textarea{
+                border: none;
+                border-radius: 20px;
+                padding: 5%;
+                
+            }
+        }
+
+        .submit{
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            height: 5vw;
+            width: 10vw;
+            margin: 5vh auto 0 auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1vw;
+            transition: 0.5s ease;
+
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+    
+   
+
+    
+}
+
 footer{
     height: 7.5vw;
     width: 90%;
@@ -198,7 +293,7 @@ footer{
         a{
             margin-right: 5%;
             text-decoration: none;
-            font-size: $root-font-size*2 ;
+            font-size: 2vw ;
             color:$text-color ;
             
         }
@@ -207,7 +302,7 @@ footer{
     a{
         margin-right: 5%;
         text-decoration: none;
-        font-size: $root-font-size*3 ;
+        font-size: 3vw ;
         font-family: 'Bebas Neue';
         color: $text-color;
         transition: 0.25s ease;

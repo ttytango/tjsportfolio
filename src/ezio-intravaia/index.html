@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/208e14b18c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>My portfolio</title>
   </head>
@@ -12,10 +13,9 @@
     <header>
 
       <section class="navBar">
-        <span id="navBar"><i class="fas fa-bars"></i></span>
+        <span class="roll-in-right" id="navBar"><i class="fas fa-bars"></i></span>
         <nav>
-          <img src="./img/logo.png" alt="">
-          <ul>
+          <ul class="roll-in-right">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -30,17 +30,17 @@
           <img class="secondHalf" src="./img/secondHalf.jpg" alt="">
           <img class='fullImage' src="./img/blake-connally-IKUYGCFmfw4-unsplash.jpg" alt="">
         </div>
-        <h1>Hello! I'm Ezio <br>
+        <h1 class="focus-in-expand">Hello! I'm Ezio <br>
         The developer who built this webpage
         </h1>
-
+        <h2 class="typewriter"><i class="fas fa-terminal"></i> Lets work together! </h2>
       </section>
     </header>
     <main>
       <section id="about" class="about">
         <section class="aboutCard">
           <div class="backgroundColorCard">
-            <img src="./img/0.jpg" alt="photo of myself">
+            <img data-aos="flip-up" src="./img/0.jpg" alt="photo of myself">
           </div>
           <h2>Ezio Intravaia</h2>
             <p>Trainee Junior Software Developer <br>
@@ -72,7 +72,7 @@
         <section class="skillsCard showOn ">
           <h2>What I can do</h2>
 
-          <section class="page1 fade moveRight rotate">
+          <section class="page1 rotate fade">
             <article>
               <i title="HTML5" class="fab fa-html5"></i>
               <div class="skillContainer">
@@ -80,7 +80,7 @@
               </div>
             </article>
             <h3>HTML</h3>
-            <p>Able to write clean and samantic code and create well structured and easily accesable website</p>
+            <p data-aos="fade-right">Able to write clean and samantic code and create well structured and easily accesable website</p>
         
 
             <article>
@@ -90,7 +90,7 @@
               </div>
             </article>
             <h3>CSS & SCSS</h3>
-            <p>Able to make awesome and responsive website for any type of device</p>
+            <p data-aos="fade-right">Able to make awesome and responsive website for any type of device</p>
 
             <article>
               <i title="Git" class="fab fa-git-alt"></i>
@@ -99,7 +99,7 @@
               </div>
             </article>
             <h3>Git & Github</h3>
-            <p>Able to use git in order to track changes in source code during software development </p>
+            <p data-aos="fade-right">Able to use git in order to track changes in source code during software development </p>
 
             <article>
               <i title="JS" class="fab fa-js-square"></i>
@@ -108,7 +108,7 @@
             </div>
             </article>
             <h3>JavaScript</h3>
-            <p>Able to do basic DOM interaction in order to make interactive website and browser games.</p>
+            <p data-aos="fade-right">Able to do basic DOM interaction in order to make interactive website and browser games.</p>
           </section>
           <section class="page2">
             <h3>Learning in progress..</h3>
@@ -184,14 +184,46 @@
             <p>ezio.intravaia@hotmail.com</p> 
             <a href="mailto: ezio.intravaia@hotmail.com"><i class="fas fa-envelope-square"></i></a>
           </div>
+          <div class="form">
+            <p>Here to contact me directily</p> 
+            <a><i class="fab fa-wpforms"></i></a>
+          </div>
           <div class="call">
             <p>07399873143</p>
             <a href="callto: 07399873143"><i class="fas fa-phone-square"></i></a>
           </div>
         </div>
+        <section class="contactMeForm">
+          <button><i class="fas fa-times-circle"></i></button>
+          <form action="">
+            <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+        
+            <label for="email">eMail</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Optional">
+
+          </div>
+          <div>
+                
+            <label for="content">Content</label>
+            <textarea id="content" name="content" placeholder="Write something.." required></textarea>
+          </div>
+        
+            <input type="submit" value="Submit">
+        
+          </form>
+      </section>
       </section>
     </footer>
 
     <script src="interactivity.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({duration: 2000});
+    </script>
   </body>
 </html>
