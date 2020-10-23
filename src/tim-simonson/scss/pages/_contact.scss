@@ -87,11 +87,6 @@
             border-radius: 16px;
         }
         
-        #dark-background {
-            background-color: transparent;
-            background-image: none;
-        }
-        
         .checkbox {
             background-color: $color-lightest-blue;
             width: 200px;
@@ -101,4 +96,9 @@
                 background-color: $color-yellow;
                 font-weight: 6;
             }
+        }
+        
+        .dark-background {
+            background-color: transparent;
+            background-image: none;
         }
