@@ -41,7 +41,7 @@
                     //justify-content: flex-end;
                     .project-card {
                         @include clearfix;
-                        background: radial-gradient(circle, ($color-lightest-blue, 0.9) 50%, $color-secondary 50%);
+                        background-color: linear-gradient(to top, ($color-lightest-blue, 0.9), ($color-secondary, 0.7));
                         overflow: hidden;
                         z-index: -20;
                         width: 100%;
@@ -51,7 +51,7 @@
                         // opacity: 1;
                         // backdrop-filter: opacity(10%);
                         border: 1px solid $color-secondary;
-                        box-shadow: -2px -2px 2px 8px blueviolet;
+                        box-shadow: -2px -2px 2px 8px rgb(97, 82, 110);
                         color: $color-yellow;
                         // mix-blend-mode: difference;
                         border-top-left-radius: 8px;
@@ -70,7 +70,7 @@
                         }
                         div {
                             display: flex;
-                            background: linear-gradient(rgba($color-secondary, 1) 50%, $color-red 90%);
+                            background: linear-gradient(to left bottom, $color-secondary 30%, $color-tertiary 90%, $color-lightest-blue 0%, $color-lime 20%, $color-yellow 30%);
                             // height: 40%;
                             color: $black;
                             font-size: 3rem;
@@ -111,7 +111,7 @@
                                 height: 30px;
                                 font-size: 1.8rem;
                                 background-color: $color-red;
-                                border: 1px solid #640e0eb7;
+                                border: 1px solid #460b0bc9;
                                 cursor: pointer;
                                 border-radius: 8px;
                                 @include respond(large) {

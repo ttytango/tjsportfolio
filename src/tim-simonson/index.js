@@ -1,3 +1,11 @@
+// const overlayBtn = document.getElementById('overlay-button');
+
+
+// function removeOverlay(object) {
+//     const content = document.querySelectorAll("content");
+//     content.style.mixBlendMode = "unset";
+// }
+
 var myTimer = setTimeout(myTitle, 2000);
 
 function myTitle() {
@@ -149,3 +157,20 @@ var animation = anime({
     direction: "forwards",
     loop: true
 });
+
+// const toggle = document.getElementById("toggle");
+// const mainBackground = document.getElementsByTagName("main");
+
+// document.addEventListener('DOMContentLoaded', function() {
+
+
+//     toggle.addEventListener('change', function() {
+//         if (toggle.checked) {
+//             // mainBackground.style.backgroundColor = "black";
+//             console.log('Checked');
+//         } else {
+//             // mainBackground.style.backgroundImage = "none";
+//             console.log('Not checked');
+//         }
+//     });
+// });
