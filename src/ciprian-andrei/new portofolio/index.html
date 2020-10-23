@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ciprian's portofolio website made using HTML, CSS and Javascript">
+    <meta name="keywords" content="HTML5, CSS3, Javascript">
+    <meta name="author" content="Ciprian Andrei">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ca-ico.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <script defer async src="https://kit.fontawesome.com/8c0ab55b41.js" crossorigin="anonymous"></script>
+    <script defer async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script defer async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script defer async src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha512-LfB+BcvR3zBt7ebVskhSWiSbEUiG3p5EcCprkieldsKhBeR6wpnLi0VpWC2GNgVGWP2n/skO8Bx2oKNjUhXCkw==" crossorigin="anonymous"></script>
+   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer async src="main.js"></script>
+    <title>Ciprian | Portofolio | Home</title>
+</head>
+<body>
+                        <!-- Landing Page -->
+    <header>
+        <section class="nav-section">
+            <div>
+                <img src="/images/ca-logo.svg" alt="my-logo" srcset=""> 
+            </div>
+            <nav data-aos="fade-left" data-aos-delay="200">
+                <a href="/index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/projects.html">Projects</a>
+                <a href="/contact.html">Contact</a>
+                <!-- <div> -->
+                    <!-- <i class="fas fa-bars"></i> -->
+                    <!-- <i class="fas fa-times"></i> -->
+                <!-- </div> -->
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="home">
+            <section class='intro'data-aos="fade-right">
+                <div class="text-wrapper">
+                    <h1 data-aos="fade-right">Hi! <br>
+                    <span data-aos="fade-right" data-aos-delay="50">I am </span>
+                    <span>Ciprian,</span></h1>
+                    <p>
+                        <span data-aos="fade-right">a London based </span>
+                        <span data-aos="fade-left">Software Developer</span>
+                    </p>
+                </div>
+                <img src="/images/Frame.svg" class='programmer' alt="" srcset="" data-aos="fade-left"  data-aos-delay="150">
+            </section>
+            
+            <section class='media'>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github-square fa-3x media-icon git"></i></a> 
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-3x media-icon linkedin"></i></a>
+                <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook-square fa-3x media-icon facebook"></i></a>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p id='copyright'>&copy; Designed by Ciprian Andrei 2020<p>
+    </footer>
+</body>
+</html>

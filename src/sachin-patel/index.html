@@ -12,36 +12,47 @@
   <title>Portfolio</title>
 </head>
 <body>
+  <!-- header........ -->
   <header data-aos="fade-right" data-aos-duration="3000" data-aos-delay="100"> 
     <img class="logo" src="images/glow (4).png" alt="logo" >
     <nav class="navbar">
-        <a href="#">About</a>
-        <a href="#">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#">Contact</a>
     </nav>
+<section class="socials">
+      <a href="https://github.com/" class="fab fa-github-square" id="github"></a>
+      <a href ="" class="fas fa-envelope-square"></a>
+      <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+</section>
+</header>
 
-    <section class="socials">
-      <span><a class="fab fa-github-square" id="github"></a></span>
-      <a class="fas fa-envelope-square"></a>
-      <a class="fab fa-linkedin"></a>
-  
-  
-    </section>
-
-
-  </header>
+<!-- mainbody...... -->
   <main>
-  <div>
+  <div class="landing">
       <h1 data-aos="fade-left" data-aos-duration="3000" data-aos-delay="100">Welcome</h1>
+  </div> 
+  <!-- facepic..... -->
+<div class="about" id="about">
+    <img class="face-pic"src="./images/FACE PIC.jpg" alt="Facepic">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, explicabo! Totam, sequi libero repudiandae modi, quae perferendis est molestias qui reprehenderit at vero alias? Accusamus aut perspiciatis doloremque eum.
+    </p>
+    </div>
+
+</div>
+<!-- projects..... -->
+<article class="projects" id="projects">
+    <div class="container" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="100">
+    <div class="box">Project</div>
+    <div class="box">Project</div>
+    <div class="box">Project</div>
+    <div class="box">Project</div>
+    <div class="box">Project</div>
+    <div class="box">Project</div>
   </div>
-  <div>
-
-  </div>
-
-
-
+</article>
 </main>
-
 
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
