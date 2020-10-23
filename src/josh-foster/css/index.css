@@ -123,10 +123,6 @@ section footer {
   }
 }
 
-section footer:hover {
-  opacity: 1;
-}
-
 section footer button {
   background-color: transparent;
   border: none;
@@ -148,7 +144,7 @@ section video {
   width: 100%;
   position: fixed;
   z-index: -10;
-  -webkit-transform: translate(0%, -10%);
-          transform: translate(0%, -10%);
+  -webkit-transform: translate(0%, -9.5%);
+          transform: translate(0%, -9.5%);
 }
 /*# sourceMappingURL=index.css.map */
