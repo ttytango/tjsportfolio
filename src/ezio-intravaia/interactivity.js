@@ -1,3 +1,4 @@
+const navLinks = document.querySelectorAll('nav a')
 const button = document.querySelector('button')
 const aboutCard = document.querySelector('.aboutCard')
 const aboutCardExtended = document.querySelector('.aboutCardExtended')
@@ -17,22 +18,70 @@ const dot1 = document.querySelector('#dot1')
 const dot2 = document.querySelector('#dot2')
 const page1 = document.querySelector('.page1')
 const page2 = document.querySelector('.page2')
+const heroImageH1 = document.querySelector('.hero-image h1')
+const heroImageH2 = document.querySelector('.hero-image h2')
+const secondHalf = document.querySelector('.secondHalf')
+const firstHalf = document.querySelector('.firstHalf')
+const fullImage = document.querySelector('.fullImage')
+const contactMe = document.querySelector('.contactMe')
+const contactMeForm = document.querySelector('.contactMeForm')
+const formButton = document.querySelector('.form a')
+const closeForm = document.querySelector('.contactMeForm button')
+const body = document.querySelector('body')
 
 
 let play = true
 let i;
 
+const openingSite = () => {
+    myVar = setTimeout(openingSite1, 3000);
+}
+
+const openingSite1 = () => {
+    firstHalf.style.display = 'none'
+    secondHalf.style.display = 'none'
+    fullImage.style.display = 'block'
+    body.style.overflow = 'initial'
+
+    openingSite2()
+}
+
+const openingSite2 = () => {
+    myVar = setTimeout(openingSite3, 0500);
+}
+
+const openingSite3 = () => {
+    heroImageH1.style.visibility ='visible'
+    navbarButton.style.display = 'block'
+
+    if (window.innerWidth > 600) {
+        heroImageH2.style.display = 'block'
+    }
+}
 
 
 navbarButton.onclick = () => {
-    if (navBar.style.display == 'none') {
+    if (window.innerWidth < 420 && navBar.style.display == 'none'){
         navBar.style.display = 'block'
-        navbarButton.style.right= '350px'
-    } else {
+        navbarButton.style.top= '90px'
+    } else if (navBar.style.display == 'none') {
+        navBar.style.display = 'block'
+        navbarButton.style.right= '360px'
+    }  else {
+        navBar.style.display= 'none'
+        navbarButton.style.right= '20px'
+        navbarButton.style.top= '5px'
+    }
+}
+
+for (i = 0; i < navLinks.length; i++) {   
+    navLinks[i].onclick = () => {
         navBar.style.display= 'none'
         navbarButton.style.right= '20px'
     }
+
 }
+
 
 button.onclick = () => {
     aboutCard.style.display='none'
@@ -50,8 +99,14 @@ animation1 = () => {
 
 
 goBack.onclick = () => {
+    if (window.innerWidth < 450) {
+        aboutCardExtended.style.width='350px'
+        aboutCard.style.display='inline-block'
+        aboutCardExtended.style.display='none'    
+    } else {
     aboutCardExtended.style.width='350px'
     animation2()
+    }
 }
 
 const animation2 = () => {
@@ -70,6 +125,7 @@ dot1.onclick = () => {
     dot2.style.backgroundColor = 'grey';
 }
 
+
 dot2.onclick = () => {
     page1.style.display = 'none'
     page2.style.display = 'flex'
@@ -87,7 +143,7 @@ for (i = 0; i < playClass.length; i++) {
         playClass[i].style.display= 'none'
         }
         for (i = 0; i < pauseClass.length; i++) {   
-        pauseClass[i].style.display= 'block'    
+        pauseClass[i].style.display= 'contents'    
         }}}
     }
     
@@ -96,7 +152,7 @@ for (i = 0; i < playClass.length; i++) {
         if (play == false) {
         play = true
         for (i = 0; i < playClass.length; i++) {   
-        playClass[i].style.display= 'block'
+        playClass[i].style.display= 'contents'
         }
         for (i = 0; i < pauseClass.length; i++) {   
         pauseClass[i].style.display= 'none'    
@@ -140,7 +196,6 @@ project3Button.onclick = () => {
     project1.style.display = 'none'
     project2.style.display = 'none'
     project3.style.display = 'block'
-    slideOn = 3
     clearTimeout(myVar);
     timer()
 
@@ -197,6 +252,15 @@ const project2Slide = () => {
     }
 }
 
+formButton.onclick = () => {
+    contactMe.style.display = 'none'
+    contactMeForm.style.display = 'block'
+}
 
+closeForm.onclick = () => {
+    contactMe.style.display = 'flex'
+    contactMeForm.style.display = 'none'
+}
 
+openingSite()
 timer()

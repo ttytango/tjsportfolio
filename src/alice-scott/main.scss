@@ -1,0 +1,375 @@
+@import "variables";
+@import "animations";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primaryfont;
+}
+
+header {
+    background-image: url(img/christin-hume-mfB1B1s4sMc-unsplash.jpg);
+    background-color: $primary-color;
+    height: 120vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 96% 96%, 91% 100%, 85% 96%, 79% 100%, 72% 92%, 67% 97%, 62% 95%, 60% 100%, 53% 93%, 47% 98%, 42% 98%, 36% 100%, 31% 96%, 26% 100%, 19% 96%, 16% 100%, 11% 96%, 6% 99%, 3% 98%, 0% 100%);
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    margin-bottom: 50px;
+
+    .navbar {
+        grid-column: 20 / 21;
+        position: fixed;
+        right: 0;
+        color: $tertiary-color;
+        cursor: pointer;
+        margin: 10px;
+        font-size: 50px;
+        opacity: 80%;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .banner {
+        grid-column: 2 / 20;
+        background-color: $secondary-color-transparent;
+        border-radius: ($border-radius)*3;
+        height: 85vh;
+        width: 0vw;
+        border: none;
+        margin: 70px auto;
+        max-width: 580px;
+        box-shadow: 2px 2px 10px whitesmoke;
+        animation-name: growanimation;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;       
+
+        * {
+           opacity: 0;
+           animation-name: fade-in;
+           animation-duration: 3s; 
+           animation-fill-mode: forwards;
+           animation-delay: 2.5s;       
+        }
+
+        h1 {
+            color: $tertiary-color;
+            font-size: 4rem;
+            text-align: center;
+            position: relative;
+            top: 10%;
+            margin: auto;
+            text-shadow: 2px 2px 5px rgb(0, 0, 0);
+           }
+
+        p {
+            color: $tertiary-color;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            top: 10%;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-evenly;
+            width: 40vw;
+            margin: auto;
+            color: $tertiary-color;
+            position: relative;
+            font-size: 1.5rem;
+            top: 30%;
+        }
+        
+        .arrow {
+            color: $tertiary-color;
+            position: absolute;
+            font-size: 50px;
+            bottom: 2px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.about-me {
+    padding: 10px;
+    margin: 10px auto;
+    height: 100vh;
+    width: 90vw;
+
+    .headings {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 5vh;
+        background-color: lightgrey;
+        border-radius: 20px 20px 0 0 ;
+
+        h2 {
+            font-size: 16px;
+            padding: 10px auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        .past-heading {
+            border-right: 2px solid rgb(255, 253, 248);
+        }
+    }
+
+    .past {
+        background-color: $primary-color;;
+        height: 90vh;
+        padding: 60px 20px;
+    }
+}
+
+#projects {
+    margin: 50px 10px;
+    background-color: $primary-color;
+    padding: 40px 0;
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(6, 4fr) 1fr;
+        grid-template-rows: min-content repeat(6, 2fr);
+        gap: 10px;
+        
+        h2 {
+            grid-column: 2 / -1;
+        }
+
+        article {
+            opacity: 0.85;
+            cursor: pointer;
+            transition: 0.6s ease;
+
+            &:hover {
+               opacity: 100%;
+            }
+        }
+
+        .project-1 {
+            grid-row: 2 / 3;
+            grid-column: 2 / 8; 
+        }
+        .project-2 {
+            grid-row: 3 / 4;
+            grid-column: 2 / 8; 
+        }
+        .project-3 {
+            grid-row: 4 / 5;
+            grid-column: 2 / 8; 
+        }
+        .project-4 {
+            grid-row: 5 / 6;
+            grid-column: 2 / 8; 
+        }
+        .project-5 {
+            grid-row: 6 / 7;
+            grid-column: 2 / 8; 
+        }
+        .project-6 {
+            grid-row: 7 / 8;
+            grid-column: 2 / 8; 
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: $border-radius;
+            box-shadow: 3px 3px 10px $secondary-color;
+        }
+    }
+}
+
+#contact {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+
+    .left-contact {
+        width: 90%;
+        height: 30%;
+        padding: 20px;
+
+        div {
+            display: flex;
+            justify-content: space-evenly;
+            width: 40vw;
+            margin: auto;
+            color: $secondary-color;
+            position: relative;
+            font-size: 1.5rem;
+            top: 30%;
+        }
+    }
+    
+    form {
+        background-color: $primary-color;
+        width: 90%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0;
+
+        input, textarea {
+            background-color: $primary-color;
+            margin: 15px 50px;
+            border: none;
+            border-bottom: 1px solid black;
+            padding: 3px;
+            
+            &::placeholder {
+                padding: 8px;
+           }
+        }
+
+        textarea {
+            height: 200px;
+            line-height: 20px;
+        }
+
+        .button {
+            background-color: rgba($secondary-color, 0.75);
+            color: $tertiary-color;
+            width: 50%;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+
+    svg {
+        margin-bottom: 40px;
+    }
+}
+
+// Desktop/laptop view
+@media only screen and (min-width: 480px) {
+    header {
+        height: 110vh;
+
+        .banner {
+            height: 85vh;
+            margin: 50px auto;
+            width: 0vw;
+
+            h1 {
+                font-size: 3r.5em;
+                top: 25%;
+            }
+
+            p {
+                font-size: 2.5rem;
+                top: 27%;
+            }
+
+            div {
+            width: 12vw;
+            font-size: 2rem;
+            top: 40%;
+            }
+
+            .arrow {
+                bottom: 8%;
+            }
+        }
+    }
+
+    .about-me {
+        height: 100vh;
+    
+        .headings {
+            align-items: center;
+            height: 10%;
+    
+            h2 {
+                font-size: 20px;
+            }
+        }
+    
+        .past {
+            height: 80%;
+        }
+    }
+
+    #projects {
+
+        .project-grid {
+
+            .project-1 {
+                grid-row: 2 / 6;
+                grid-column: 2 / 4; 
+            }
+            .project-2 {
+                grid-row: 2 / 4;
+                grid-column: 4 / 8; 
+            }
+            .project-3 {
+                grid-row: 4 / 6;
+                grid-column: 4 / 6; 
+            }
+            .project-4 {
+                grid-row: 4 / 6;
+                grid-column: 6 / 8; 
+            }
+            .project-5 {
+                grid-row: 6 / 8;
+                grid-column: 2 / 6; 
+            }
+            .project-6 {
+                grid-row: 6 / 8;
+                grid-column: 6 / 8; 
+            }
+    
+            img {
+                object-fit: cover
+            }
+        }
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    
+        .left-contact {
+            width: 30%;
+            align-self: center;
+            margin: 0 auto;
+            text-align: end;
+            padding: 50px;
+
+            div {
+                width: 10vw;
+            }
+        }
+        
+        form {
+            width: 35%;
+            align-self: center;
+            margin: 0 auto;
+            height: 85%;
+        }
+    }
+    
+
+}

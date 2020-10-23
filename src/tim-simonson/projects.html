@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="./scss/main.css">
+
+    <script src="https://kit.fontawesome.com/23f8bfb464.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Projects | TJ Simonson</h1>
+        <nav>
+            <ul class="top-buttons">
+                <a href="./projects.html">Projects</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./home.html">About</a>
+            </ul>
+        </nav>
+
+    </header>
+    <main id="dark-background">
+
+        <section class="projects">
+            <!-- <section class="subheading"> -->
+            <section class="content">
+
+                <div class="ui raised segment">
+                    <h2 class="title-row">Selected works</h2>
+                </div>
+
+                <div class="wrapper">
+                    <div class="project-card" data-aos="flip-down">
+                        <div class="ui raised segment">
+                            <h4 class="card-title">Django Portfolio Page</h4>
+                        </div>
+
+
+                        <article class="image">
+                            <span class="fab fa-python fa-5x"></span>
+                        </article>
+                        <p class="card-text">This is the source code to an earlier portfolio made with the Django framework. It also contains further features including a blog.</p>
+                        <div class="bottom">
+                            <button>View project on github</button>
+
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="flip-down">
+                        <div class="ui raised segment">
+                            <h4 class="card-title">Svelte Example Page</h4>
+                        </div>
+
+                        <article class="image">
+                            <img class="image-svelte" src="./images/cib-svelte.svg" alt="svelte">
+                        </article>
+                        <p class="card-text">This is another site made using the Svelte framework. It utilizes SASS/SCSS. This demonstrates further Svelte features.</p>
+
+
+                        <div class="bottom">
+                            <button>View project on github</button>
+
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="flip-down">
+                        <div class="ui raised segment">
+                            <h4 class="card-title">A nice little landing page</h4>
+
+                        </div>
+                        <article class="image">
+                            <img class="image-svelte" src="./images/cib-svelte.svg" alt="svelte">
+                        </article>
+                        </article>
+                        <p>This is another example project made using Sass.</p>
+                        <!-- <i class="right chevron icon"></i> -->
+                        <div class="bottom">
+                            <button>View project on github</button>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+    <footer>
+        Tim Simonson 2020
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+            mirror: true
+        });
+    </script>
+
+    <script src="index.js" defer></script>
+</body>
+
+</html>

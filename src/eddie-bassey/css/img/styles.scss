@@ -1,0 +1,74 @@
+$black: black;
+$dark: #3B3B3B;
+$white: white;
+$gen-border: 1px solid $black;
+$gen-margin: 10px;
+
+@import "header";
+@import "main";
+
+
+
+
+/********* UNIVERSAL *********/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Chilanka', cursive;
+    color: $dark;
+
+    h1 {
+        font-size: 60px;
+    }
+    
+    h2 {
+        font-size: 50px;
+        font-weight: 100;
+    }
+    h3 {
+        font-size: 25px;
+        font-weight: 100;
+    }
+}
+@media only screen and (max-width: 600px) {
+    body { h1 {
+        font-size: 45px;
+        }
+    
+    h2 {
+        font-size: 30px;
+        }
+        
+    h3 {
+        font-size: 25px;
+        }
+    }
+}
+
+
+
+/* p {
+    font-size: 18px;
+    line-height: 1.3;
+    padding: 0 60px;
+} */
+
+
+
+
+
+
+/*********** MAIN (About us) ***********/
+
+
+
+
+
+
+
