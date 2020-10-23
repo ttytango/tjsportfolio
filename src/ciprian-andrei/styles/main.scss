@@ -19,7 +19,7 @@ header {
     position: relative;
 }
 .home {
-    background-image: url('/images/Coding.jpg');
+    background-image: url('../images/Coding.jpg');
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,7 +39,7 @@ header {
 .nav-section {
     width: 100%;
     height: 15%;
-    background-image: url('/images/nav.png'); 
+    background-image: url('../images/nav.png'); 
     object-fit: fill;
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,7 +121,7 @@ header {
 .about {
     width: 100%;
     height: 72.5vh;
-    background-image: url('/images/16347.png');
+    background-image: url('./images/16347.png');
 
     h2 {
         margin: 30px auto; 
@@ -146,18 +146,18 @@ header {
     }
     .hobbies {
         display: none;
-        background-image: url('/images/hobbies.jpeg');
+        background-image: url('../images/hobbies.jpeg');
     }
     .journey {
         // display: none;
-        background-image: url('/images/path1.png');
+        background-image: url('../images/path1.png');
     }
 
 }
 .projects {
     width: 100%;
     height: 76.5vh;
-    background-image: url('/images/Coding.jpg');
+    background-image: url('../images/Coding.jpg');
     background-color: rgba(29, 27, 32, 0.7); // Tint color
     background-blend-mode: darken;
     object-fit: fill;
@@ -182,7 +182,6 @@ header {
     border: 2px solid $color-text; 
     width: 100%;
     height: 100%;
-    // background-image: url('/images/Coding.jpg');
     background-color: gray;
 }
 
@@ -203,49 +202,52 @@ header {
     width: 40%;
     padding: 10px;
 
-    .html {
-        color: #ff6600;
-    }
-    .css {
-        color: blue;
-    }
-    .sass {
-        color: purple;
-    }
-    .js {
-        color: yellow;
-        background-color: black;
-    }
-    .bootstrap {
-        color: purple;
-    }
-    .npm {
-        color: firebrick;
-    }
-    .node {
-        color: green;
-    }
-    .react {
-        color: dodgerblue;
-    }
+    // .html {
+    //     color: #ff6600;
+    // }
+    // .css {
+    //     color: blue;
+    // }
+    // .sass {
+    //     color: purple;
+    // }
+    // .js {
+    //     color: yellow;
+    //     background-color: black;
+    // }
+    // .bootstrap {
+    //     color: purple;
+    // }
+    // .npm {
+    //     color: firebrick;
+    // }
+    // .node {
+    //     color: green;
+    // }
+    // .react {
+    //     color: dodgerblue;
+    // }
     
 }
 
 .form-section {
     width: 100%;
     height: 76.5vh;
+    background-image: url('../images/quill-writing.jpg');
     
     h1 {
+        padding-top: 10px;
         text-align: center;
+        color: $color-text;
     }
 }
 footer {
     background-color: gray;
     height: 70px;
-    background-image: url('/images/footer.png');
+    background-image: url('../images/footer.png');
     background-color: rgba(170, 205, 221, 0.9); // Tint color
     background-blend-mode: soft-light;
-    object-fit: fill;
+    object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: $opacity-pic;
