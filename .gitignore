@@ -3,5 +3,5 @@ yarn.lock
 package-lock.json
 .DS_Store
 .vscode
-# *.map
-# *.css
+*.css.map
+*.css
