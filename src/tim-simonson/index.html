@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./scss/main.css">
+    <link href="./images/ttylogo.png" rel="icon" type="image/png">
 
     <script src="https://kit.fontawesome.com/23f8bfb464.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -18,7 +19,6 @@
 
 <body>
     <header data-aos="slide-down" data-aos-delay="50" data-aos-mirror="false">
-        <h1>TJ Simonson</h1>
         <nav>
             <ul class="top-buttons">
                 <a href="./projects.html">Projects</a>
@@ -50,7 +50,7 @@
     </section>
 
 
-    <main>
+    <main id="main" class="">
         <div class="ui tiny modal" id="htmlmodal">
 
             <div class="header">HTML</div>
@@ -88,7 +88,7 @@
         <div class="ui tiny modal" id="sassmodal">
             <div class="header">SCSS and SASS transpiling</div>
             <div class="content">
-                <p>I am a proficient utiliser of SASS/SCSS styling</p>
+                <p>I use SCSS as my main </p>
             </div>
             <i class="ui close icon teal">
 </i>
@@ -119,7 +119,7 @@
 </i>
         </div>
 
-
+        <button type="button" class="theme-button" onclick="switchBackground()">Toggle Dark Theme</button>
         <section class="content" id="about" data-aos="zoom-in">
 
             <hgroup>
@@ -142,11 +142,12 @@
                             Web Design and frontend web development.
                         </li>
                         <li>
-                            Linguistic Assets, which include French, Mandarin Chinese and Myanmar/Burmese language.
+                            Linguistic Assets, which include French (fluent), Mandarin Chinese and Myanmar/Burmese language .
                         </li>
                         <li>
-                            Backend programming and web development in Python.
+                            Backend web development and coding in Python.
                         </li>
+
                     </ul>
 
                 </p>
@@ -244,6 +245,7 @@
             </div>
             <div class="ui raised segment">
                 <p>Tailored to your needs!</p>
+                <p>I am always ready for any challenge </p>
             </div>
 
         </section>
@@ -251,7 +253,24 @@
 
 
     <footer>
-        Tim Simonson 2020
+        <p class="footer-left">
+            Tim Simonson 2020</p>
+
+        <aside class="footer-right">
+            <p>Connect with me: </p>
+            <div class="footer-links">
+
+                <a href="https://www.linkedin.com/in/tj-simonson/">
+                    <span class="fab fa-linkedin fa-3x footer-right">
+                        </span>
+                </a>
+                <a href="https://www.github.com/ttytango/">
+                    <span class="fab fa-github fa-3x footer-right">
+                        </span>
+                </a>
+            </div>
+        </aside>
+
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

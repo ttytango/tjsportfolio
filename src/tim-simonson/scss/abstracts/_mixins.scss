@@ -13,6 +13,13 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin footer {
+    position: relative;
+    top: 0%;
+    bottom: 20%;
+    width: 100%;
+}
+
 // $breakpoint: ( 'small': ( min-width: 480px), 'medium': ( min-width: 768px), 'large': ( min-width: 991px)) !default;
 @mixin respond($breakpoint) {
     @if($breakpoint==large) {
