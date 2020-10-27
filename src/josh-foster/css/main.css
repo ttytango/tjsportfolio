@@ -249,38 +249,7 @@ header nav a i:hover {
   margin: 10vw auto;
 }
 
-.contact div {
-  background-color: whitesmoke;
-  border-radius: 50px;
-  opacity: 0.75;
-  -webkit-transition: .6s ease;
-  transition: .6s ease;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contact div:hover {
-  opacity: 1;
-}
-
-.contact div h2 {
-  font-family: "Bebas Neue";
-  font-size: 3vw;
-  margin: 2.5vw 0;
-}
-
-.contact div form {
+.contact form {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -289,9 +258,32 @@ header nav a i:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: whitesmoke;
+  border-radius: 50px;
+  opacity: 0.75;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.contact div form fieldset {
+.contact form:hover {
+  opacity: 1;
+}
+
+.contact form h2 {
+  font-family: "Bebas Neue";
+  font-size: 3vw;
+  margin: 2.5vw 0;
+}
+
+.contact form fieldset {
   border: none;
   margin: auto;
   display: -webkit-box;
@@ -308,7 +300,7 @@ header nav a i:hover {
   width: 90%;
 }
 
-.contact div form fieldset input {
+.contact form fieldset input {
   border: none;
   border-radius: 20px;
   height: 3vw;
@@ -318,23 +310,23 @@ header nav a i:hover {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.contact div form fieldset input:focus::-webkit-input-placeholder {
+.contact form fieldset input:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.contact div form fieldset input:focus:-ms-input-placeholder {
+.contact form fieldset input:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.contact div form fieldset input:focus::-ms-input-placeholder {
+.contact form fieldset input:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-.contact div form fieldset input:focus::placeholder {
+.contact form fieldset input:focus::placeholder {
   color: transparent;
 }
 
-.contact div form fieldset textarea {
+.contact form fieldset textarea {
   height: 30vh;
   max-width: 90%;
   border: none;
@@ -344,23 +336,23 @@ header nav a i:hover {
   resize: none;
 }
 
-.contact div form fieldset textarea:focus::-webkit-input-placeholder {
+.contact form fieldset textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.contact div form fieldset textarea:focus:-ms-input-placeholder {
+.contact form fieldset textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.contact div form fieldset textarea:focus::-ms-input-placeholder {
+.contact form fieldset textarea:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-.contact div form fieldset textarea:focus::placeholder {
+.contact form fieldset textarea:focus::placeholder {
   color: transparent;
 }
 
-.contact div form .submit {
+.contact form .submit {
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -373,7 +365,7 @@ header nav a i:hover {
   transition: 0.5s ease;
 }
 
-.contact div form .submit:hover {
+.contact form .submit:hover {
   background-color: black;
   color: white;
 }
@@ -432,23 +424,26 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 800px) {
+  .about {
+    width: 95vw;
+    margin: 10% auto 0 2%;
+  }
   .about article h2 {
     display: none;
   }
   .about article p {
-    font-size: 1.5vw;
-    padding-top: 2vw;
+    font-size: 2vw;
   }
   .development-projects {
     width: 90vw;
   }
   .contact {
     width: 85vw;
+    height: 70vh;
   }
-  .contact div {
-    height: 70vw;
-  }
-  .contact div form {
+  .contact form {
+    margin: auto;
+    height: 70vh;
     padding: 0;
     width: 90%;
     margin-bottom: 5vw;
@@ -463,19 +458,129 @@ footer a:hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .contact div form fieldset {
+  .contact form fieldset {
     margin: auto;
-    background-color: blue;
+    height: 50vh;
   }
-  .contact div form fieldset input {
+  .contact form fieldset input {
     height: 7vw;
+    font-size: 2vw;
   }
-  .contact div form fieldset textarea {
+  .contact form fieldset textarea {
     height: 20vw;
+    font-size: 2vw;
   }
-  .contact div form .submit {
+  .contact form .submit {
     height: 7vw;
     width: 15vw;
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  body header {
+    margin-top: 3vh;
+  }
+  body header nav a {
+    font-size: 4vw;
+  }
+  body header nav .socials {
+    display: none;
+  }
+  body .about {
+    height: 150vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  body .about article {
+    height: 30%;
+    width: 80%;
+  }
+  body .about article p {
+    font-size: 4vw;
+  }
+  body .about img {
+    width: 80%;
+  }
+  body .development-projects {
+    width: 90vw;
+    height: 200vw;
+    margin: 10% auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[5];
+        grid-template-rows: repeat(5, 1fr);
+    gap: 1vw;
+  }
+  body .development-projects .project2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+  }
+  body .development-projects .project4 {
+    display: none;
+  }
+  body .development-projects .project5 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  body .development-projects .project7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  body .contact {
+    width: 95vw;
+    height: 130vw;
+  }
+  body .contact form {
+    height: 130vw;
+  }
+  body .contact form h2 {
+    font-size: 10vw;
+  }
+  body .contact form fieldset {
+    margin: 0;
+    height: 70vw;
+  }
+  body .contact form fieldset input {
+    width: 95%;
+    height: 10vw;
+    font-size: 4vw;
+  }
+  body .contact form fieldset textarea {
+    font-size: 4vw;
+    height: 15vw;
+  }
+  body .contact form .submit {
+    width: 25vw;
+    font-size: 5vw;
+  }
+  body footer {
+    height: 20vw;
+  }
+  body footer .links a {
+    font-size: 5vw;
+    margin: 0 5vw;
+  }
+  body footer a {
+    margin-right: 5vw;
+    font-size: 5vw;
   }
 }
 /*# sourceMappingURL=main.css.map */

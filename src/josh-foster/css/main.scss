@@ -194,8 +194,10 @@ header{
     width: 60vw;
     margin: 10vw auto;
 
-    div{
-        
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
         background-color:whitesmoke;
         border-radius: 50px;
         opacity: 0.75;
@@ -213,16 +215,7 @@ header{
             font-family: $font-one ;
             font-size: 3vw;
             margin: 2.5vw 0;
-            
-            
-        }      
-
-        form{
-        
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          
+            } 
     
             fieldset{
                 
@@ -233,9 +226,7 @@ header{
                 justify-content: space-evenly;
                 height: 100%;
                 width: 90%;
-               
-                
-    
+
                 input{
                     border: none;
                     border-radius: 20px;
@@ -287,7 +278,7 @@ header{
             }
         }
     
-    }
+    
     
 }
 
@@ -337,6 +328,9 @@ footer{
    
     .about{
 
+        width: 95vw;
+        margin: 10% auto 0 2%;
+
         article{
 
             h2{
@@ -344,9 +338,9 @@ footer{
             }
 
             p{
-                font-size: 1.5vw;
+                font-size: 2vw;
                 
-                padding-top: 2vw;
+                
             }
         }
     }
@@ -355,63 +349,174 @@ footer{
         width: 90vw;
     }
 
+
+
+
     .contact{
 
         width: 85vw;
+        height: 70vh;
         
         
-        div{
-          height: 70vw;
-
-          h2{
-              
-          }
-
-          form{
-
-            padding: 0;
-            width: 90%;
-            
-            margin-bottom: 5vw;
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
+        
+        form{
+        margin: auto;
+        height: 70vh;
+        padding: 0;
+        width: 90%;
+        margin-bottom: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
 
             fieldset{
                 margin: auto;
-                background-color: blue;
-                
+                height: 50vh;
                 input{
-                 height: 7vw;
+                height: 7vw;
+                font-size: 2vw;
                 }
 
                 textarea{
                     height: 20vw;
+                    font-size: 2vw;
                 }
             }
 
             .submit{
                 height: 7vw;
                 width: 15vw; 
+                font-size: 2vw;
             }
         }
+
+    }
+}
+
+@media only screen and (max-width: 430px){
+
+    body{
+
+        header{
+            margin-top: 3vh;
+            
+
+            nav{
+                
+                a{
+                    font-size: 4vw;
+                }
+
+                .socials{
+                    display: none;
+                }
+            }
         }
 
-        
+        .about{
+            
+            height: 150vw;
+            flex-direction: column;
+            flex-direction: column-reverse;
+
+            article{
+                height: 30%;
+                width: 80%;
+
+                p{
+                    font-size: 4vw;
+                }
+
+            }
+
+            img{
+                width: 80%;
+            }
+            
+        }
+
+        .development-projects{
+                width: 90vw;
+                height: 200vw;
+                margin: 10% auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                gap: 1vw;
+
+                .project2{
+                    grid-column: 2/3;
+                    grid-row: 2/4;
+                }
+
+                .project4{
+                    display: none;
+                }
+
+                .project5{
+                    grid-column: 2/3;
+                    grid-row: 4/5;
+                }
+
+                .project7{
+                    grid-column: 1/3;
+                    grid-row: 5/6;
+                }
+            }
+
+        .contact{
+            width: 95vw;
+            height: 130vw;
+
+            form{
+                height: 130vw;
+                
+                h2{
+                    font-size: 10vw;
+                }
+
+                fieldset{
+                    margin: 0;
+                    height: 70vw;
+                    
+                    
+                    input{
+                        width: 95%;
+                        height: 10vw;
+                        font-size: 4vw;
+                    }
+
+                    textarea{
+                        font-size: 4vw;
+                        height: 15vw;
+                    }
+                }
+
+                .submit{
+                    width: 25vw;
+                    font-size: 5vw;
+                }
+            }
+        }
+
+        footer{
+            height: 20vw;
+
+            .links{
+
+                a{
+                    font-size: 5vw;
+                    margin: 0 5vw;
+                }
+            }
+
+            a{
+                margin-right: 5vw;
+                font-size: 5vw;
+            }
+
+        }
     }
-  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+}
