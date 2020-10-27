@@ -1,14 +1,36 @@
         .contact-page {
             main {
+                .theme-button {
+                    width: 20%;
+                    margin: 0 auto;
+                    padding: 20px 10px;
+                    cursor: pointer;
+                    // transition: all .3s ease-in;
+                    color: $black;
+                    font-size: 1.6rem;
+                    font-style: $font-cursive;
+                    background-color: $color-lime;
+                    outline-style: $color-secondary;
+                    &:hover {
+                        transform: translate(20px, 2px);
+                    }
+                    &:active {
+                        background-color: $black;
+                        opacity: 50%;
+                        transform: translate(-2px, -2px);
+                    }
+                }
                 height: 90vh;
                 // @include respond(large) {
                 //     height: 600px;
                 // }
                 .contact {
                     @include clearfix;
-                    min-width: 320px;
+                    min-width: 280px;
                     width: 80%;
                     background-color: $black;
+                    backdrop-filter: opacity(0.2);
+                    mix-blend-mode: $content-mix-blend-mode;
                     height: 540px;
                     margin: auto;
                     padding: 10px;

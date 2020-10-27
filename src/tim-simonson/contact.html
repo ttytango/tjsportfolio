@@ -33,7 +33,7 @@
     </header>
 
     <main>
-
+        <button type="button" class="theme-button" onclick="switchBackground()">Toggle Dark Theme</button>
         <section class="contact" data-aos="zoom-out" data-aos-delay="50">
 
             <div class="ui raised segment">
@@ -53,10 +53,27 @@
 
 
     <footer>
-        Tim Simonson 2020
+        <p class="footer-left">
+            Tim Simonson 2020</p>
+
+        <aside class="footer-right">
+            <p>Connect with me: </p>
+            <div class="footer-links">
+
+                <a href="https://www.linkedin.com/in/tj-simonson/">
+                    <span class="fab fa-linkedin fa-3x footer-right">
+                        </span>
+                </a>
+                <a href="https://www.github.com/ttytango/">
+                    <span class="fab fa-github fa-3x footer-right">
+                        </span>
+                </a>
+            </div>
+        </aside>
+
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -65,5 +82,5 @@
             easing: "ease-in-sine"
         });
     </script>
-    <script src="index.js " defer></script>
+    <script src="index.js" defer></script>
 </body>
