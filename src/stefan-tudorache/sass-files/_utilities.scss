@@ -1,4 +1,4 @@
-@import "variables";
+@import "mixin_variables";
 
 p {
   line-height: 1.5rem;
@@ -23,7 +23,7 @@ a {
 .comment {
   font-size: 3rem;
   text-decoration: underline $primary-color;
-  margin: 43.2px 0;
+  margin: 23.5px 0;
 }
 
 .underline {
