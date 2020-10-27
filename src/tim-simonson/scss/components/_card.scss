@@ -23,10 +23,15 @@
         background-color: $color-secondary;
         border-radius: 50%;
         font-size: 3.6rem;
-        box-shadow: inset 2px 2px 10px rgba(50, 255, 9, 0.712);
+        box-shadow: inset 2px -2px 2px 18px rgba(109, 110, 145, 0.609);
         svg {
             filter: drop-shadow(4px 6px 12px $black);
             margin-top: 8px;
+        }
+        #sass {
+            font-size: 13.4rem;
+            margin: 22px 20px 18px 20px;
+            filter: drop-shadow(8px 6px 8px $black);
         }
     }
 }
