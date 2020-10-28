@@ -17,7 +17,7 @@ main {
 }
 
 .home {
-  background-image: url("/images/Coding.jpg");
+  background-image: url("../images/Coding.jpg");
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@ main {
 .nav-section {
   width: 100%;
   height: 15%;
-  background-image: url("/images/nav.png");
+  background-image: url("../images/nav.png");
   -o-object-fit: fill;
      object-fit: fill;
   background-repeat: no-repeat;
@@ -272,7 +272,7 @@ main {
 
 .hobbies-description {
   display: none;
-  background-image: url("/images/hobbies.jpeg");
+  background-image: url("../images/hobbies.jpeg");
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
@@ -282,7 +282,7 @@ main {
 }
 
 .experience-description {
-  background-image: url("/images/background-description.jpg");
+  background-image: url("../images/background-description.jpg");
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
@@ -293,7 +293,7 @@ main {
 
 .background-description {
   display: none;
-  background-image: url("/images/path1.png");
+  background-image: url("../images/path1.png");
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
@@ -356,7 +356,7 @@ main {
 .projects {
   width: 100%;
   min-height: 100vh;
-  background-image: url("/images/Coding.jpg");
+  background-image: url("../images/Coding.jpg");
   background-color: rgba(29, 27, 32, 0.7);
   background-blend-mode: luminosity;
   -o-object-fit: fill;
@@ -468,7 +468,7 @@ main {
 .form-section {
   width: 100%;
   height: 76.5vh;
-  background-image: url("/images/quill-writing.jpg");
+  background-image: url("../images/quill-writing.jpg");
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
@@ -562,7 +562,7 @@ main {
 
 footer {
   height: 70px;
-  background-image: url("/images/footer.png");
+  background-image: url("../images/footer.png");
   background-color: rgba(170, 205, 221, 0.9);
   background-blend-mode: soft-light;
   -o-object-fit: fill;

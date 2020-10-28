@@ -23,7 +23,7 @@ main {
 // home page
 
 .home {
-    background-image: url('/images/Coding.jpg');
+    background-image: url('../images/Coding.jpg');
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,7 +36,7 @@ main {
 .nav-section {
     width: 100%;
     height: 15%;
-    background-image: url('/images/nav.png'); 
+    background-image: url('../images/nav.png'); 
     object-fit: fill;
     background-repeat: no-repeat;
     background-size: cover;
@@ -218,7 +218,7 @@ main {
 }
 .hobbies-description {
     display: none;
-    background-image: url('/images/hobbies.jpeg');
+    background-image: url('../images/hobbies.jpeg');
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -226,7 +226,7 @@ main {
     background-blend-mode: soft-light;
 }
 .experience-description {
-    background-image: url('/images/background-description.jpg');
+    background-image: url('../images/background-description.jpg');
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,7 +236,7 @@ main {
 }
 .background-description {
     display: none;
-    background-image: url('/images/path1.png');
+    background-image: url('../images/path1.png');
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -287,7 +287,7 @@ main {
 .projects {
     width: 100%;
     min-height: 100vh;
-    background-image: url('/images/Coding.jpg');
+    background-image: url('../images/Coding.jpg');
     background-color: rgba(29, 27, 32, 0.7); 
     background-blend-mode: luminosity;
     object-fit: fill;
@@ -375,7 +375,7 @@ main {
 .form-section {
     width: 100%;
     height: 76.5vh;
-    background-image: url('/images/quill-writing.jpg');
+    background-image: url('../images/quill-writing.jpg');
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -450,7 +450,7 @@ main {
 
 footer {
     height: 70px;
-    background-image: url('/images/footer.png');
+    background-image: url('../images/footer.png');
     background-color: rgba(170, 205, 221, 0.9); // Tint color
     background-blend-mode: soft-light;
     object-fit: fill;
