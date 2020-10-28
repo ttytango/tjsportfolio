@@ -2,6 +2,7 @@ $opacity-pic: 0.9;
 $color-text: #fff;
 $border-text: 2px solid black;
 $font-size-text: 1.3rem;
+$header-padding: 30px;
 
 *{
     margin: 0;
@@ -10,16 +11,19 @@ $font-size-text: 1.3rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-    display: block;
-    
-}
-header {
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 100vh;
 }
+
+main {
+    height: 80%;
+    width: 100%;
+}
+
+// home page
+
 .home {
-    background-image: url('../images/Coding.jpg');
+    background-image: url('/images/Coding.jpg');
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,21 +33,14 @@ header {
     height: 76.5vh;
 }
 
-.journey, .hobbies {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    text-align: center;
-}
 .nav-section {
     width: 100%;
     height: 15%;
-    background-image: url('../images/nav.png'); 
+    background-image: url('/images/nav.png'); 
     object-fit: fill;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(170, 205, 221, 0.9); // Tint color
+    background-color: rgba(170, 205, 221, 0.9); 
     background-blend-mode: soft-light;
     opacity: $opacity-pic;
     box-shadow: 0 10px 10px rgb(8, 8, 0);
@@ -66,13 +63,15 @@ header {
         width: 50%;
 
         a {
-            color: $color-text;
+            color: black;
             text-decoration: none;
             align-items: center;
             margin: auto;
             font-size: $font-size-text;
+            font-weight: bold;
             
             &:hover {
+                
                 text-decoration: underline;
                 text-decoration-color: $color-text;
             }
@@ -81,10 +80,12 @@ header {
 }
 .intro {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 80%;
+    width: 85%;
     margin: auto;
+    padding-top: 100px;
     h1 {
         color: $color-text;
         font-size: $font-size-text * 2;
@@ -96,10 +97,14 @@ header {
     }
     
 }
+.text-wrapper {
+    align-self: center;
+}
 .programmer {
-    width: 30%;
+    width: 45%;
     border-radius: 40%;
     margin-top: 50px;
+    align-self: center;
 
 }
 .media {
@@ -113,53 +118,178 @@ header {
     .media-icon {
         color: skyblue;
         margin: 5px 0;
+        transition: transform 0.25s;
+
+        &:hover {
+            color: royalblue;
+            transform: scale(1.1);
+        }
     }
+    .linkedin:hover { 
+        color: #0e76a8;
+        transform: scale(1.1);
+    }
+    .github:hover {
+        color: black;
+        transform: scale(1.1);
+    }
+    .facebook:hover {
+        color: #3b5998;
+        transform: scale(1.1);
+    }
+    
 }
 
-
+// about page
 
 .about {
     width: 100%;
-    height: 72.5vh;
-    background-image: url('./images/16347.png');
+    background-color: rgb(241, 247, 248);
 
     h2 {
-        margin: 30px auto; 
-        text-align: center;  
+        margin: auto;
+        padding-top: $header-padding; 
+        text-align: center; 
+        text-decoration-line: underline;;
+        text-decoration-color: #c7642b; 
     }
+    
+}
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 1350px;
+    margin: 100px auto;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 10%;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border: $border-text;
+        border-radius: 5px;
+    }
+
     h3 {
         display: inline-block;
-        width: 130px;
-        margin-left: 70px;
+        width: 150px;
         border: $border-text;
         text-align: center;
         border-radius: 5px;
-    }
+        background-color: #c7642b;
+        color: white;
+        
 
-    .journey, .hobbies {
-        width: 60%;
-        height: 50%;
-        border: $border-text;
-        padding: 15px;
-        border-radius: 5px;
-
+        &:hover {
+            background-color: skyblue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
     }
-    .hobbies {
-        display: none;
-        background-image: url('../images/hobbies.jpeg');
-    }
-    .journey {
-        // display: none;
-        background-image: url('../images/path1.png');
-    }
-
 }
+.extra-details {
+    width: 70%;
+    text-align: center;
+
+    h3 {
+        color: $color-text;
+        border: none;
+        text-decoration: underline;
+        text-decoration-color: $color-text;
+        background-color: none;
+        margin-bottom: 10px;
+    }
+}
+.background-description, .hobbies-description, .experience-description {
+    width: 100%;
+    height: 100%;
+    border: $border-text;
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0.7;
+    color: white;
+    animation-delay: 0.3s;
+    animation: 0.25s ease-in-out;
+}
+.hobbies-description {
+    display: none;
+    background-image: url('/images/hobbies.jpeg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(9, 30, 41, 0.8); 
+    background-blend-mode: soft-light;
+}
+.experience-description {
+    background-image: url('/images/background-description.jpg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(9, 30, 41, 0.8); 
+    background-blend-mode: soft-light;
+    
+}
+.background-description {
+    display: none;
+    background-image: url('/images/path1.png');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(9, 30, 41, 0.8); 
+    background-blend-mode: soft-light;
+}
+
+.icon-skills {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+}
+
+.html {
+    color: #dc6c5b;
+}
+.css {
+    color: #264de4;
+}
+.sass {
+    color: #cc6699 ;
+}
+.js {
+    color: #f0db4f;;
+}
+.bootstrap {
+    color: purple;
+}
+.npm {
+    color: firebrick;
+}
+.node {
+    color: #3c873a;
+}
+.react {
+    color: #61DBFB;
+}
+.git {
+    color: #f34f29;
+}
+.yarn {
+    color: dodgerblue;
+}
+
+// projects page
+
 .projects {
     width: 100%;
-    height: 76.5vh;
-    background-image: url('../images/Coding.jpg');
-    background-color: rgba(29, 27, 32, 0.7); // Tint color
-    background-blend-mode: darken;
+    min-height: 100vh;
+    background-image: url('/images/Coding.jpg');
+    background-color: rgba(29, 27, 32, 0.7); 
+    background-blend-mode: luminosity;
     object-fit: fill;
     background-repeat: no-repeat;
     background-size: cover;
@@ -167,87 +297,163 @@ header {
     h2 {
         color: $color-text;
         text-align: center;
+        padding-top: $header-padding;
+        text-decoration: underline;
+        text-decoration-color: $color-text;
     }
 }
 .project-container {
 
     display: grid;
-    width: 70%;
-    height: 80%;
+    width: 60%;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin: 50px auto;
+    gap: 30px;
+    margin: auto;
+    margin-top: 20px;
 }
 .card {
     border: 2px solid $color-text; 
     width: 100%;
     height: 100%;
-    background-color: gray;
+    border-radius: 5px;
 }
+.card-body{
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .card-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(15, 15, 15, 0.89);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        opacity: 0;
+        transition: opacity 0.25s;
+        
+        > * {
+            transform: translateY(20px);
+            transition: 0.25s;
+        }
 
-.skills-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 100%;
-}
-.split {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    margin: auto;
-}
-.skill-div {
-    width: 40%;
-    padding: 10px;
+        &:hover {
+            opacity: 1;
+            
+            > * {
+                transform: translateY(20px);
+            }
+        }
+    }
 
-    // .html {
-    //     color: #ff6600;
-    // }
-    // .css {
-    //     color: blue;
-    // }
-    // .sass {
-    //     color: purple;
-    // }
-    // .js {
-    //     color: yellow;
-    //     background-color: black;
-    // }
-    // .bootstrap {
-    //     color: purple;
-    // }
-    // .npm {
-    //     color: firebrick;
-    // }
-    // .node {
-    //     color: green;
-    // }
-    // .react {
-    //     color: dodgerblue;
-    // }
-    
 }
+.card-links-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+        color: white;
+        text-decoration: none;
+        transition: transform 0.25s;
+        padding-bottom: 5px;
+        
+        &:hover {
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+    }
+}
+//  contact page
 
 .form-section {
     width: 100%;
     height: 76.5vh;
-    background-image: url('../images/quill-writing.jpg');
+    background-image: url('/images/quill-writing.jpg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     
-    h1 {
-        padding-top: 10px;
+    h2 {
         text-align: center;
         color: $color-text;
+        padding-top: $header-padding;
     }
 }
+
+.contact-form {
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    background-color: #dae8ee;
+    label {
+        color: white;
+    }
+    fieldset {
+        border: none;
+    }
+    .input-fields {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+
+        
+    }
+    .input-fields, .content  {
+        width: 50%;
+
+        input,  textarea {
+            margin: 10px 0;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 2px solid white;
+            padding: 10px;
+            width: 100%;
+
+            &::placeholder{
+            color: inherit;
+            }
+        }
+        textarea {
+            height: 210px;
+            border: 2px solid white;
+        }
+        .button {
+            background-color:  #c7642b;
+            border: 2px solid transparent;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        
+            &:hover{
+            border: 2px solid black;
+            background-color: #ffffff;
+            color: black;
+
+
+            }
+
+        }
+    }
+}
+
+
+
 footer {
-    background-color: gray;
     height: 70px;
-    background-image: url('../images/footer.png');
+    background-image: url('/images/footer.png');
     background-color: rgba(170, 205, 221, 0.9); // Tint color
     background-blend-mode: soft-light;
-    object-fit: cover;
+    object-fit: fill;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: $opacity-pic;
@@ -256,4 +462,253 @@ footer {
     text-align: center;
     padding-top: 20px;
 }
-// Media colors
+// Media queries
+@media screen and (max-width: 1330px) {
+    // about page
+    .about-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    // home page
+    .intro {
+        h1 {
+            font-size: $font-size-text * 1.5;
+        }
+        .programmer {
+            width: 65%;
+        }
+    }
+    // about page
+    .about-container {
+        width: 85%;
+        justify-content: space-between;
+    }
+    .extra-details {
+        width: 70%;
+    }
+    .icon-skills {
+        width: 90%;
+    }
+    // projects page
+    .nav-section{
+        nav {
+            width: 80%;
+        }
+    }
+    .project-container {
+        width: 80%;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    // contact page
+    .contact-form {
+        width: 70%;
+        margin: 30px auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    // home page
+    .nav-section {
+        display: block;
+
+        div {
+            width: 100%;
+            display: flex;
+
+            img {
+                margin: auto;
+                padding-top: 10px;
+            }
+        }
+        nav {
+            display: flex;
+            width: 100%;
+
+            a {
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .intro {
+        display: block;
+        margin: auto;
+        padding-top: 40px;
+
+        .text-wrapper {
+            display: block;
+            margin: auto;
+            width: 85%;
+            text-align: center;
+        }
+        .programmer {
+            display: block;
+            margin: 50px auto;
+            width: 80%;
+        }
+    }
+    .media {
+        
+        a {
+            font-size: $font-size-text / 2;
+        }
+    }
+        //about page
+    .about {
+        min-height: 100vh;
+    }
+    .about-container {
+        display: block;
+        margin: auto;
+    }
+    .options {
+        width: 90%;
+        margin: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        h3 {
+            width: 100%;
+            // height: 100%;
+            padding-top: 10px;
+        }
+    }
+    .extra-details {
+        width: 90%;
+        margin: auto;
+        padding-top: 20px;
+    }
+    .icon-skills {
+        width: 90%;
+    }
+    
+    // project page
+
+    // contact-page
+    .form-section {
+        height: 100vh;
+
+        .contact-form {
+            display: block;
+            margin: 50px auto;
+            padding: 10px;
+            width: 85%;
+
+            .input-fields {
+                width: 100%;
+                
+                .details-field {
+                    input {
+                        margin: 5px 0;
+                        padding: 5px;
+                    }
+                }
+            }
+            .content {
+                width: 100%;
+
+                .message-field {
+                    textarea {
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+    // home page
+    .intro {
+        display: block;
+        margin: auto;
+        padding-top: 40px;
+
+        .text-wrapper {
+            display: block;
+            margin: auto;
+            width: 85%;
+            text-align: center;
+        }
+        .programmer {
+            display: block;
+            margin: 50px auto;
+            width: 80%;
+        }
+    }
+    // about page
+    .about {
+        min-height: 100vh;
+    }
+    .about-container {
+        display: block;
+        width: 90%;
+        margin: auto;
+
+        .options {
+            width: 90%;
+            margin: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                margin: auto;
+            }
+
+            h3 {
+                width: 100%;
+                margin: auto;
+            }
+        }
+
+        .extra-details {
+            width: 90%;
+            margin: 20px auto;
+        }
+        
+    }
+    .icon-skills {
+        margin-top: 40px;
+    }
+    
+    // contact page
+
+    .form-section {
+        height: 100vh;
+
+        .contact-form {
+            display: block;
+            margin: 50px auto;
+            padding: 10px;
+
+            .input-fields {
+                width: 100%;
+                
+                .details-field {
+                    input {
+                        margin: 5px 0;
+                        padding: 5px;
+                    }
+                }
+            }
+            .content {
+                width: 100%;
+
+                .message-field {
+                    textarea {
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
