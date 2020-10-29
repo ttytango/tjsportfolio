@@ -23,27 +23,30 @@
     <header>
         <h1>Contact | TJ Simonson</h1>
         <nav>
-            <ul class="top-buttons">
+            <ul data-role="" class="top-buttons">
                 <a href="./projects.html">Projects</a>
                 <a href="./contact.html">Contact</a>
-                <a href="./index.html">About</a>
+                <a href="./index.html">Home</a>
             </ul>
         </nav>
 
     </header>
 
-    <main>
-        <button type="button" class="theme-button" onclick="switchBackground()">Toggle Dark Theme</button>
-        <section class="contact" data-aos="zoom-out" data-aos-delay="50">
+    <main class="">
+        <button type="button" name="toggle" class="theme-button show" id="toggle_to_dark">Change Theme</button>
+
+
+
+        <section class="contact light" data-aos="zoom-out">
 
             <div class="ui raised segment">
                 <h2>Contact Me</h2>
             </div>
             <div class="form-group">
-                <form method="" class="contact-form">
-                    <input type="text" name="name" id="name" value="" class="input-field" placeholder="Please enter your full name">
-                    <input type="email" name="email" id="email" class="input-field" placeholder="Please enter your email address">
-                    <textarea name="message" class="input-field text-field" placeholder="Please write your message here, and I'll get back to you as soon as I can"></textarea>
+                <form action="https://formspree.io/f/xzbkgzlb" method="POST" class="contact-form">
+                    <input type="text" name="name" id="name" value="" class="input-field" placeholder="Please enter your full name" required>
+                    <input type="email" name="_replyto" id="email" class="input-field" placeholder="Please enter your email address" required>
+                    <textarea name="message" class="input-field text-field" placeholder="Please write your message here, and I'll get back to you as soon as I can" required></textarea>
                     <button type="submit">Submit</button>
                 </form>
             </div>
@@ -77,8 +80,8 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1400,
-            mirror: false,
+            duration: 800,
+            mirror: true,
             easing: "ease-in-sine"
         });
     </script>

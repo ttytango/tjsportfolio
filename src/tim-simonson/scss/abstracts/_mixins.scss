@@ -6,18 +6,13 @@
     }
 }
 
-@mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 @mixin footer {
     position: relative;
+    position: sticky, fixed;
     top: 0%;
-    bottom: 20%;
+    bottom: 0%;
     width: 100%;
+    // margin-top: 20px;
 }
 
 // $breakpoint: ( 'small': ( min-width: 480px), 'medium': ( min-width: 768px), 'large': ( min-width: 991px)) !default;
@@ -34,6 +29,11 @@
     }
     @if($breakpoint==small) {
         @media only screen and (max-width: 767px) and (min-width: 480px) {
+            @content;
+        }
+    }
+    @if($breakpoint==smaller) {
+        @media only screen and (max-width: 479px) {
             @content;
         }
     }

@@ -1,21 +1,25 @@
-// const overlayBtn = document.getElementById('overlay-button');
+const themeButton = document.querySelector('.theme-button');
+const themeButtonDark = document.querySelector('.theme-button__dark');
+const mainBody = document.querySelector('main');
+const contactBody = document.querySelector('.contact');
 
 
-// function removeOverlay(object) {
-//     const content = document.querySelectorAll("content");
-//     content.style.mixBlendMode = "unset";
-// }
-// const mainBackground = document.querySelector("main");
 function switchBackground() {
-    $('main').addClass("dark-background");
-    $('.theme-button').hide();
+    mainBody.classList.toggle("dark-background");
+    contactBody.classList.toggle("transparency");
+    contactBody.classList.toggle("light");
 }
 
+themeButton.addEventListener("click", function(event) {
+    switchBackground();
+    event.target.classList.toggle("show");
+    // this.classList.toggle("hide");
+})
 
-var myTimer = setTimeout(myTitle, 2000);
+let myTimer = setTimeout(myTitle, 2000);
 
 function myTitle() {
-    var greet = document.querySelector("#webdeveloper");
+    let greet = document.querySelector("#webdeveloper");
     greet.style.animationPlayState = "running";
 }
 
@@ -61,7 +65,7 @@ TextShadow.eventSpace.addEventListener('mouseleave', TextShadow.handleMouseLeave
 
 function openHtmlModal() {
     $('#htmlmodal.tiny.modal').modal({
-            inverted: true,
+            inverted: false,
             centered: true
         })
         .modal('show');
@@ -69,7 +73,7 @@ function openHtmlModal() {
 
 function openCssModal() {
     $('#cssmodal.tiny.modal').modal({
-            inverted: true,
+            inverted: false,
             centered: true
         })
         .modal('show');
@@ -77,7 +81,7 @@ function openCssModal() {
 
 function openJsModal() {
     $('#jsmodal.tiny.modal').modal({
-            inverted: true,
+            inverted: false,
             centered: true
         })
         .modal('show');
@@ -85,7 +89,7 @@ function openJsModal() {
 
 function openPyModal() {
     $('#pymodal.tiny.modal').modal({
-            inverted: true,
+            inverted: false,
             centered: true
         })
         .modal('show');
@@ -93,7 +97,7 @@ function openPyModal() {
 
 function openSassModal() {
     $('#sassmodal.tiny.modal').modal({
-            inverted: true,
+            inverted: false,
             centered: true
         })
         .modal('show');
@@ -101,7 +105,7 @@ function openSassModal() {
 
 function openNpmModal() {
     $('#npmmodal.tiny.modal ').modal({
-            inverted: true,
+            inverted: false,
             centered: true
         })
         .modal('show');
@@ -109,7 +113,7 @@ function openNpmModal() {
 
 function openGitModal() {
     $('#gitmodal.tiny.modal ').modal({
-            inverted: true,
+            inverted: false,
             centered: true
         })
         .modal('show');
@@ -117,12 +121,35 @@ function openGitModal() {
 
 function openBsModal() {
     $('#bsmodal.tiny.modal ').modal({
-            inverted: true,
+            inverted: false,
             centered: true
         })
         .modal('show');
 }
 
+function openReactModal() {
+    $('#reactmodal.tiny.modal').modal({
+            inverted: false,
+            centered: true
+        })
+        .modal('show');
+}
+
+function openSvelteModal() {
+    $('#sveltemodal.tiny.modal').modal({
+            inverted: false,
+            centered: true
+        })
+        .modal('show');
+}
+
+function openLinuxModal() {
+    $('#linuxmodal.tiny.modal').modal({
+            inverted: false,
+            centered: true
+        })
+        .modal('show');
+}
 
 const boxesAnimation = anime({
     targets: ".subheading > h3",
@@ -138,7 +165,7 @@ const boxesAnimation = anime({
     direction: "alternate",
 
 });
-var animateletters = anime({
+const animateletters = anime({
     targets: ".box",
     translateY: [-10, 20],
     borderRadius: 50,
@@ -149,7 +176,7 @@ var animateletters = anime({
     direction: "alternate",
     loop: true
 });
-var animation = anime({
+const animation = anime({
     targets: "header > nav > ul > a",
     // Properties
     translateX: [20, 40],

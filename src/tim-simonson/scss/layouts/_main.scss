@@ -14,30 +14,33 @@ main {
         width: 90%;
         background-color: $black;
         color: rgb(255, 236, 236);
-        padding: 2px;
-        min-height: 72vh;
-        backdrop-filter: opacity(0.45);
+        padding: 2px 20px;
+        min-height: 80vh;
+        backdrop-filter: opacity(0.4);
         mix-blend-mode: $content-mix-blend-mode;
         border-radius: 12px;
         //scroll-behavior: auto;
         //scrollbar-base-color: $color-lime;
-        //overflow: auto;
+        overflow: auto;
         //overscroll-behavior: contain;
         /*scrollbar-highlight-color: #ffffff;
         */
         animation: title-down 1s normal;
         transition: all .3s ease-in;
         &:hover {
-            filter: drop-shadow(2px 3px 10px $color-lime);
-            -webkit-filter: drop-shadow(2px 3px 10px $color-lime);
+            filter: drop-shadow(2px 3px 10px $color-lime) opacity(1);
         }
         @include respond(large) {
-            padding: 20px;
+            padding: 0;
             width: 80%;
         }
         @include respond(medium) {
             padding: 20px 20px;
             width: 80%;
+        }
+        .theme-button {
+            filter: brightness(60%);
+            color: rgba($black, 0.9);
         }
     }
 }
