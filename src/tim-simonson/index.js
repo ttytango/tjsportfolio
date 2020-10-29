@@ -1,30 +1,17 @@
-// window.onscroll = function() { scrollFunction(); };
-// var header = document.getElementById("header");
+// const overlayBtn = document.getElementById('overlay-button');
 
-// function scrollFunction() {
-//     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-//         header.style.height = "440px";
-//     } else {
-//         header.style.height = "220px";
-//         // header.style.paddingTop = "20px";
-//     }
+
+// function removeOverlay(object) {
+//     const content = document.querySelectorAll("content");
+//     content.style.mixBlendMode = "unset";
 // }
+// const mainBackground = document.querySelector("main");
+function switchBackground() {
+    $('main').addClass("dark-background");
+    $('.theme-button').hide();
+}
 
-// window.addEventListener("load", function() {
-//     var delay = 2;
-//     var nodes = document.querySelectorAll(".animate");
-//     for (var i = 0; i < nodes.length; i++) {
-//         var words = nodes[i].innerText.split(" ");
-//         nodes[i].innerHTML = "";
-//         for (var i2 = 0; i2 < words.length; i2++) {
-//             var item = document.createElement("span");
-//             item.innerText = words[i2];
-//             var calc = (delay + ((nodes.length + i2) / 3));
-//             item.style.animationDelay = calc + "s";
-//             nodes[i].appendChild(item);
-//         }
-//     }
-// });
+
 var myTimer = setTimeout(myTitle, 2000);
 
 function myTitle() {
@@ -71,47 +58,6 @@ TextShadow.eventSpace.addEventListener('mousemove', TextShadow.shadowUpdate);
 
 TextShadow.eventSpace.addEventListener('mouseleave', TextShadow.handleMouseLeave);
 
-// // Get the modal
-// var modal = document.getElementById("modal-dialog");
-
-// // Get the button that opens the modal
-// var btn = document.getElementById("mySVG");
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on the button, open the modal
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-
-// var modal2 = document.getElementById("modal-dialog-css");
-// var btn2 = document.getElementById("mySVGCSS");
-// var span2 = document.getElementsById("close2")[0];
-
-// btn2.onclick = function() {
-//     modal2.style.display = "block";
-// }
-// span2.onclick = function() {
-//     modal2.style.display = "none";
-// }
-// window.onclick = function(event) {
-//     if (event.target == modal2) {
-//         modal2.style.display = "none";
-//     }
-// }
 
 function openHtmlModal() {
     $('#htmlmodal.tiny.modal').modal({
@@ -176,3 +122,44 @@ function openBsModal() {
         })
         .modal('show');
 }
+
+
+const boxesAnimation = anime({
+    targets: ".subheading > h3",
+    translateX: [20, -20],
+    translateY: [10, 10],
+    borderRadius: 50,
+    // opacity: 10,
+    duration: 24000,
+    easing: "easeInOutElastic",
+    elasticity: 2000,
+    delay: (el, i, t) => i * 12,
+    loop: true,
+    direction: "alternate",
+
+});
+var animateletters = anime({
+    targets: ".box",
+    translateY: [-10, 20],
+    borderRadius: 50,
+    // opacity: 100,
+    duration: 4000,
+    easing: "easeInElastic",
+    elasticity: 1000,
+    direction: "alternate",
+    loop: true
+});
+var animation = anime({
+    targets: "header > nav > ul > a",
+    // Properties
+    translateX: [20, 40],
+    borderRadius: 25,
+    rotate: [0, -2],
+
+    // Property Parameters
+    duration: 3000,
+    easing: "easeInOutQuint",
+    // Animation Parameters
+    direction: "forwards",
+    loop: true
+});

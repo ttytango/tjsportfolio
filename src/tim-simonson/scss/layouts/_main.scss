@@ -4,30 +4,32 @@ main {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1800px;
+    max-height: 3200px;
     display: flex;
     flex-direction: column;
     padding: 25px;
     .content {
-        margin: 10px auto;
-        width: 100%;
+        @include clearfix;
+        margin: 40px auto;
+        width: 90%;
         background-color: $black;
         color: rgb(255, 236, 236);
         padding: 2px;
-        height: 100vh;
-        backdrop-filter: opacity(0.6);
-        mix-blend-mode: overlay;
+        min-height: 72vh;
+        backdrop-filter: opacity(0.45);
+        mix-blend-mode: $content-mix-blend-mode;
         border-radius: 12px;
-        scroll-behavior: auto;
-        scrollbar-base-color: $color-lime;
-        overflow: auto;
-        overscroll-behavior: contain;
+        //scroll-behavior: auto;
+        //scrollbar-base-color: $color-lime;
+        //overflow: auto;
+        //overscroll-behavior: contain;
         /*scrollbar-highlight-color: #ffffff;
         */
         animation: title-down 1s normal;
-        transition: all .3s ease-in-out;
+        transition: all .3s ease-in;
         &:hover {
             filter: drop-shadow(2px 3px 10px $color-lime);
+            -webkit-filter: drop-shadow(2px 3px 10px $color-lime);
         }
         @include respond(large) {
             padding: 20px;
