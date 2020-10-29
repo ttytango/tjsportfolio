@@ -5,72 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alice's portfolio</title>
     <script src="https://kit.fontawesome.com/f25651ee7a.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-  <header>
-
+     <nav role="navigation">
+        <div id="menuToggle" data-aos="fade-in" data-aos-duration="3000" data-aos-delay="3000">
+          <input type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#home"><li>Home</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#projects"><li>Projects</li></a>
+            <a href="#contact"><li>Contact</li></a>
+          </ul>
+        </div>
+      </nav>  
     <!-- Landing Page -->
-    <span class="navbar fas fa-bars"></span>
+    <header id="home">
     <div class="banner">
       <h1>ALICE SCOTT</h1>
       <p>WEB DEVELOPER</p>
       <div>
-        <span class="fab fa-github"></span>
-        <span class="fab fa-linkedin-in"></span>
-        <span class="fab fa-instagram"></span>
+        <a href="https://github.com/"><span class="fab fa-github"></span></a>
+        <a href="https://linkedin.com"><span class="fab fa-linkedin-in"></span></a>
+        <a href="https://instagram.com"><span class="fab fa-instagram"></span></a>
       </div>
-      <span class="arrow fas fa-arrow-down"></span>
+      <a href="#about"><span class="arrow fas fa-arrow-down"></span></a>
     </div>
   </header>
 
   <main>
 
     <!-- About Me -->
-      <section id="about" class="about-me">
-        <div class="headings">
-            <h2 class="past-heading">My Experience</h2>
-            <h2 class="future-heading">Why Tech?</h2> 
-       </div> 
-       <p class="past">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
-      Eveniet corrupti illo iusto sunt! Odit harum libero fugit expedita tenetur 
-       <br><br>
-      beatae dolores doloremque earum, sapiente at ipsum unde amet praesentium sed. 
-      <br><br>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum unde, pariatur, libero, dolorem molestiae 
-      <br><br>
-      labore totam quo doloribus amet aut fugit id quidem omnis nam suscipit. 
-      <br><br>
-      Dolore exercitationem dolorem quasi.</p>
+    <section id="about">
+      <div class="tab">
+        <a class="tablinks" onclick="openTab(event, 'past')" id="defaultOpen" data-aos="fade-right">My Experience</a>
+        <a class="tablinks" onclick="openTab(event, 'future')" data-aos="fade-right">Why Tech?</a>
+      </div>
+      <div class="content-background">
+        <div id="past" class="tabcontent" data-aos="fade-left">
+          <p data-aos="fade-left">My past experience Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia excepturi labore, et fugiat, inventore dicta nam iusto debitis odit explicabo maiores harum molestiae asperiores eligendi repellendus minus, numquam nostrum blanditiis.</p>
+        </div>
+        
+        <div id="future" class="tabcontent">
+            <p>Why Tech? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, asperiores. Sequi tempora ab quas modi atque labore incidunt ipsam, facere qui repellat ut amet aperiam sed dolorem explicabo eligendi laborum.</p>
+            <img src="./img/brain.png" alt="brain"> 
+        </div>
+      </div>
     </section>
-        <!-- <p class="future">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corrupti illo iusto sunt! Odit harum libero fugit expedita tenetur beatae dolores doloremque earum, sapiente at ipsum unde amet praesentium sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eveniet vel nihil tenetur neque doloremque nemo quia fuga magni placeat esse odit nobis magnam libero eos, odio facere quae deleniti.</p> -->
-
 
     <!-- Projects -->
     <section id="projects">
-      <section class="project-grid">
-        <h2>PROJECTS</h2>
-        <article class="project-1"><img src="./img/log-pile.jpg" alt="placeholder"></article>
-        <article class="project-2"><img src="./img/log-pile.jpg" alt="placeholder"></article>
-        <article class="project-3"><img src="./img/log-pile.jpg" alt="placeholder"></article>
-        <article class="project-4"><img src="./img/log-pile.jpg" alt="placeholder"></article>
-        <article class="project-5"><img src="./img/log-pile.jpg" alt="placeholder"></article>
-        <article class="project-6"><img src="./img/log-pile.jpg" alt="placeholder"></article>
-      </section>
-    </section>  
+      <div class="project-grid">
+        <h2 data-aos="fade-right">PROJECTS</h2>
+          <article class="project project1" >
+            <img src="./img/placeholders/monkey.png" alt="Monkey" onclick="openOverlay('monkey')">
+            <div id="monkey" class="image-overlay blur">
+              <div class="closebtn" onclick="closeOverlay()">&times;</div>
+              <h3 class="project-title">Monkey project title</h3>
+              <p class="project-description">Information about project</p>
+            </div>
+          </article>
+          <article class="project project2">
+            <img src="./img/placeholders/laptop.png" alt="" onclick="openOverlay('laptop')">
+            <div id="laptop" class="image-overlay blur">
+              <div class="closebtn" onclick="closeOverlay()">&times;</div>
+              <h3 class="project-title">Laptop project title</h3>
+              <p class="project-description">Information about project</p>
+            </div>
+          </article>
+          <article class="project project3"><img src="./img/placeholders/hats.png" alt="" onclick="openOverlay('hats')">
+            <div id="hats" class="image-overlay blur">
+              <div class="closebtn" onclick="closeOverlay()">&times;</div>
+              <h3 class="project-title">Hats project title</h3>
+              <p class="project-description">Information about project</p>
+            </div>
+          </article>
+          <article class="project project4"><img src="./img/placeholders/bottles.png" alt="" onclick="openOverlay('bottles')">
+            <div id="bottles" class="image-overlay blur">
+              <div class="closebtn" onclick="closeOverlay()">&times;</div>
+              <h3 class="project-title">Bottles project title</h3>
+              <p class="project-description">Information about project</p>
+            </div>
+          </article>
+          <article class="project project5"><img src="./img/placeholders/car.png" alt="" onclick="openOverlay('car')">
+            <div id="car" class="image-overlay blur">
+              <div class="closebtn" onclick="closeOverlay()">&times;</div>
+              <h3 class="project-title">Car project title</h3>
+              <p class="project-description">Information about project</p>
+            </div>
+          </article>
+          <article class="project project6"><img src="./img/placeholders/cakes.png" alt="" onclick="openOverlay('baking')">
+            <div id="baking" class="image-overlay blur">
+              <div class="closebtn" onclick="closeOverlay()">&times;</div>
+              <h3 class="project-title">Baking project title</h3>
+              <p class="project-description">Information about project</p>
+            </div>
+          </article>      
+        </div>
+    </section> 
     
     <!-- Contact -->
     <section id="contact">
-        <section class="left-contact">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repudiandae voluptatem autem nesciunt quidem?</p>
+        <section class="left-contact" data-aos="fade-right">
+          <p>For more information or to get in touch, email me at alice.cy.scott@gmail.com or alternatively leave a message to the right and I will get back to you!</p>
           <div>
-            <span class="fab fa-github"></span>
-            <span class="fab fa-linkedin-in"></span>
-            <span class="fab fa-instagram"></span>
+            <a href="https://github.com/"><span class="fab fa-github"></span></a>
+            <a href="https://linkedin.com"><span class="fab fa-linkedin-in"></span></a>
+            <a href="https://instagram.com"><span class="fab fa-instagram"></span></a>
           </div>
         </section>
-        <form action="https://formspree.io/f/xvovarvj" method="POST">
+        <form action="https://formspree.io/f/xvovarvj" method="POST" data-aos="fade-left">
           <input type="text" name="name" aria-label="name" placeholder="Name..." required>
           <input type="email" name="email" aria-label="email" placeholder="Email..." required>
           <textarea name="message" aria-label="message" placeholder="Message..." required></textarea>
@@ -80,14 +129,19 @@
   </main>
 
   <footer>
-    <span class="fas fa-angle-double-up"></span>
+    <div class="to-top-button">
+      <span class="fas fa-angle-double-up"></span>
+    </div>
+    <span class="horizontal-line"></span>
+    <p>Copyright 2020</p>
   </footer>
 
-  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
-  <!-- <script>
+  <script src="./main.js" defer></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
     AOS.init({
       duration: 2000
     });
-  </script> -->
+  </script>
 </body>
 </html>
