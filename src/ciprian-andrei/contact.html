@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ciprian's portofolio website made using HTML, CSS and Javascript">
+    <meta name="keywords" content="HTML5, CSS3, Javascript">
+    <meta name="author" content="Ciprian Andrei">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ca-ico.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script defer async src="https://kit.fontawesome.com/8c0ab55b41.js" crossorigin="anonymous"></script>
+    <title>Ciprian | Contact</title>
+</head>
+<body>
+    <header>
+        <section class="nav-section">
+            <div>
+                <img src="./images/logo.svg" alt="my-logo" srcset=""> 
+            </div>
+            <nav>
+                <a href="index.html" data-aos="flip-down"  data-aos-duration="2000">Home</a>
+                <a href="about.html" data-aos="flip-down"  data-aos-duration="2000">About</a>
+                <a href="projects.html" data-aos="flip-down"  data-aos-duration="2000">Projects</a>
+                <a href="contact.html" data-aos="flip-down"  data-aos-duration="2000">Contact</a>
+            </nav>
+        </section>
+    </header>
+
+    <main data-aos="zoom-out"  data-aos-easing="ease-in-linear"data-aos-duration="1000">
+        <section class='media'>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github-square fa-3x media-icon github"></i></a> 
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-3x media-icon linkedin"></i></a>
+            <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook-square fa-3x media-icon facebook"></i></a>
+        </section>
+        <section class="form-section">
+            <h2 data-aos="zoom-in-up" data-aos-duration="1000">Feel free to fill out the form bellow for any future collaboration</h2>
+            <form action="" method="POST" class="contact-form"> 
+                <section class="input-fields">
+                    <fieldset class="details-field">
+                        <input type="text" name="firstName" aria-label="firstName" placeholder="First Name" required>
+                        <input type="text" name="lastName" aria-label="lastName" placeholder="Last Name" required>
+                        <input type="email" name="email" aria-label="email" placeholder="Email address" required>
+                        <input type="tel" name="phone" aria-label="phone" placeholder="Phone">
+                    </fieldset>
+                </section>
+                <section class="content">
+                    <fieldset class="message-field">
+                        <textarea name="message" cols="20" rows="10" aria-label="message" required placeholder="Message:"></textarea>
+                        <input type="submit" value="Send" class="button">
+                    </fieldset>
+                </section>
+            </form>
+        </section>
+        <footer>
+            <p id='copyright'>&copy; Designed by Ciprian Andrei 2020<p>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
