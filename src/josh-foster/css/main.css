@@ -1,3 +1,7 @@
+*:focus {
+  outline: none;
+}
+
 body {
   background-color: black;
   background-image: url("/src/josh-foster/img/background-image-main.jpg");
@@ -240,16 +244,13 @@ header nav a i:hover {
   grid-row: 4/5;
 }
 
-.contact div {
+.contact {
   width: 60vw;
-  height: 40vw;
-  background-color: whitesmoke;
-  margin: 10% auto;
-  padding: 2vw;
-  border-radius: 50px;
-  opacity: 0.75;
-  -webkit-transition: .6s ease;
-  transition: .6s ease;
+  margin: 10vw auto;
+}
+
+.contact form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,6 +258,12 @@ header nav a i:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: whitesmoke;
+  border-radius: 50px;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  display: flex;
+  flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -265,31 +272,15 @@ header nav a i:hover {
           align-items: center;
 }
 
-.contact div:hover {
-  opacity: 1;
-}
-
-.contact div h2 {
-  font-family: "Bebas Neue";
+.contact form h2 {
+  font-family: 'Bebas Neue';
   font-size: 3vw;
-}
-
-.contact div:hover {
-  opacity: 1;
-}
-
-.contact form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin: 2.5vw 0;
 }
 
 .contact form fieldset {
   border: none;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,23 +288,63 @@ header nav a i:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 20vw;
-  width: 50vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+  width: 90%;
 }
 
 .contact form fieldset input {
   border: none;
   border-radius: 20px;
-  height: 10vw;
+  height: 3vw;
   padding-left: 2vw;
-  margin: 2vh 0;
+  margin: 1vw 0;
+  font-size: 1vw;
   font-family: 'Courier New', Courier, monospace;
 }
 
+.contact form fieldset input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.contact form fieldset input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.contact form fieldset input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.contact form fieldset input:focus::placeholder {
+  color: transparent;
+}
+
 .contact form fieldset textarea {
+  height: 30vh;
+  max-width: 90%;
   border: none;
   border-radius: 20px;
   padding: 5%;
+  font-size: 1vw;
+  resize: none;
+}
+
+.contact form fieldset textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.contact form fieldset textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.contact form fieldset textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.contact form fieldset textarea:focus::placeholder {
+  color: transparent;
 }
 
 .contact form .submit {
@@ -322,7 +353,7 @@ header nav a i:hover {
   cursor: pointer;
   height: 5vw;
   width: 10vw;
-  margin: 5vh auto 0 auto;
+  margin: 2.5vw auto;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1vw;
   -webkit-transition: 0.5s ease;
@@ -385,5 +416,179 @@ footer a {
 
 footer a:hover {
   color: red;
+}
+
+@media only screen and (max-width: 800px) {
+  .about {
+    width: 95vw;
+    margin: 10% auto 0 2%;
+  }
+  .about img:hover {
+    width: 80vw;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
+  .about article h2 {
+    display: none;
+  }
+  .about article p {
+    font-size: 2vw;
+  }
+  .development-projects {
+    width: 90vw;
+  }
+  .contact {
+    width: 85vw;
+    height: 70vh;
+  }
+  .contact form {
+    margin: auto;
+    height: 70vh;
+    padding: 0;
+    width: 90%;
+    margin-bottom: 5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contact form fieldset {
+    margin: auto;
+    height: 50vh;
+  }
+  .contact form fieldset input {
+    height: 7vw;
+    font-size: 2vw;
+  }
+  .contact form fieldset textarea {
+    height: 20vw;
+    font-size: 2vw;
+  }
+  .contact form .submit {
+    height: 7vw;
+    width: 15vw;
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  body header {
+    margin-top: 3vh;
+  }
+  body header nav a {
+    font-size: 4vw;
+  }
+  body header nav .socials {
+    display: none;
+  }
+  body .about {
+    height: 150vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  body .about article {
+    height: 30%;
+    width: 80%;
+  }
+  body .about article p {
+    font-size: 4vw;
+  }
+  body .about img {
+    width: 80%;
+  }
+  body .development-projects {
+    width: 90vw;
+    height: 200vw;
+    margin: 10% auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[5];
+        grid-template-rows: repeat(5, 1fr);
+    gap: 1vw;
+  }
+  body .development-projects .project2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+  }
+  body .development-projects .project4 {
+    display: none;
+  }
+  body .development-projects .project5 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  body .development-projects .project7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  body .contact {
+    width: 95vw;
+    height: 130vw;
+    margin-bottom: 10vh;
+  }
+  body .contact form {
+    height: 140vw;
+  }
+  body .contact form h2 {
+    margin-top: 10vh;
+    font-size: 10vw;
+  }
+  body .contact form fieldset {
+    margin: auto;
+    height: 70vw;
+  }
+  body .contact form fieldset input {
+    margin: 0 auto;
+    width: 90%;
+    height: 10vw;
+    font-size: 4vw;
+  }
+  body .contact form fieldset textarea {
+    margin: 0 auto;
+    width: 65vw;
+    font-size: 4vw;
+    height: 15vw;
+  }
+  body .contact form .submit {
+    margin-bottom: 10vh;
+    border-radius: 20vw;
+    height: 10vh;
+    width: 30vw;
+    font-size: 5vw;
+  }
+  body footer {
+    height: 20vw;
+  }
+  body footer .links a {
+    font-size: 5vw;
+    margin: 0 5vw;
+  }
+  body footer a {
+    margin-right: 5vw;
+    font-size: 5vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */
