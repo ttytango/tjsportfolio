@@ -11,7 +11,7 @@ $font-one: 'Bebas Neue';
 
 body{
     background-color: black;
-    background-image: url("../img/background-image-main.jpg");
+    background-image: url("/src/josh-foster/img/background-image-main.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -116,8 +116,8 @@ header{
     height: 100vw;
     margin: 10% auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
     gap: 1vw;
     
 
@@ -200,19 +200,17 @@ header{
         flex-direction: column;
         background-color:whitesmoke;
         border-radius: 50px;
-        opacity: 0.75;
+        
         transition: .6s ease;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        &:hover{
-            opacity: 1;
-        }
+        
 
         h2{
-            font-family: $font-one ;
+            font-family: 'Bebas Neue' ;
             font-size: 3vw;
             margin: 2.5vw 0;
             } 
@@ -331,6 +329,13 @@ footer{
         width: 95vw;
         margin: 10% auto 0 2%;
 
+        img{
+            &:hover{
+                width: 80vw;
+                filter: grayscale(0%);
+            }
+        }
+
         article{
 
             h2{
@@ -338,9 +343,7 @@ footer{
             }
 
             p{
-                font-size: 2vw;
-                
-                
+                font-size: 2vw;  
             }
         }
     }
@@ -349,16 +352,11 @@ footer{
         width: 90vw;
     }
 
-
-
-
     .contact{
 
         width: 85vw;
         height: 70vh;
-        
-        
-        
+                
         form{
         margin: auto;
         height: 70vh;
@@ -467,33 +465,43 @@ footer{
         .contact{
             width: 95vw;
             height: 130vw;
+            margin-bottom: 10vh;
 
             form{
-                height: 130vw;
+                height: 140vw;
+                
                 
                 h2{
+                    margin-top: 10vh;
                     font-size: 10vw;
                 }
 
                 fieldset{
-                    margin: 0;
+                    margin: auto;
+                    
                     height: 70vw;
                     
                     
                     input{
-                        width: 95%;
+                        margin: 0 auto;
+                        width: 90%;
                         height: 10vw;
                         font-size: 4vw;
                     }
 
                     textarea{
+                        margin: 0 auto;
+                        width: 65vw;
                         font-size: 4vw;
                         height: 15vw;
                     }
                 }
 
                 .submit{
-                    width: 25vw;
+                    margin-bottom: 10vh;
+                    border-radius: 20vw;
+                    height: 10vh;
+                    width: 30vw;
                     font-size: 5vw;
                 }
             }

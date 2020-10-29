@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" scroll-behaviour: smooth; >
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,34 +13,91 @@
     <title>Otis Portfolio</title>
 </head>
 
-<body>
+<body id="page-top">
+
     <!--Header Section-->
     <section>
-    <header>
-        <h1>Otis Parsons</h1>
-        <h1> Software Developer</h1>
+    <header class="header">
+    <h1>Otis Parsons</h1>
+    <h1>Software Developer</h1>
+</section>
     </header>
-    </section>
+    
+
 
     <!--About Me-->
-    <section>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-8 mx-auto">
     <header>
         <h2>About Me</h2>
+        
 
         <ul class="aboutme">
-            <li> I am a Software Developer based in London, I love to build and to solve problems.</li>
+            <li>Hi, </li>
+
+            <li> I am a Software Developer based in London.</li>
 
             <li> I have several years of Product & Operations experience and hold an MSc in Finance.</li>
 
             <li>Below are a few of my projects, skills and contact details.</li>
+            
+            <ul class="star"> 
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>   
+                <li></li>
+            </ul>
         </ul>
         
     </header>
 
+    <section class="spaceship">
+            <div class="rocket">
+            <div class="rocket-body">
+                <div class="body"></div>
+                <div class="fin fin-left"></div>
+                <div class="fin fin-right"></div>
+                <div class="window"></div>
+                </div>
+                <div class="exhaust-flame"></div>
+                <ul class="exhaust-fumes">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
+                <ul class="star">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>   
+                <li></li>
+                </ul>
+            </div>
+            
+        </section>
+
     <!--Work-->
-    <section>
+    <section id="work" class="bg-light">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+
     <header>
         <h3>Work</h3>
+        
         <section class="hero-section">
             <div class="card-grid">
             <a class="card" href="#">
@@ -64,7 +122,7 @@
                 </div>
             </li>
             <a class="card" href="#">
-                <div class="card__background" style="background-image: url(Images/code4.jpg)"></div>
+                <div class="card__background" style="background-image: url(images/code4.jpg)"></div>
                 <div class="card__content">
                 <p class="card__category">Project</p>
                 <h3 class="card__heading">Game</h3>
@@ -77,8 +135,13 @@
     </header>
     </section>
 
+
         <!--Skills & Experience-->
-        <section id="skills" class="Skills">
+        <section id="contact" class="Skills">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-8 mx-auto">
+
             <header>
                 <h2>Skills</h2>
             </header>
@@ -103,7 +166,15 @@
     
         </section>
 
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom JavaScript for this theme -->
+<script src="js/scrolling-nav.js"></script>
 
 </body>
 </html>
