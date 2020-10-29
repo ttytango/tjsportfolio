@@ -1,32 +1,104 @@
-.card {
-    cursor: pointer;
-    transition: all .2s ease-out;
-    &:hover {
-        background-color: rgba(255, 82, 232, 0.699);
-        box-shadow: 2px 2px 8px rgb(219, 135, 24);
-    }
-    &:active {
-        box-shadow: 1px 1px 4px rgba(68, 175, 68, 0.514);
-    }
-}
-
-.project-card {
-    // background-blend-mode: overlay;
-    // isolation: isolate;
-    .image {
-        align-self: start;
-        margin: auto;
-        text-align: center;
-        justify-content: center;
-        width: 200px;
-        height: 200px;
-        background-color: $color-secondary;
-        border-radius: 50%;
-        font-size: 3.6rem;
-        box-shadow: inset 2px 2px 10px rgba(50, 255, 9, 0.712);
-        svg {
-            filter: drop-shadow(4px 6px 12px $black);
-            margin-top: 8px;
+    .card {
+        cursor: pointer;
+        transition: all .2s ease-out;
+        &:hover {
+            background-color: rgba(255, 82, 232, 0.699);
+            box-shadow: 2px 2px 8px rgb(219, 135, 24);
+        }
+        &:active {
+            box-shadow: 1px 1px 4px rgba(68, 175, 68, 0.514);
         }
     }
-}
+    
+    .project-card {
+        // backface-visibility: hidden;
+        transition: all .2s ease-out;
+        mix-blend-mode: luminosity;
+        margin-top: 20px;
+        background-color: linear-gradient(to right, rgba($color-lightest-blue, 0.3), rgba($color-lightest-blue, 1));
+        border: 1px solid #460b0bc9;
+        box-shadow: -2px 2px 2px $color-lime;
+        //opacity: 1;
+        .image {
+            // isolation: isolate;
+            align-self: start;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+            // background-color: $color-lightest-blue;
+            border-radius: 50%;
+            font-size: 3.6rem;
+            box-shadow: inset 2px -2px 2px 18px rgba(186, 188, 230, 0.692);
+            svg {
+                filter: drop-shadow(4px 6px 12px $black);
+                margin-top: 8px
+            }
+            #sass {
+                font-size: 13.4rem;
+                margin: 22px 20px 18px 20px;
+                filter: drop-shadow(8px 6px 8px $black);
+            }
+        }
+        .card-text {
+            @include clearfix;
+            color: $black;
+            width: 90%;
+            margin: 10px 10px 0 10px;
+            font-family: $font-family;
+            font-weight: 400;
+            padding: 10px 10px;
+            min-height: 100px;
+            font-size: 1.2rem;
+            background-color: lighten($color-lightest-blue, 18);
+            &__sub {
+                background-color: lighten(rgb(122, 122, 173), 10);
+                color: $black;
+                padding: 0;
+                margin: 0 auto;
+                min-height: 2rem;
+                margin-bottom: 2px;
+                list-style-position: inside;
+            }
+            @include respond(large) {
+                font-size: 2rem;
+                width: 50%;
+                padding: 30px 20px;
+            }
+        }
+        @include respond(large) {
+            font-size: 2rem;
+            padding: 30px 20px;
+        }
+        .bottom {
+            position: relative;
+            // justify-content: center;
+            padding: 20px 0;
+            height: 60px;
+            z-index: 100;
+            // margin: 40px 20px;
+            // align-self: center;
+            // justify-content: center;
+            // align-content: center;
+            .button-project {
+                background-color: rgb(153, 218, 68);
+                align-self: center;
+                width: 120px;
+                height: 30px;
+                font-size: 1rem;
+                // background-color: rgb(73, 209, 164);
+                // border: 1px solid #460b0bc9;
+                border-radius: 8px;
+                @include respond(large) {
+                    width: 240px;
+                    height: 40px;
+                    font-size: 2rem;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: $color-red;
+                }
+            }
+        }
+    }

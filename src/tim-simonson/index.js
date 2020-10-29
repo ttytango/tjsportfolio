@@ -1,3 +1,17 @@
+// const overlayBtn = document.getElementById('overlay-button');
+
+
+// function removeOverlay(object) {
+//     const content = document.querySelectorAll("content");
+//     content.style.mixBlendMode = "unset";
+// }
+// const mainBackground = document.querySelector("main");
+function switchBackground() {
+    $('main').addClass("dark-background");
+    $('.theme-button').hide();
+}
+
+
 var myTimer = setTimeout(myTitle, 2000);
 
 function myTitle() {
