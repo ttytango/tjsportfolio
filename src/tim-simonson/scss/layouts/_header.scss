@@ -9,6 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    article,
     h1 {
         // line-height: 100px;
         width: 36%;
@@ -75,6 +76,16 @@ header {
         @include respond(large) {
             width: 70%;
             padding: 10px 60px;
+        }
+    }
+    article {
+        animation: bounce 5s infinite alternate;
+        img {
+            filter: brightness(100%) contrast(100%);
+            filter: drop-shadow(2px 2px 22px $color-lime) invert(20%);
+            border-radius: 50%;
+            animation: logoanimate 4s infinite ease-out reverse;
+            -webkit-filter: brightness(100%) contrast(100%);
         }
     }
 }
