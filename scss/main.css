@@ -197,6 +197,7 @@ nav .top-buttons {
   max-width: 60%;
   align-items: flex-end;
   margin: 0 10px 10px 40px;
+  list-style-type: none;
 }
 nav .top-buttons a {
   border-radius: 6px;
