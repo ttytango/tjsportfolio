@@ -891,15 +891,15 @@ header nav a {
     padding: 10px 60px;
   }
 }
-header article {
-  animation: bounce 5s infinite alternate;
-}
 header article img {
   filter: brightness(100%) contrast(100%);
   filter: drop-shadow(2px 2px 22px #c8ff52) invert(20%);
   border-radius: 50%;
-  animation: logoanimate 4s infinite ease-out reverse;
   -webkit-filter: brightness(100%) contrast(100%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 main {
