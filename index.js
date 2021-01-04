@@ -177,7 +177,7 @@ const animateletters = anime({
     loop: true
 });
 const animation = anime({
-    targets: "header > nav > ul > a",
+    targets: "header > nav > ul > li > a",
     // Properties
     translateX: [20, 40],
     borderRadius: 25,
