@@ -1,0 +1,122 @@
+.card {
+    cursor: pointer;
+    transition: all .2s ease-out;
+    &:hover {
+        background-color: rgba(255, 82, 232, 0.699);
+        box-shadow: 2px 2px 8px rgb(219, 135, 24);
+    }
+    &:active {
+        box-shadow: 1px 1px 4px rgba(68, 175, 68, 0.514);
+    }
+}
+
+.project-card {
+    // backface-visibility: hidden;
+    transition: all .2s ease-out;
+    // mix-blend-mode: luminosity;
+    margin-top: 20px;
+    //background-color: linear-gradient(to right, rgba($color-lightest-blue, 0.3), rgba($color-lightest-blue, 1));
+    //border: 1px solid #b14a4ac9;
+    box-shadow: -2px 2px 2px $color-lime;
+    background: rgba($black, 0.9);
+    opacity: 1;
+    z-index: 2;
+    // isolation: isolate;
+    .image {
+        // mix-blend-mode: inherit;
+        align-self: start;
+        margin: auto;
+        text-align: center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        // background-color: $color-lightest-blue;
+        border-radius: 50%;
+        font-size: 3.6rem;
+        box-shadow: inset 2px -2px 2px 18px rgba(186, 188, 230, 0.992);
+        svg {
+            filter: drop-shadow(4px 6px 12px $black);
+            margin-top: 8px
+        }
+        #sass {
+            font-size: 13.4rem;
+            margin: 22px 20px 18px 20px;
+            filter: drop-shadow(8px 6px 8px $black);
+        }
+    }
+    .card-text {
+        @include clearfix;
+        border-radius: 8px;
+        color: $black;
+        width: 60%;
+        align-content: center;
+        justify-content: center;
+        margin: 10px auto;
+        font-family: $font-family-sub;
+        font-weight: 100;
+        //padding: 10px;
+        min-height: 200px;
+        font-size: 1.2rem;
+        background-color: lighten($color-lightest-blue, 2);
+        &__sub {
+            background-color: lighten(rgb(124, 124, 251), 10);
+            color: $black;
+            width: 85%;
+            padding: 10px 10px;
+            font-size: 1.2rem;
+            margin: 20px auto;
+            min-height: 2rem;
+            margin-bottom: 8px;
+            list-style-position: inside;
+            text-align: left;
+        }
+        @include respond(large) {
+            font-size: 2rem;
+            width: 50%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+    }
+    @include respond(large) {
+        font-size: 2rem;
+        padding: 30px 20px;
+    }
+    .bottom {
+        position: relative;
+        // justify-content: center;
+        padding: 20px 0;
+        height: 60px;
+        z-index: 100;
+        // margin: 40px 20px;
+        // align-self: center;
+        // justify-content: center;
+        // align-content: center;
+        .button-project {
+            background-color: rgb(153, 218, 68);
+            align-self: center;
+            width: 140px;
+            height: 40px;
+            font-size: 1.2rem;
+            // background-color: rgb(73, 209, 164);
+            // border: 1px solid #460b0bc9;
+            border-radius: 8px;
+            @include respond(large) {
+                width: 240px;
+                height: 40px;
+                font-size: 2rem;
+            }
+            &:hover {
+                cursor: pointer;
+                background-color: forestgreen;
+            }
+        }
+    }
+}
+
+.projects {
+    .title-row {
+        //mix-blend-mode: multiply;
+        border-radius: 12px;
+        backdrop-filter: drop-shadow(2px 2px 4px $black) hue-rotate(-12deg);
+    }
+}

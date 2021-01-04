@@ -1,0 +1,139 @@
+.contact-page {
+    main {
+        .theme-button {
+            animation: fa-spin .5s normal;
+            width: 20%;
+            min-width: 140px;
+            margin: 0;
+            cursor: pointer;
+            transition: all .3s ease-in;
+            color: $black;
+            font-style: $font-family-sub;
+            background-color: saturate($color: #29b152, $amount: 100);
+            outline-style: $color-tertiary;
+            &__dark {
+                filter: contrast(80%);
+                backdrop-filter: invert(40%);
+            }
+            &:hover {
+                transform: translate(20px, 2px);
+            }
+            &:active {
+                background-color: $black;
+                opacity: 50%;
+            }
+            @include respond(large) {
+                padding: 10px 10px;
+            }
+        }
+        height: 90vh;
+        @include respond(large) {
+            height: 90vh;
+        }
+        @include respond(medium) {
+            height: 80vh;
+        }
+        @include respond(small) {
+            height: 80vh;
+        }
+        @include respond(smaller) {
+            height: 100vh;
+        }
+        .contact {
+            @include clearfix;
+            position: inherit;
+            min-width: 280px;
+            width: 80%;
+            background-color: $black;
+            mix-blend-mode: $content-mix-blend-mode;
+            height: 540px;
+            margin: 30px auto;
+            padding: 10px;
+            box-shadow: 3px 3px 12px black;
+            div {
+                &:first-of-type {
+                    width: 60%;
+                    margin: 10px auto;
+                    text-align: center;
+                    background-color: $color-yellow;
+                    h2 {
+                        font-family: $font-family-sub;
+                        font-size: 3rem;
+                        font-weight: normal;
+                        color: rgba($black, 0.9);
+                    }
+                }
+            }
+            .form-group {
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                .contact-form {
+                    min-width: 140px;
+                    margin: 10px auto;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    button {
+                        margin: 10px 0;
+                        padding: 10px 10px;
+                        width: 140px;
+                    }
+                    @include respond(large) {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        .input-field,
+        textarea {
+            min-width: 260px;
+            margin-top: 20px;
+            color: $black;
+            padding: 10px;
+            opacity: 1;
+            &::placeholder {
+                font-size: 1.6rem;
+                color: rgb(71, 68, 68);
+            }
+            @include respond(large) {
+                width: 600px;
+                height: 3rem;
+                font-size: 1.8rem;
+                margin-left: -60px;
+                padding: 20px 10px;
+            }
+        }
+        .input-field {
+            height: 3rem;
+        }
+        .text-field {
+            height: 180px;
+        }
+    }
+}
+
+.contact * {
+    border-radius: 16px;
+}
+
+.checkbox {
+    background-color: $color-lightest-blue;
+    width: 200px;
+    height: 20px;
+    font-size: 3rem;
+    label {
+        background-color: $color-yellow;
+        font-weight: 6;
+    }
+}
+
+.dark-background {
+    background-color: transparent;
+    background-image: none;
+    .theme-button {
+        filter: brightness(60%);
+        color: rgba($black, 0.9);
+    }
+}

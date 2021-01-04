@@ -1,0 +1,42 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin footer {
+    position: relative;
+    position: sticky, fixed;
+    // align-self: end;
+    // offset-block-start: auto;
+    top: 0%;
+    bottom: 0%;
+    width: 100%;
+    // margin-top: 20px;
+}
+
+// $breakpoint: ( 'small': ( min-width: 480px), 'medium': ( min-width: 768px), 'large': ( min-width: 991px)) !default;
+@mixin respond($breakpoint) {
+    @if($breakpoint==large) {
+        @media only screen and (min-width: 991px) {
+            @content;
+        }
+    }
+    @if($breakpoint==medium) {
+        @media only screen and (max-width: 990px) and (min-width: 768px) {
+            @content;
+        }
+    }
+    @if($breakpoint==small) {
+        @media only screen and (max-width: 767px) and (min-width: 480px) {
+            @content;
+        }
+    }
+    @if($breakpoint==smaller) {
+        @media only screen and (max-width: 479px) {
+            @content;
+        }
+    }
+}

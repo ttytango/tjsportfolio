@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link href="./images/ttylogo.png" rel="icon" type="image/png">
+
+    <link rel="stylesheet" href="./scss/main.css">
+
+    <script src="https://kit.fontawesome.com/23f8bfb464.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+</head>
+
+<body class="contact-page">
+    <header>
+        <h1>Contact | TJ Simonson</h1>
+        <nav>
+            <ul data-role="" class="top-buttons">
+                <a href="./projects.html">Projects</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./index.html">Home</a>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="">
+        <button type="button" name="toggle" class="theme-button show" id="toggle_to_dark">Change Theme</button>
+
+
+
+        <section class="contact light" data-aos="zoom-out">
+
+            <div class="ui raised segment">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="form-group">
+                <form action="https://formspree.io/f/xzbkgzlb" method="POST" class="contact-form">
+                    <input type="text" name="name" id="name" value="" class="input-field" placeholder="Please enter your full name" required>
+                    <input type="email" name="_replyto" id="email" class="input-field" placeholder="Please enter your email address" required>
+                    <textarea name="message" class="input-field text-field" placeholder="Please write your message here, and I'll get back to you as soon as I can" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p class="footer-left">
+            Tim Simonson 2020</p>
+
+        <aside class="footer-right">
+            <p>Connect with me: </p>
+            <div class="footer-links">
+
+                <a href="https://www.linkedin.com/in/tj-simonson/">
+                    <span class="fab fa-linkedin fa-3x footer-right">
+                        </span>
+                </a>
+                <a href="https://www.github.com/ttytango/">
+                    <span class="fab fa-github fa-3x footer-right">
+                        </span>
+                </a>
+            </div>
+        </aside>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            mirror: true,
+            easing: "ease-in-sine"
+        });
+    </script>
+    <script src="index.js" defer></script>
+</body>

@@ -1,0 +1,210 @@
+.grid {
+    @include respond(large) {
+        display: grid;
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        width: 100%;
+        height: 80px;
+        gap: 4px;
+        padding: 10px;
+        hgroup {
+            grid-row: 1;
+            grid-column: 1 / 13;
+        }
+        .title-row {
+            grid-row: 2;
+            grid-column: 1 / 12;
+        }
+        .card {
+            background-color: rgba(255, 0, 0, 0);
+            font-size: 2rem;
+            padding: 2px 2px;
+            display: flex;
+            flex-direction: column;
+            width: 160px;
+            height: 120px;
+            margin: 0;
+            text-align: center;
+            // align-content: center;
+            justify-content: center;
+            @include clearfix;
+            &:hover {
+                transform: scale(1.1);
+            }
+            svg {
+                font-size: 6rem;
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+                align-items: center;
+                filter: drop-shadow(1px 1px 2px $black);
+                justify-content: center;
+                transition: all .2s ease-out;
+                &:hover {
+                    filter: opacity(1);
+                    filter: drop-shadow(4px 4px 6px $black);
+                    transform: translateX(10px) rotate(360deg) translateY(-5px);
+                }
+            }
+            @include respond(large) {
+                background-color: rgba(255, 0, 0, 0.979);
+                font-size: 2.8rem;
+                margin: 0;
+                width: 100%;
+                padding: 20px 10px;
+            }
+            @include respond(medium) {
+                color: whitesmoke;
+                // background-color: rgba(255, 0, 0, 0.637);
+                width: 100%;
+                padding: 20px 10px;
+                margin: auto;
+            }
+            @include respond(small) {
+                color: whitesmoke;
+                // background-color: rgba(255, 0, 0, 0.233);
+                margin: 0;
+            }
+        }
+        .card-1 {
+            grid-row: 3;
+            grid-column: 1;
+            // position: relative;
+        }
+        .card-2 {
+            grid-row: 3;
+            grid-column: 2;
+            // position: relative;
+        }
+        .card-3 {
+            grid-row: 3;
+            grid-column: 3;
+            // position: relative;
+        }
+        .card-4 {
+            grid-row: 3;
+            grid-column: 4;
+        }
+        .card-5 {
+            grid-row: 4;
+            grid-column: 1;
+        }
+        .card-6 {
+            grid-row: 4;
+            grid-column: 2;
+            // position: relative;
+        }
+        .card-7 {
+            grid-row: 4;
+            grid-column: 3;
+        }
+        .card-8 {
+            grid-row: 4;
+            grid-column: 4;
+        }
+        .card-9 {
+            grid-row: 5;
+            grid-column: 1;
+            // position: relative;
+        }
+        .card-10 {
+            grid-row: 5;
+            grid-column: 2;
+            // position: relative;
+        }
+        .card-11 {
+            grid-row: 5;
+            grid-column: 3;
+            // position: relative;
+        }
+        .card-12 {
+            grid-row: 5;
+            grid-column: 4;
+        }
+        p {
+            color: whitesmoke;
+            font-size: 2.4rem;
+        }
+    }
+    @include respond(large) {
+        grid-template-rows: repeat(auto-fill, minmax(100%, 2fr));
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+        gap: 10px 10px;
+        margin: auto;
+        width: 100%;
+    }
+    @include respond(medium) {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
+        gap: 10px 10px;
+        width: 100%;
+        .card {
+            font-size: 2rem;
+            background-color: red;
+            align-items: center;
+            justify-self: center;
+            text-align: center;
+            svg {
+                font-size: 3rem;
+                filter: drop-shadow(1px 1px 2px $black);
+            }
+            p {
+                font-size: 2rem;
+                color: whitesmoke;
+            }
+        }
+    }
+    @include respond(small) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        // margin: 0 auto;
+        .card {
+            font-size: 2rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            flex-grow: 2;
+            background-color: red;
+            margin: 2px auto;
+            align-items: center;
+            justify-self: center;
+            text-align: center;
+            width: 40%;
+            svg {
+                font-size: 6rem;
+                filter: drop-shadow(1px 1px 2px $black);
+            }
+            p {
+                font-size: 1.6rem;
+                color: whitesmoke;
+            }
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .card {
+        font-size: 2rem;
+        display: inline-block;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        background-color: red;
+        margin: 4px auto;
+        align-items: center;
+        justify-self: center;
+        text-align: center;
+        width: 80%;
+        svg {
+            font-size: 6rem;
+        }
+        p {
+            font-size: 1.6rem;
+            color: whitesmoke;
+        }
+    }
+}
+
+svg {
+    color: green;
+}

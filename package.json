@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0",
+    "sass": "^1.26.11"
+  },
+  "scripts": {
+    "compile-css": "sass .:.",
+    "prefix-css": "postcss **/*.css  --use autoprefixer --replace",
+    "build": "yarn compile-css && yarn prefix-css"
+  }
+}

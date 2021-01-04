@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,500&family=Source+Code+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,300&family=Russo+One&display=swap');
+header {
+    nav {
+        font-size: 1.2rem;
+        letter-spacing: 0rem;
+        font-weight: 400;
+        @include respond(large) {
+            font-size: 2.6rem;
+            letter-spacing: 2rem;
+            font-weight: 600;
+        }
+        @include respond(medium) {
+            font-size: 2rem;
+            letter-spacing: 0.4rem;
+            font-weight: 600;
+            // letter-spacing: 0.6rem;
+        }
+        @include respond(small) {
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+        }
+    }
+}
+
+.subheading {
+    h2 {
+        font-family: $font-cursive;
+    }
+    h3 {
+        font-family: $font-family-sub;
+        font-size: 0.8rem;
+        letter-spacing: 0.4rem;
+        margin: 0 auto;
+    }
+}
+
+.content {
+    color: $black;
+    font-weight: 600;
+    h2 {
+        font-size: 2rem;
+        color: $black;
+    }
+    p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: $black;
+    }
+    @include respond(large) {
+        hgroup,
+        .ui.raised.segment {
+            margin: 10px 20px;
+        }
+    }
+}

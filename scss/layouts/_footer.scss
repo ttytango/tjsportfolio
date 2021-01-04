@@ -1,0 +1,31 @@
+footer {
+    @include footer;
+    background-color: $black;
+    color: $color-lime;
+    display: flex;
+    font-weight: 600;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 20px 40px;
+    .footer-left {
+        font-size: 1.8rem;
+        align-self: center;
+    }
+    .footer-right {
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 2px;
+        }
+        align-content: flex-end;
+        justify-content: space-between;
+        .footer-links {
+            align-self: stretch;
+            text-align: left;
+        }
+        span {
+            margin: 10px 10px 10px 40px;
+        }
+    }
+}

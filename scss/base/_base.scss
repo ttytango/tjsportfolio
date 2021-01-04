@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgba($black, 0.9);
+}
+
+.close {
+    color: chartreuse;
+}
+
+.transparency {
+    backdrop-filter: opacity(0.5) brightness(8);
+}
+
+.light {
+    backdrop-filter: opacity(0.1);
+}
+
+.show {
+    transition: opacity 400ms;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.isolate {
+    isolation: isolate;
+    position: relative;
+}
