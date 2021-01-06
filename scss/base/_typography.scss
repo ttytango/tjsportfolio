@@ -48,7 +48,7 @@ header {
         line-height: 2rem;
         color: $black;
     }
-    @include respond(large) {
+    @include respond(large and larger) {
         hgroup,
         .ui.raised.segment {
             margin: 10px 20px;

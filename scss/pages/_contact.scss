@@ -22,11 +22,14 @@
                 background-color: $black;
                 opacity: 50%;
             }
-            @include respond(large) {
+            @include respond(larger) {
                 padding: 10px 10px;
             }
         }
         height: 90vh;
+        @include respond(larger) {
+            height: 90vh;
+        }
         @include respond(large) {
             height: 90vh;
         }
@@ -80,6 +83,9 @@
                         padding: 10px 10px;
                         width: 140px;
                     }
+                    @include respond(larger) {
+                        width: 50%;
+                    }
                     @include respond(large) {
                         width: 50%;
                     }
@@ -96,6 +102,13 @@
             &::placeholder {
                 font-size: 1.6rem;
                 color: rgb(71, 68, 68);
+            }
+            @include respond(larger) {
+                width: 600px;
+                height: 3rem;
+                font-size: 1.8rem;
+                margin-left: -60px;
+                padding: 20px 10px;
             }
             @include respond(large) {
                 width: 600px;

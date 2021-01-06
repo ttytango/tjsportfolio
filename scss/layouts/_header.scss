@@ -17,7 +17,7 @@ header {
         padding: 40px;
         font-size: 1.6rem;
         letter-spacing: 0.4rem;
-        @include respond(large) {
+        @include respond(larger) {
             width: 100%;
             font-size: 3rem;
         }
@@ -31,7 +31,7 @@ header {
     nav {
         height: 100px;
         width: 80%;
-        @include respond(large) {
+        @include respond(larger) {
             height: 100px;
             font-size: 2.4rem; //1 rem = 9px, 9/16 = 50%
             letter-spacing: 0.6rem;
@@ -73,20 +73,20 @@ header {
             width: 70%;
             // padding: 10px 60px;
         }
-        @include respond(large) {
+        @include respond(larger) {
             width: 70%;
             padding: 10px 60px;
         }
     }
-    article {
-        // animation: bounce 5s infinite alternate;
-        img {
-            filter: brightness(100%) contrast(100%);
-            filter: drop-shadow(2px 2px 22px $color-lime) invert(20%);
-            border-radius: 50%;
-            //animation: logoanimate 4s infinite ease-out reverse;
-            -webkit-filter: brightness(100%) contrast(100%);
-            //-webkit-animation: logoanimate 4s infinite ease-out reverse;
-        }
-    }
+    // article {
+    //     // animation: bounce 5s infinite alternate;
+    //     img {
+    //         filter: brightness(100%) contrast(100%);
+    //         filter: drop-shadow(2px 2px 22px $color-lime) invert(20%);
+    //         border-radius: 50%;
+    //         //animation: logoanimate 4s infinite ease-out reverse;
+    //         -webkit-filter: brightness(100%) contrast(100%);
+    //         //-webkit-animation: logoanimate 4s infinite ease-out reverse;
+    //     }
+    // }
 }

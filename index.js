@@ -14,7 +14,7 @@ themeButton.addEventListener("click", function(event) {
     switchBackground();
     event.target.classList.toggle("show");
     // this.classList.toggle("hide");
-})
+});
 
 let myTimer = setTimeout(myTitle, 2000);
 

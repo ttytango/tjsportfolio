@@ -30,12 +30,20 @@ nav {
                 // transform: translate(2px, -10px);
                 color: $color-yellow;
             }
-            @include respond(large) {
+            @include respond(larger) {
                 // flex-direction: row;
                 min-width: 180px;
                 height: 60px;
                 // margin: 0 20px;
                 padding: 10px 20px;
+            }
+            @include respond(large) {
+                // flex-direction: row;
+                min-width: 140px;
+                height: 60px;
+                margin: 0 20px;
+                padding: 10px 10px;
+                letter-spacing: .2rem;
             }
             @include respond(medium) {
                 width: 140px;
@@ -52,9 +60,15 @@ nav {
                 height: 40px;
             }
         }
+        @include respond(larger) {
+            display: flex;
+            align-items: flex-end;
+        }
         @include respond(large) {
             display: flex;
             align-items: flex-end;
+            // margin: 6px 6px;
+            // padding: 0.6rem .4rem;
         }
         @include respond(medium) {
             display: flex;
@@ -95,6 +109,9 @@ hgroup {
             background-color: $color-lime;
             opacity: 1;
             box-shadow: 2px 2px 4px $black;
+        }
+        @include respond(larger) {
+            width: 200px;
         }
         @include respond(large) {
             width: 200px;

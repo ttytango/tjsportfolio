@@ -33,6 +33,10 @@
             filter: hue-rotate(-15deg) drop-shadow(-1px 2px 3px black);
         }
         letter-spacing: 0.4rem;
+        @include respond(larger) {
+            font-size: 4rem;
+            letter-spacing: 2rem;
+        }
         @include respond(large) {
             font-size: 4rem;
             letter-spacing: 2rem;
@@ -58,6 +62,10 @@
         animation: appearcontent .8s ease;
         animation-play-state: paused;
         backface-visibility: hidden;
+        @include respond(larger) {
+            font-size: 3.6rem;
+            letter-spacing: 0.6rem;
+        }
         @include respond(large) {
             font-size: 3.6rem;
             letter-spacing: 0.6rem;
@@ -68,6 +76,9 @@
         @include respond(small) {
             font-size: 2rem;
         }
+    }
+    @include respond(larger) {
+        height: 60vh;
     }
     @include respond(large) {
         height: 60vh;
