@@ -53,10 +53,10 @@
         justify-content: center;
         margin: 10px auto;
         font-family: $font-family-sub;
-        font-weight: 100;
+        font-weight: 300;
         //padding: 10px;
         min-height: 200px;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         background-color: lighten($color-lightest-blue, 2);
         &__sub {
             background-color: lighten(rgb(124, 124, 251), 10);
@@ -70,7 +70,16 @@
             list-style-position: inside;
             text-align: left;
         }
+        @include respond(medium) {
+            font-size: 1.6rem;
+        }
         @include respond(large) {
+            font-size: 1.6rem;
+            width: 50%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+        @include respond(larger) {
             font-size: 2rem;
             width: 50%;
             height: 150px;
@@ -78,7 +87,7 @@
         }
     }
     @include respond(large) {
-        font-size: 2rem;
+        font-size: 2.2rem;
         padding: 30px 20px;
     }
     .bottom {
@@ -100,9 +109,9 @@
             // background-color: rgb(73, 209, 164);
             // border: 1px solid #460b0bc9;
             border-radius: 8px;
-            @include respond(large) {
-                width: 240px;
-                height: 40px;
+            @include respond(large and larger) {
+                width: 260px;
+                height: 60px;
                 font-size: 2rem;
             }
             &:hover {

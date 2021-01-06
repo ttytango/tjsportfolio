@@ -85,5 +85,23 @@
             easing: "ease-in-sine"
         });
     </script>
-    <script src="index.js" defer></script>
+    <script type="text/javascript">
+        const themeButton = document.querySelector('.theme-button');
+        const themeButtonDark = document.querySelector('.theme-button__dark');
+        const mainBody = document.querySelector('main');
+        const contactBody = document.querySelector('.contact');
+
+
+        function switchBackground() {
+            mainBody.classList.toggle("dark-background");
+            contactBody.classList.toggle("transparency");
+            contactBody.classList.toggle("light");
+        }
+
+        themeButton.addEventListener("click", function(event) {
+            switchBackground();
+            event.target.classList.toggle("show");
+            // this.classList.toggle("hide");
+        });
+    </script>
 </body>

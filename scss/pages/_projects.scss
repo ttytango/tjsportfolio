@@ -2,16 +2,19 @@
     // @include clearfix;
     margin: 20px 0;
     box-shadow: 6px 6px 12px black;
-    max-height: 400vh;
+    max-height: 600vh;
     width: 90%;
     opacity: 1;
-    background-color: rgba(172, 92, 12, 0.137);
+    background-color: rgba(12, 192, 112, 0.137);
     color: $color-tertiary;
     padding: 20px 20px;
     border-radius: 2%;
     z-index: 2;
     // mix-blend-mode: hard-light;
     @include respond(medium) {
+        margin: 20px auto;
+    }
+    @include respond(larger) {
         margin: 20px auto;
     }
     @include respond(large) {
@@ -60,20 +63,31 @@
                 font-size: 1rem;
                 text-align: center;
             }
+            @include respond(larger) {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: center;
+                width: 100%;
+                width: 100%;
+                height: 30%;
+                margin: 40px auto;
+            }
             @include respond(large) {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 align-items: center;
                 width: 80%;
+                height: 30%;
                 margin: 40px auto;
             }
         }
         .card-title {
             color: $black;
             font-size: 2rem;
-            @include respond(large) {
-                font-size: 3rem;
+            @include respond(large and larger) {
+                font-size: 4rem;
             }
             @include respond(medium) {
                 font-size: 3rem;
@@ -90,7 +104,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    max-height: 3600px;
+    max-height: 5000px;
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -98,7 +112,7 @@
     .projects {
         .ui.raised.segment {
             border-radius: 8px;
-            background-color: rgba(128, 255, 0, 0.794);
+            background-color: rgba(128, 255, 0, 0.894);
             z-index: 2;
             // opacity: 1;
             background-blend-mode: overlay;
