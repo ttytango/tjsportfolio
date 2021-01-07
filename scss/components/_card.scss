@@ -48,34 +48,40 @@
         @include clearfix;
         border-radius: 8px;
         color: $black;
-        width: 60%;
+        width: 70%;
         align-content: center;
         justify-content: center;
         margin: 10px auto;
         font-family: $font-family-sub;
         font-weight: 300;
         //padding: 10px;
-        min-height: 200px;
+        min-height: 180px;
+        // max-height: 300px;
         font-size: 1.6rem;
         background-color: lighten($color-lightest-blue, 2);
         &__sub {
             background-color: lighten(rgb(124, 124, 251), 10);
             color: $black;
-            width: 85%;
+            width: 70%;
             padding: 10px 10px;
             font-size: 1.2rem;
-            margin: 20px auto;
-            min-height: 2rem;
+            margin: 10px auto;
+            height: 4%;
+            max-height: 18vh;
             margin-bottom: 8px;
             list-style-position: inside;
             text-align: left;
         }
+        @include respond(small) {
+            width: 50%;
+        }
         @include respond(medium) {
             font-size: 1.6rem;
+            width: 50%;
         }
         @include respond(large) {
             font-size: 1.6rem;
-            width: 50%;
+            width: 60%;
             height: 150px;
             padding: 10px 20px;
         }
