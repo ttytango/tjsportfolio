@@ -4,7 +4,7 @@ main {
     background-attachment: fixed;
     background-repeat: repeat;
     background-size: cover;
-    max-height: 5000px;
+    max-height: 800vh;
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -16,7 +16,7 @@ main {
         color: rgb(255, 236, 236);
         padding: 2px 20px;
         min-height: 80vh;
-        backdrop-filter: opacity(0.4);
+        backdrop-filter: opacity(0.2);
         mix-blend-mode: $content-mix-blend-mode;
         border-radius: 12px;
         // scroll-behavior: auto;
