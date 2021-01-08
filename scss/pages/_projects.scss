@@ -70,8 +70,8 @@
             }
             @include respond(larger) {
                 display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
+                flex-direction: row;
+                flex-wrap: wrap;
                 align-items: center;
                 width: 90%;
                 height: 30%;

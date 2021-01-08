@@ -49,6 +49,9 @@ header {
         color: $black;
     }
     @include respond(large and larger) {
+        // #skills {
+        //     height: 100vh;
+        // }
         hgroup,
         .ui.raised.segment {
             margin: 10px 20px;
