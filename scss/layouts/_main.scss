@@ -21,7 +21,7 @@ main {
         border-radius: 12px;
         // scroll-behavior: auto;
         // scrollbar-base-color: $color-lime;
-        overflow: auto;
+        // overflow: auto;
         //overscroll-behavior: contain;
         /*scrollbar-highlight-color: #ffffff;
         */
@@ -31,8 +31,8 @@ main {
             filter: drop-shadow(2px 3px 10px $color-lime) opacity(1);
         }
         @include respond(large) {
-            padding: 0;
-            width: 80%;
+            padding: 20px 20px;
+            width: 90%;
         }
         @include respond(medium) {
             padding: 20px 20px;
