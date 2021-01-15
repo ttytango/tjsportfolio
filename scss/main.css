@@ -1389,7 +1389,7 @@ main {
   background-attachment: fixed;
   background-repeat: repeat;
   background-size: cover;
-  max-height: 800vh;
+  max-height: 900vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1962,7 +1962,7 @@ main .content .theme-button {
             align-items: center;
     width: 90%;
     height: 30%;
-    margin: 40px auto;
+    margin: 20px auto;
   }
 }
 
@@ -1995,7 +1995,7 @@ main .content .theme-button {
   background-attachment: fixed;
   background-repeat: repeat;
   background-size: cover;
-  max-height: 800vh;
+  max-height: 900vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
